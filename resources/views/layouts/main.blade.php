@@ -18,8 +18,11 @@
             <div class="flex-shrink-0">
                 <img src="{{ asset('storage/images/logoreseaulilas.png') }}" alt="Logo Réseau LILAS" class="h-52">
             </div>
+            
             <div class="flex-grow flex items-center justify-end space-x-20">
+
                 <a href="{{route ('accueil')}}" class="text-lg font-medium">Accueil</a>
+
                 <div class="relative group">
                     <a href="#" class="text-lg font-medium flex items-center">
                         Nous rejoindre
@@ -28,7 +31,7 @@
                         </svg>
                     </a>
                     <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-2 w-60 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="#" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir adhérente</a>
+                        <a href="{{route ('devenir-adherente')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir adhérente</a>
                         <a href="{{route ('devenir-partenaire')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir partenaire</a>
                         <a href="{{route ('devenir-benevole')}}" class="block px-4 py-2 font-semibold hover:text-jaune">Devenir bénévole</a>
                     </div>     
@@ -44,9 +47,10 @@
                     </a>
                     <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
                         <a href="#" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Agenda</a>
-                        <a href="#" class="block px-4 py-2 font-semibold hover:text-jaune">Actualités</a>
+                        <a href="{{route ('actualites')}}" class="block px-4 py-2 font-semibold hover:text-jaune">Actualités</a>
                     </div>     
                 </div>
+
                 <a href="#" class="text-lg font-medium">Nos partenaires</a>
                 <a href="{{route ('contact')}}" class="text-lg font-medium">Contact</a>
             </div>
@@ -59,24 +63,16 @@
     </main>
 
     
-    <footer class="bg-jaune p-6">
-        <div class="flex flex-row justify-center items-start space-x-40">
-            <!-- Section 1: Logo et Description -->
-            <!-- <div class="flex flex-col">
-                <div class="mb-0">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="Logo Réseau LILAS" class="h-24">
-                    <div class="mt-2 max-w-52 text-sm">estibulum egestas vehicula augue, vitae suscipit urna congue in. Pellentesque egestas gravida felis quis convallis. </div>
-                </div>
-            </div> -->
-
-            <!-- Main Content Container -->
-            <div class="flex flex-col ">
-
-                <!-- Section Container -->
-                <div class="flex flex-row space-x-12 mb-8">
+ <footer class="bg-jaune p-6">
+        <div class="flex flex-row justify-center items-start ">
+            
+          <div class="flex flex-row mb-8">
+                  <div class="flex-1 relative left-0 ">
+                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="Logo Réseau LILAS" class="">
+                </div>  
 
                     <!-- Section 2: S'engager -->
-                    <div class="flex-1 min-w-[200px]">
+                    <div class="flex-1 ">
                         <div class="text-base font-bold">S'engager</div>
                         <div class="flex flex-col space-y-2 text-base">
                             <a href="#" class="text-sm">- Devenir adhérente</a>
@@ -86,7 +82,7 @@
                     </div>
 
                     <!-- Section 3: Horaires -->
-                    <div class="flex-1 min-w-[200px]">
+                    <div class="flex-1 ">
                         <div class="text-base font-bold">Horaires</div>
                         <div class="flex flex-col space-y-1 text-base">
                             <div class="flex items-center space-x-2">
@@ -99,7 +95,7 @@
                     </div>
 
                     <!-- Section 4: Contactez-nous -->
-                    <div class="flex-1 min-w-[200px]">
+                    <div class="flex-1 ">
                         <div class="text-base font-bold">Contactez-nous</div>
                         <div class="flex flex-col space-y-2 text-base">
                             <div class="flex items-center space-x-2">
@@ -125,24 +121,24 @@
                     </div>
                 </div>
 
-                <!-- Footer -->
-                <div class="text-center border-t border-black">
-                    <div class="inline-flex items-center space-x-2 relative top-2">
-                        <a href="#" class="text-sm">Mentions légales</a>
-                        <span class="border-l border-black h-4"></span>
-                        <a href="#" class="text-sm">Politique de confidentialité</a>
-                        <span class="border-l border-black h-4"></span>
-                        <a href="#" class="text-sm">Plan du site</a>
-                    </div>
-                </div>
+            </div>
+        
+        
+        <div class="text-center border-t border-black">
+            <div class="inline-flex items-center space-x-2 relative top-2">
+                <a href="#" class="text-sm">Mentions légales</a>
+                <span class="border-l border-black h-4"></span>
+                <a href="#" class="text-sm">Politique de confidentialité</a>
+                <span class="border-l border-black h-4"></span>
+                <a href="#" class="text-sm">Plan du site</a>
             </div>
         </div>
     </footer>
     
     
-        
+         
 
- 
+        
 
 
 

@@ -14,40 +14,40 @@
     @section('content')
 
     <div class="relative h-80 w-full">
-        <!-- Image en arrière-plan -->
         <img class="h-80 w-full object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="Photo accueil">
     </div>
-    
-    <!-- Carré jaune positionné à cheval entre l'image et la div -->
+
     <div class="relative z-10 flex justify-center">
-        <div class="absolute -top-20 bg-jaune h-40 w-3/4 p-6 rounded-xl flex items-center justify-center space-x-12 shadow-lg">
+        
+        <div class="absolute -top-20 bg-jaune h-40 w-7/10 p-6 rounded-xl flex items-center justify-center space-x-16 shadow-lg">
+            
             <div class="flex flex-col items-center text-center">
-                <div class="font-black text-4xl">90</div>
-                <div>adhérentes</div>
+                <div class="font-black text-6xl" id="counter1">0</div>
+                <div class="text-xl">adhérentes</div>
             </div>
     
-            <!-- Separator -->
+       
             <div class="h-full border-l-2 border-black"></div>
     
             <div class="flex flex-col items-center text-center">
-                <div class="font-black text-4xl">14</div>
-                <div>partenaires</div>
+                <div class="font-black text-6xl" id="counter2">14</div>
+                <div class="text-xl">partenaires</div>
             </div>
     
-            <!-- Separator -->
+            
+            <div class="h-full border-l-2 border-black"></div>
+    
+            <div class="flex flex-col items-center text-center ">
+                <div class="font-black text-6xl" id="counter3">11</div>
+                <div class="text-xl">rencontres</div>
+            </div>
+    
+        
             <div class="h-full border-l-2 border-black"></div>
     
             <div class="flex flex-col items-center text-center">
-                <div class="font-black text-4xl">11</div>
-                <div>rencontres chaque année</div>
-            </div>
-    
-            <!-- Separator -->
-            <div class="h-full border-l-2 border-black"></div>
-    
-            <div class="flex flex-col items-center text-center">
-                <div class="font-black text-4xl">90</div>
-                <div>adhérentes</div>
+                <div class="font-black text-6xl">90</div>
+                <div class="text-xl">adhérentes</div>
             </div>
         </div>
     </div>
@@ -55,37 +55,30 @@
    
     <div class="h-screen w-full pt-40">
 
-    <div class="flex flex-row">
+    <div class="flex flex-row items-center justify-center space-x-32 ">
  
             <div class="h-96 w-96">
-                <img class=" h-96 w-96 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                <img class=" h-96 w-96 rounded-xl object-cover ransition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
             </div>
         
 
-        <div class="flex flex-col"> 
-            <div class="relative font-black text-lg group">
-                <a href="#" class="text-black underline">QUI SOMMES-NOUS ?</a>
+        <div class="flex flex-col space-y-12 "> 
+            <div class="relative font-black text-lg group text-center">
+                <a href="#" class="text-black text-3xl text-center">QUI SOMMES-NOUS ?</a>
             </div>
-            
-            
-            </div>
-            
-            <div class="max-w-xl"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, 
+            <div class="max-w-xl text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, 
                 efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices
                  consectetur. Vivamus lacinia risus non nunc dignissim, ut tristique sapien euismod. Nullam sed mi varius 
                  ipsum blandit mollis. Sed lacinia tempus est in efficitur. Integer aliquam ut eros ac elementum. 
                  Fusce et libero metus. Nulla et metus in nibh finibus sodales.
                  In eget bibendum sapien, sit amet tempor velit. Nulla facilisi. Morbi eu elementum augue.  
             </div>
-
         </div>
+
+    </div>
 
     </div> 
        
-   
-
-
-
 
  
     <div class="flex-grow">
@@ -107,33 +100,7 @@
             </div>
         </div>
     </div>
-     
     
-    
-    
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <div class="bg-gray-700 flex items-center justify-center p-60 relative">
 
         <div class="absolute top-4 left-1/2 -translate-x-1/2 font-black text-3xl ">
@@ -170,9 +137,6 @@
     </div>
     
 
-
-
-
     <div class="h-60 w-full bg-blue-900 p-8">
         <div class="text-center font-black text-2xl"> ILS NOUS SOUTIENNENT </div> 
     
@@ -202,13 +166,5 @@
     
 
 
-
-
-
-
-
-
-    
-      
 </body>
 </html>

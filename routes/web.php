@@ -20,6 +20,14 @@ Route::get('/devenir/benevole', function () {
     return view('pages.guest.devenirbenevole');
 })->name('devenir-benevole');
 
+Route::get('/devenir/adherente', function () {
+    return view('pages.guest.deveniradherente');
+})->name('devenir-adherente');
+
+Route::get('/actualites', function () {
+    return view('pages.guest.actualites-liste');
+})->name('actualites');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

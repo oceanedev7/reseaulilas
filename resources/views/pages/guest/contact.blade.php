@@ -105,12 +105,6 @@
 
 </div>
 
-<div class="w-full h-80 bg-red-900 mt-10">
-
-
-
-</div>
-
 
     @endsection
     
