@@ -51,7 +51,7 @@
                     </div>     
                 </div>
 
-                <a href="#" class="text-lg font-medium">Nos partenaires</a>
+                <a href="{{route ('nospartenaires')}}" class="text-lg font-medium">Nos partenaires</a>
                 <a href="{{route ('contact')}}" class="text-lg font-medium">Contact</a>
             </div>
         </div>

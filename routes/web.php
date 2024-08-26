@@ -40,6 +40,10 @@ Route::get('/evenement', function () {
     return view('pages.guest.evenement');
 });
 
+Route::get('/nospartenaires', function () {
+    return view('pages.guest.nospartenaires');
+})->name('nospartenaires');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
