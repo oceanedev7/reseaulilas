@@ -58,7 +58,7 @@
     </nav>
     
 
-    <main class="flex-grow">
+    <main>
         @yield('content')
     </main>
 
@@ -71,7 +71,6 @@
                     <img src="{{ asset('storage/images/logofooter.png') }}" alt="Logo Réseau LILAS" class="">
                 </div>  
 
-                    <!-- Section 2: S'engager -->
                     <div class="flex-1 ">
                         <div class="text-base font-bold">S'engager</div>
                         <div class="flex flex-col space-y-2 text-base">
@@ -81,7 +80,6 @@
                         </div>
                     </div>
 
-                    <!-- Section 3: Horaires -->
                     <div class="flex-1 ">
                         <div class="text-base font-bold">Horaires</div>
                         <div class="flex flex-col space-y-1 text-base">
@@ -94,7 +92,6 @@
                         </div>
                     </div>
 
-                    <!-- Section 4: Contactez-nous -->
                     <div class="flex-1 ">
                         <div class="text-base font-bold">Contactez-nous</div>
                         <div class="flex flex-col space-y-2 text-base">

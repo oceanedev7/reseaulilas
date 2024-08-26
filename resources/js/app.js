@@ -6,6 +6,8 @@ window.Alpine = Alpine;
 
 Alpine.start();
 
+// Compteur automatique chiffres marquants (vue accueil)
+
         // Premier compteur
         var depart1 = 0;
         const arrivee1 = 90;
@@ -52,3 +54,23 @@ Alpine.start();
         const intervalId1 = setInterval(augmenter1, interval1);
         const intervalId2 = setInterval(augmenter2, interval2);
         const intervalId3 = setInterval(augmenter3, interval3);
+
+
+// Caroussel des membres de l'équipe (vue accueil)
+
+let defaultTransform = 0;
+function goNext() {
+    defaultTransform = defaultTransform - 398;
+    var slider = document.getElementById("slider");
+    if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) defaultTransform = 0;
+    slider.style.transform = "translateX(" + defaultTransform + "px)";
+}
+next.addEventListener("click", goNext);
+function goPrev() {
+    var slider = document.getElementById("slider");
+    if (Math.abs(defaultTransform) === 0) defaultTransform = 0;
+    else defaultTransform = defaultTransform + 398;
+    slider.style.transform = "translateX(" + defaultTransform + "px)";
+}
+prev.addEventListener("click", goPrev);
+

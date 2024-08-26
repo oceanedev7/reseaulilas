@@ -36,7 +36,8 @@ export default {
 
             scale: {
                 '220': '2.20',
-              }
+              },
+              
         },
     },
 
