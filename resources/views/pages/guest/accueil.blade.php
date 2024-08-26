@@ -58,7 +58,7 @@
     <div class="flex flex-row items-center justify-center space-x-32 ">
  
             <div class="h-96 w-96">
-                <img class=" h-96 w-96 rounded-xl object-cover ransition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                <img class=" h-96 w-96 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
             </div>
         
 

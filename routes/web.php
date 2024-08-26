@@ -28,6 +28,18 @@ Route::get('/actualites', function () {
     return view('pages.guest.actualites-liste');
 })->name('actualites');
 
+Route::get('/actualites/detail', function () {
+    return view('pages.guest.actualite-detail');
+});
+
+Route::get('/agenda', function () {
+    return view('pages.guest.agenda');
+})->name('agenda');
+
+Route::get('/evenement', function () {
+    return view('pages.guest.evenement');
+});
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

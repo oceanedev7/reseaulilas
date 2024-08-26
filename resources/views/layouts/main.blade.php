@@ -46,7 +46,7 @@
                         </svg>
                     </a>
                     <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="#" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Agenda</a>
+                        <a href="{{route ('agenda')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Agenda</a>
                         <a href="{{route ('actualites')}}" class="block px-4 py-2 font-semibold hover:text-jaune">Actualités</a>
                     </div>     
                 </div>
