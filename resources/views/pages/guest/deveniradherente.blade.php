@@ -29,7 +29,7 @@
     
             <div class="flex flex-col space-y-6"> 
                 <div class="relative font-black text-lg group">
-                    <a href="#" class="text-black text-xl ml-12 ">QUI SOMMES-NOUS ?</a>
+                    <div class="text-black text-xl ml-12 ">QUI SOMMES-NOUS ?</div>
                 </div>
                 <div class="max-w-xl text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, 
                     efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices
@@ -45,7 +45,7 @@
 
      <div class="flex flex-col space-y-6"> 
             <div class="relative font-black text-lg group flex justify-end">
-                <a href="#" class="text-black text-xl mr-12">QUI SOMMES-NOUS ?</a>
+                <div  class="text-black text-xl mr-12">QUI SOMMES-NOUS ?</div>
             </div>
             <div class="max-w-xl text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, 
                 efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices

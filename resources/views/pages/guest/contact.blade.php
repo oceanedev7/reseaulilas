@@ -27,7 +27,7 @@
                 </div>
                 <div class="flex-1 flex justify-center items-center gap-4 relative z-10">
                     <div class="flex-1 bg-white p-4 ">
-                        <div class="flex flex-col space-y-8">
+                        <div class="flex flex-col space-y-10">
                             <a href="https://www.google.fr/maps/place/BeBOOSTER/@14.6048436,-61.0458183,17z/data=!3m1!4b1!4m6!3m5!1s0x8c6aa15d37fd051d:0x5fead3840118fcbe!8m2!3d14.6048384!4d-61.0432434!16s%2Fg%2F11smk9_zqk?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex space-x-4">
                                 <i class="fa-solid fa-location-dot text-2xl mt-5"></i>
                                 <div class="">
@@ -60,6 +60,7 @@
                                 <input class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Prénom">
                             </div>
                             <div class="flex flex-col space-y-6">
+                                <input class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Adresse e-mail">
                                 <input class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Sujet">
                                 <textarea placeholder="Message" rows="4"   class="resize-none p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black"></textarea>
                             </div>
@@ -73,7 +74,7 @@
         </div>
     </div>
     
-<div class="w-full h-72 flex flex-row justify-center items-center space-x-24"> 
+<div class="w-full h-72 flex flex-row justify-center items-center space-x-24 mt-24 mb-8"> 
 
     <div class="flex items-center justify-center rounded-xl h-32 w-72 custom-shadow overflow-hidden"> 
         <div class="flex items-center justify-center space-x-4">
