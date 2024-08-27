@@ -36,7 +36,7 @@
                         Lorem ipsum dolor sit amet, ullamcorper ante et, efficitur leo. Aenean eget urna fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis ultricies libero non ligula sollicitudin, ac faucibus mi fringilla.
                     </div>
                     <div class="flex justify-end pb-4">
-                        <a href="#" class="bg-jaune font-semibold text-center mt-2 rounded px-3 py-1 text-sm">
+                        <a href="#" class="bg-jaune font-semibold text-center mt-2 rounded px-3 py-1">
                             Voir plus <i class="fa-solid fa-circle-arrow-right ml-1"></i>
                         </a>
                     </div>

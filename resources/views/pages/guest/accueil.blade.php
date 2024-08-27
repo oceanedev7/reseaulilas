@@ -64,7 +64,7 @@
 
         <div class="flex flex-col space-y-12 "> 
             <div class="relative font-black text-lg group text-center">
-                <a href="#" class="text-black text-3xl text-center">QUI SOMMES-NOUS ?</a>
+                <div class="text-black text-3xl text-center">QUI SOMMES-NOUS ?</div>
             </div>
             <div class="max-w-xl text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, 
                 efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices
@@ -153,11 +153,11 @@
                   </div> --}}
                   
                   <div class="relative w-full h-[400px] -translate-y-1/2">
-                    <!-- Conteneur du carrousel -->
+                   
                     <div class="w-full h-full overflow-hidden relative ">
-                      <!-- Slider -->
-                      <div id="slider" class="h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
-                        <!-- Diapositives -->
+                     
+                      <div id="slider" class="p-2  h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
+                      
                         <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
                           <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
                           <div class="flex flex-col items-center justify-center mt-6">
@@ -214,10 +214,16 @@
                               <div class="font-bold">Directrice Commerciale</div>
                             </div>
                           </div>
+                          <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
+                            <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                            <div class="flex flex-col items-center justify-center mt-6">
+                              <div>Marie DUPOND</div>
+                              <div class="font-bold">Directrice Commerciale</div>
+                            </div>
+                          </div>
                         
                       </div>
                     </div>
-                    <!-- Boutons de navigation -->
                     <button aria-label="slide backward" class="absolute z-30 left-0 ml-4 top-1/2 transform -translate-y-1/2" id="prev">
                       <i class="fa-solid fa-circle-arrow-left text-3xl text-white"></i>
                     </button>

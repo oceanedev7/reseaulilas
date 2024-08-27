@@ -13,14 +13,13 @@
 </head>
 <body>
 
-    <nav class=" h-24 w-full flex items-center">
+     {{-- <nav class=" h-24 w-full flex items-center">
         <div class="flex items-center w-full max-w-screen-xl mx-auto px-16">
             <div class="flex-shrink-0">
                 <img src="{{ asset('storage/images/logoreseaulilas.png') }}" alt="Logo Réseau LILAS" class="h-52">
             </div>
             
-            <div class="flex-grow flex items-center justify-end space-x-20">
-
+             <div class="flex-grow flex items-center justify-end ">
                 <a href="{{route ('accueil')}}" class="text-lg font-medium">Accueil</a>
 
                 <div class="relative group">
@@ -52,77 +51,148 @@
                 </div>
 
                 <a href="{{route ('nospartenaires')}}" class="text-lg font-medium">Nos partenaires</a>
+                
+                
+               
                 <a href="{{route ('contact')}}" class="text-lg font-medium">Contact</a>
+               
+            </div> 
+             
+        </div>
+    </nav>  --}}
+
+
+ 
+        
+    <nav class="h-24 w-full flex items-center">
+        <div class="flex items-center w-full max-w-screen-xl mx-auto">
+            <a href="{{route ('accueil')}}" class="flex-shrink-0 ml-14">
+                <img src="{{ asset('storage/images/logoreseaulilas.png') }}" alt="Logo Réseau LILAS" class="h-52">
+            </a>
+    
+            <!-- Conteneur pour les carrés -->
+            <div class="flex-grow flex items-center justify-end">
+                <div class="h-24 hover:bg-jaune flex items-center px-10">
+                    <a href="{{route ('accueil')}}" class="text-lg font-medium">Accueil</a>
+                </div>
+    
+                <div class="relative group h-24 hover:bg-jaune flex items-center px-10">
+                    <a href="#" class="text-lg font-medium flex items-center">
+                        Nous rejoindre
+                        <svg class="w-2 h-2 ms-2 mt-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </a>
+                    <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-44 w-60 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="{{route ('devenir-adherente')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir adhérente</a>
+                        <a href="{{route ('devenir-partenaire')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir partenaire</a>
+                        <a href="{{route ('devenir-benevole')}}" class="block px-4 py-2 font-semibold hover:text-jaune">Devenir bénévole</a>
+                    </div>     
+                </div>
+                
+    
+                <div class="relative group h-24 hover:bg-jaune flex items-center px-10">
+                    <a href="#" class="text-lg font-medium flex items-center">
+                        Nos actualités
+                        <svg class="w-2 h-2 ms-2 mt-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                        </svg>
+                    </a>
+                    <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-32 w-56 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
+                        <a href="{{route ('agenda')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Agenda</a>
+                        <a href="{{route ('actualites')}}" class="block px-4 py-2 font-semibold hover:text-jaune">Actualités</a>
+                    </div>     
+                </div>
+    
+                <div class="h-24 hover:bg-jaune flex items-center px-10"> 
+                    <a href="{{route ('nospartenaires')}}" class="text-lg font-medium">Nos partenaires</a>
+                </div>
+    
+                <div class="h-24 hover:bg-jaune flex items-center px-10"> 
+                    <a href="{{route ('contact')}}" class="text-lg font-medium">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
-    
 
+    
     <main>
         @yield('content')
     </main>
 
     
  <footer class="bg-jaune p-6">
-        <div class="flex flex-row justify-center items-start ">
-            
-          <div class="flex flex-row mb-8">
-                  <div class="flex-1 relative left-0 ">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="Logo Réseau LILAS" class="">
-                </div>  
 
-                    <div class="flex-1 ">
-                        <div class="text-base font-bold">S'engager</div>
-                        <div class="flex flex-col space-y-2 text-base">
-                            <a href="#" class="text-sm">- Devenir adhérente</a>
-                            <a href="#" class="text-sm">- Devenir partenaire</a>
-                            <a href="#" class="text-sm">- Devenir bénévole</a>
-                        </div>
-                    </div>
-
-                    <div class="flex-1 ">
-                        <div class="text-base font-bold">Horaires</div>
-                        <div class="flex flex-col space-y-1 text-base">
-                            <div class="flex items-center space-x-2">
-                                <i class="fa-solid fa-calendar-days text-xl"></i>
-                                <div class="text-sm">
-                                    Du Lundi au Vendredi <br> De 8h30 à 17h
-                                </div>
+                <div class="flex flex-row justify-center items-start px-8">
+                    <div class="flex flex-row mb-8 space-x-14 max-w-7xl">
+                       
+                        <div class="flex items-center flex-shrink-0">
+                            <img src="{{ asset('storage/images/logofooter1.png') }}" alt="Logo Réseau LILAS" class="h-16"> <!-- Taille du logo augmentée -->
+                        </div>  
+                
+                        <div class="space-x-36 flex">
+                       
+                        <div class="space-y-4">
+                            <div class="text-base font-bold">S'engager</div>
+                            <div class="flex flex-col space-y-4 text-base">
+                                <a href="{{route ('devenir-adherente')}}" class="text-sm hover:font-bold transition-all duration-500">- Devenir adhérente</a>
+                                <a href="{{route ('devenir-partenaire')}}" class="text-sm hover:font-bold transition-all duration-500">- Devenir partenaire</a>
+                                <a href="{{route ('devenir-benevole')}}" class="text-sm hover:font-bold transition-all duration-500">- Devenir bénévole</a>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="flex-1 ">
-                        <div class="text-base font-bold">Contactez-nous</div>
-                        <div class="flex flex-col space-y-2 text-base">
-                            <div class="flex items-center space-x-2">
-                                <i class="fa-solid fa-location-dot text-xl"></i>
-                                <div class="text-sm">
-                                    Centre d'Affaires BE BOOSTER, <br> 12 Rue des Arts et Métiers, <br> Fort-de-France 97200, Martinique
+                
+                        <div class="space-y-4">
+                            <div class="text-base font-bold">Horaires</div>
+                            <div class="flex flex-col space-y-1 text-base">
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-calendar-days text-xl"></i>
+                                    <div class="text-sm">
+                                        Du Lundi au Vendredi <br> de 8h30 à 17h
+                                    </div>
                                 </div>
                             </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="fa-solid fa-phone text-xl"></i>
-                                <div class="text-sm">0696 40 21 90</div>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <a href="#" class="text-xl"><i class="fa-brands fa-square-facebook"></i></a>
-                                <a href="#" class="text-xl"><i class="fa-brands fa-square-instagram"></i></a>
-                                <a href="#" class="text-xl"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="#" class="text-xl"><i class="fa-brands fa-square-whatsapp"></i></a>
-                                <div class="text-center text-sm">
-                                    Rejoignez notre groupe “Entrepreneuses 972”
+                        </div>
+                
+                        <div class="flex-1 space-y-4">
+                            <div class="text-base font-bold">Contactez-nous</div>
+                            <div class="flex flex-col space-y-4 text-base">
+                                <a href="https://www.google.fr/maps/place/BeBOOSTER/@14.6048436,-61.0458183,17z/data=!3m1!4b1!4m6!3m5!1s0x8c6aa15d37fd051d:0x5fead3840118fcbe!8m2!3d14.6048384!4d-61.0432434!16s%2Fg%2F11smk9_zqk?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-location-dot text-xl"></i>
+                                    <div class="text-sm">
+                                        Centre d'Affaires BE BOOSTER, <br> 12 Rue des Arts et Métiers, <br> Fort-de-France 97200, Martinique
+                                    </div>
+                                </a>
+                                <div class="flex items-center space-x-2">
+                                    <i class="fa-solid fa-phone text-xl"></i>
+                                    <div class="text-sm">0696 40 21 90</div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <a href="https://www.facebook.com/p/R%C3%A9seau-LILAS-100081957576254/" target="_blank" class="text-xl">
+                                        <i class="fa-brands fa-square-facebook"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/reseaulilas/" target="_blank" class="text-xl">
+                                        <i class="fa-brands fa-square-instagram"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/r%C3%A9seau-l-i-l-a-s-49037421b/?originalSubdomain=mq" target="_blank" class="text-xl">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                    </a>
+                                    <a href="https://chat.whatsapp.com/LT88YWEQe8UG1UsxWz9je9" target="_blank" class="text-xl">
+                                        <i class="fa-brands fa-square-whatsapp"></i>
+                                      </a> 
+                                    <div class="text-center text-sm">
+                                        Rejoignez notre groupe “Entrepreneuses 972”
+                                    </div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         
         
         <div class="text-center border-t border-black">
-            <div class="inline-flex items-center space-x-2 relative top-2">
+            <div class="inline-flex items-center space-x-2 relative top-2.5">
                 <a href="#" class="text-sm">Mentions légales</a>
                 <span class="border-l border-black h-4"></span>
                 <a href="#" class="text-sm">Politique de confidentialité</a>

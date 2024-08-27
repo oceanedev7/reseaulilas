@@ -64,30 +64,31 @@
 <div class="mt-16 w-full">
 
     <form class="flex flex-col items-center">
+        @csrf
         <div class="flex flex-col space-y-4 w-full max-w-4xl">
             <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1" placeholder="Nom">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1" placeholder="Prénom">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" placeholder="Nom">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Prénom">
             </div>
             
             <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1" placeholder="Raison sociale">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1" placeholder="Fonction">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Raison sociale">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" placeholder="Fonction">
             </div>
             
             <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1" placeholder="Adresse e-mail">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1" placeholder="Numéro de téléphone">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Adresse e-mail">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Numéro de téléphone">
             </div>
     
-            <input class="p-2 rounded-xl border-2 border-jaune w-full" placeholder="Adresse postale">
+            <input class="p-2 rounded-xl border-2 border-jaune w-full focus:ring-0 focus:border-black " placeholder="Adresse postale">
     
             <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1" placeholder="Ville">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1" placeholder="Code postal">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Ville">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Code postal">
             </div>
     
-            <select class="p-2 rounded-xl border-2 border-jaune w-full">
+            <select class="p-2 rounded-xl border-2 border-jaune w-full focus:ring-0 focus:border-black ">
                 <option value="" disabled selected>Veuillez sélectionner un type de partenariat</option>
                 <option value="">Sponsoring</option>
                 <option value="">Mécénat</option>
@@ -95,7 +96,7 @@
                 <option value="">Parrainage</option>
             </select>
     
-            <textarea class="p-2 rounded-xl border-2 border-jaune resize-none w-full text-gray-500" rows="5" placeholder="Message"></textarea>
+            <textarea class="p-2 rounded-xl border-2 border-jaune resize-none w-full text-gray-500 focus:ring-0 focus:border-black " rows="5" placeholder="Message"></textarea>
         </div>
         <div class="flex justify-end w-full max-w-4xl mt-4">
             <button class="font-bold bg-jaune rounded-xl py-1.5 px-4">ENVOYER</button>

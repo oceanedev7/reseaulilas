@@ -65,7 +65,7 @@
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 72" stroke="currentColor" class="w-6 h-18">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v64m0 0l6-6m-6 6l-6-6" />
     </svg>
-    <a href="" class="bg-jaune py-4 px-6 rounded-xl font-black text-lg"> JE VEUX DEVENIR ADHÉRANTE</a>
+    <a href="https://www.helloasso.com/associations/lilas-les-independantes-libres-alignees-et-solidai" target="_blank" class="bg-jaune py-4 px-6 rounded-xl font-black text-lg"> JE VEUX DEVENIR ADHÉRANTE</a>
     </div>
 
     </div> 

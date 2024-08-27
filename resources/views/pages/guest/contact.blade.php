@@ -28,27 +28,27 @@
                 <div class="flex-1 flex justify-center items-center gap-4 relative z-10">
                     <div class="flex-1 bg-white p-4 ">
                         <div class="flex flex-col space-y-8">
-                            <div class="flex space-x-4">
+                            <a href="https://www.google.fr/maps/place/BeBOOSTER/@14.6048436,-61.0458183,17z/data=!3m1!4b1!4m6!3m5!1s0x8c6aa15d37fd051d:0x5fead3840118fcbe!8m2!3d14.6048384!4d-61.0432434!16s%2Fg%2F11smk9_zqk?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex space-x-4">
                                 <i class="fa-solid fa-location-dot text-2xl mt-5"></i>
                                 <div class="">
                                     Centre d'Affaires BE BOOSTER, <br> 12 Rue des Arts et Métiers, <br> Fort-de-France 97200, Martinique
                                 </div>
-                            </div>
+                            </a>
                             <div class="flex space-x-4">
                                 <i class="fa-solid fa-phone text-2xl"></i>
                                 <div class="">0696 40 21 90</div>
                             </div>
                             <div class="flex items-center space-x-4">
-                                <a href="#" class="text-3xl"><i class="fa-brands fa-square-facebook"></i></a>
-                                <a href="#" class="text-3xl"><i class="fa-brands fa-square-instagram"></i></a>
-                                <a href="#" class="text-3xl"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="https://www.facebook.com/p/R%C3%A9seau-LILAS-100081957576254/" target="_blank" class="text-3xl"><i class="fa-brands fa-square-facebook"></i></a>
+                                <a href="https://www.instagram.com/reseaulilas/" target="_blank" class="text-3xl"><i class="fa-brands fa-square-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/r%C3%A9seau-l-i-l-a-s-49037421b/?originalSubdomain=mq" target="_blank" class="text-3xl"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
-                            <div class="flex space-x-4">
-                                <a href="#" class="text-3xl"><i class="fa-brands fa-square-whatsapp mt-5"></i></a>
+                            <a  href="https://chat.whatsapp.com/LT88YWEQe8UG1UsxWz9je9" target="_blank" class="flex space-x-4">
+                                <i class="fa-brands fa-square-whatsapp mt-5 text-3xl"></i>
                                 <div class="">Rejoignez notre groupe 
                                     "Entrepreneuses 972" <br> dédié aux entrepreneuses
                                     de Martinique <br> (déjà + 600 membres)</div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                     <div class="flex-1 p-4">
@@ -56,12 +56,12 @@
                         <form class="space-y-6">
                             @csrf
                             <div class="flex flex-row space-x-4">
-                                <input class="p-2 rounded-xl border-2 border-jaune" placeholder="Nom">
-                                <input class="p-2 rounded-xl border-2 border-jaune" placeholder="Prénom">
+                                <input class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Nom">
+                                <input class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Prénom">
                             </div>
                             <div class="flex flex-col space-y-6">
-                                <input class="p-2 rounded-xl border-2 border-jaune" placeholder="Sujet">
-                                <textarea placeholder="Message" rows="4"   class="resize-none p-2 rounded-xl border-2 border-jaune"></textarea>
+                                <input class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Sujet">
+                                <textarea placeholder="Message" rows="4"   class="resize-none p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black"></textarea>
                             </div>
                             <div class="flex justify-end">
                                 <button class="font-bold bg-jaune rounded-xl py-1.5 px-4">ENVOYER</button>
