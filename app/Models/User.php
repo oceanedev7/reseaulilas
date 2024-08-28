@@ -23,6 +23,88 @@ class User extends Authenticatable
         'is_admin',
     ];
 
+    public function actualites()
+     {
+         return $this->hasMany(Actualite::class);
+     }
+
+     public function evenements()
+     {
+         return $this->hasMany(Agenda::class);
+     }
+
+     public function contactRequests()
+     {
+         return $this->hasMany(Contact_request::class);
+     }
+
+     public function partnersSignup()
+     {
+         return $this->hasMany(Partner_signup::class);
+     }
+
+     public function volunteersSignup()
+     {
+         return $this->hasMany(Volunteer_signup::class);
+     }
+
+     public function officeAdresses()
+     {
+         return $this->hasMany(Office_adress_content::class);
+     }
+
+     public function numbers()
+     {
+         return $this->hasMany(Number_content::class);
+     }
+
+     public function contactContents()
+     {
+         return $this->hasMany(Contact_content::class);
+     }
+
+     public function partnerLogos()
+     {
+         return $this->hasMany(Partner_logo::class);
+     }
+
+     public function aboutContents()
+     {
+         return $this->hasMany(About_content::class);
+     }
+
+     public function memberContents()
+     {
+         return $this->hasMany(Member_content::class);
+     }
+
+     public function teamContents()
+     {
+         return $this->hasMany(Team_content::class);
+     }
+
+     public function partnerContents()
+     {
+         return $this->hasMany(Partner_content::class);
+     }
+
+     public function volunteerContents()
+     {
+         return $this->hasMany(Volunteer_content::class);
+     }
+
+     public function partnerThankContents()
+     {
+         return $this->hasMany(Partner_thanks_content::class);
+     }
+
+     public function missionContents()
+     {
+         return $this->hasMany(Mission_content::class);
+     }
+
+
+
     /**
      * The attributes that should be hidden for serialization.
      *
