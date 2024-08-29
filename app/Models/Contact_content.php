@@ -12,6 +12,7 @@ class Contact_content extends Model
     protected $fillable = [
         'horaire',
         'adresse',
+        'email',
         'telephone',
     ];
 

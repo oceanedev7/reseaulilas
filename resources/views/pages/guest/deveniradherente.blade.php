@@ -17,55 +17,49 @@
     </div>
 
 
-    <div class=" w-full p-12">
+    <div class="w-full p-14">
 
-        <div class="font-black text-xl p-8"> POURQUOI ADHÉRER ? </div>
+        <div class="text-2xl font-bold text-center mt-4"> DÉCOUVREZ NOS FORMULES </div>
 
-        <div class="flex flex-row items-center justify-center space-x-32 p-12">
-     
-                <div class="h-60 w-60">
-                    <img class=" h-60 w-60 rounded-xl object-cover ransition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                </div>
-    
-            <div class="flex flex-col space-y-6"> 
-                <div class="relative font-black text-lg group">
-                    <div class="text-black text-xl ml-12 ">QUI SOMMES-NOUS ?</div>
-                </div>
-                <div class="max-w-xl text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, 
-                    efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices
-                     consectetur. Vivamus lacinia risus non nunc dignissim, ut tristique sapien euismod. Nullam sed mi varius 
-                     ipsum blandit mollis. Sed lacinia tempus est in efficitur. Integer aliquam ut eros ac elementum. 
+        <div class="flex justify-center space-x-12 mt-20">
+            <div class=" flex flex-col space-y-4">
+                <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                <div  class=" flex flex-col">
+                <div class="text-center max-w-60 font-black"> FORMULE 1 </div>
+                <div class="text-center max-w-60 font-semibold"> Pour celles qui souhaitent... </div>
                 </div>
             </div>
-    
-        </div>
-
-
-        <div class="flex flex-row items-center justify-center space-x-32 p-12">
-
-     <div class="flex flex-col space-y-6"> 
-            <div class="relative font-black text-lg group flex justify-end">
-                <div  class="text-black text-xl mr-12">QUI SOMMES-NOUS ?</div>
+            <div class=" flex flex-col space-y-4">
+                <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                <div  class=" flex flex-col">
+                    <div class="text-center max-w-60 font-black"> FORMULE 2 </div>
+                    <div class="text-center max-w-60 font-semibold"> Pour celles qui souhaitent... </div>
+                    </div>            </div>
+            <div class=" flex flex-col space-y-4">
+                <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                <div  class=" flex flex-col">
+                    <div class="text-center max-w-60 font-black"> FORMULE 3 </div>
+                    <div class="text-center max-w-60 font-semibold"> Pour celles qui souhaitent... </div>
+                    </div>            </div>
+            <div class=" flex flex-col space-y-4">
+                <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                <div  class=" flex flex-col">
+                    <div class="text-center max-w-60 font-black"> FORMULE 4 </div>
+                    <div class="text-center max-w-60 font-semibold"> Pour celles qui souhaitent... </div>
+                    </div>           
             </div>
-            <div class="max-w-xl text-justify"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, 
-                efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices
-                 consectetur. Vivamus lacinia risus non nunc dignissim, ut tristique sapien euismod. Nullam sed mi varius 
-                 ipsum blandit mollis. Sed lacinia tempus est in efficitur. Integer aliquam ut eros ac elementum. 
-            </div>
         </div>
+        
 
-            <div class="h-60 w-60">
-                <img class=" h-60 w-60 rounded-xl object-cover ransition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-            </div>
-     
-        </div>
 
-       <div class="flex flex-col justify-center items-center p-12 space-y-6">
+        <div class="flex flex-row items-center justify-center space-x-32 mt-20">
+
+       <div class="flex flex-col justify-center items-center space-y-6 ">
     <div class="font-black text-2xl text-center"> ADHÉRER EN LIGNE </div>
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 72" stroke="currentColor" class="w-6 h-18">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v64m0 0l6-6m-6 6l-6-6" />
     </svg>
-    <a href="https://www.helloasso.com/associations/lilas-les-independantes-libres-alignees-et-solidai" target="_blank" class="bg-jaune py-4 px-6 rounded-xl font-black text-lg"> JE VEUX DEVENIR ADHÉRANTE</a>
+    <a href="https://www.helloasso.com/associations/lilas-les-independantes-libres-alignees-et-solidai" target="_blank" class="bg-jaune py-4 px-6 rounded-xl font-black text-lg"> JE VEUX DEVENIR ADHÉRENTE</a>
     </div>
 
     </div> 

@@ -38,6 +38,11 @@
                                 <i class="fa-solid fa-phone text-2xl"></i>
                                 <div class="">0696 40 21 90</div>
                             </div>
+
+                            <a href="mailto:adressemail@gmail.com" class="flex space-x-4">
+                                <i class="fa-solid fa-envelope text-2xl"></i>
+                                <div class="">adressemail@gmail.com</div>
+                            </a>
                             <div class="flex items-center space-x-4">
                                 <a href="https://www.facebook.com/p/R%C3%A9seau-LILAS-100081957576254/" target="_blank" class="text-3xl"><i class="fa-brands fa-square-facebook"></i></a>
                                 <a href="https://www.instagram.com/reseaulilas/" target="_blank" class="text-3xl"><i class="fa-brands fa-square-instagram"></i></a>

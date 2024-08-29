@@ -25,6 +25,10 @@ Route::get('/devenir/adherente', function () {
     return view('pages.guest.deveniradherente');
 })->name('devenir-adherente');
 
+Route::get('/nous/decouvrir', function () {
+    return view('pages.guest.nousdecouvrir');
+})->name('nous-decouvrir');
+
 Route::get('/actualites', function () {
     return view('pages.guest.actualites-liste');
 })->name('actualites');
