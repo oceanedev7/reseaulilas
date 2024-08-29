@@ -80,7 +80,7 @@
                     <a href="{{route ('nous-decouvrir')}}" class="text-lg font-medium">Nous découvrir</a>
                 </div>
     
-                <div class="relative group h-24 hover:bg-jaune flex items-center px-6">
+                {{-- <div class="relative group h-24 hover:bg-jaune flex items-center px-6">
                     <a href="#" class="text-lg font-medium flex items-center">
                         Nous rejoindre
                         <svg class="w-2 h-2 ms-2 mt-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
@@ -88,15 +88,46 @@
                         </svg>
                     </a>
                     <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-44 w-60 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="{{route ('devenir-adherente')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir adhérente</a>
+                        <a href="{{route ('devenir-adherente')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir adhérente</a>        
                         <a href="{{route ('devenir-partenaire')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir partenaire</a>
                         <a href="{{route ('devenir-benevole')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir bénévole</a>
                         <a href="#" class="block px-4 py-2 font-semibold hover:text-jaune">Recrutement</a>
 
                     </div>     
-                </div>
+                </div> --}}
+
+
+                 <li class=" relative h-24 hover:bg-jaune flex justify-center items-center px-6 menu-item">
+                    <a href="#" class="text-lg font-medium flex items-center">Nous rejoindre<svg class="w-2 h-2 ms-2 mt-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                    </svg>
+                </a>
+                    <ul class="z-10 absolute hidden text-center mt-52 w-52 p-2 space-y-2 bg-white border border-black rounded-lg  submenu">
+                        <li class="relative submenu-item">
+                      
+                          <a href="#" class="custom-border text-center  flex justify-center px-4 hover:text-yellow-400 font-semibold">
+                            <svg class="w-2 h-2 ms-2 mt-2.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                            Devenir adhérente
+                        </a>
+              
+                            <ul class="z-10 absolute top-0 right-48 hidden p-2 w-44 space-y-2 bg-white border-2 border-black rounded-lg sub-submenu overflow-auto">
+                                <li><a href="#" class="block px-4  hover:text-jaune custom-border font-medium">Formule 1 </a></li>
+                                <li><a href="#" class="block px-4  hover:text-jaune custom-border font-medium">Formule 2</a></li>
+                                <li><a href="#" class="block px-4  hover:text-jaune custom-border font-medium">Formule 3</a></li>
+                                <li><a href="#" class="block px-4  hover:text-jaune font-medium">Formule 4</a></li>
+                            </ul>
+                        </li>
+                       
+                        <li><a href="#" class="block px-4  hover:text-jaune custom-border font-semibold">Devenir partenaire</a></li>
+                        <li><a href="#" class="block px-4  hover:text-jaune custom-border font-semibold">Devenir bénévole</a></li>
+                        <li><a href="#" class="block px-4  hover:text-jaune font-semibold">Recrutement</a></li>
+                       
+                    </ul>
+                </li>
+
                 
-    
                 <div class="relative group h-24 hover:bg-jaune flex items-center px-6">
                     <a href="#" class="text-lg font-medium flex items-center">
                         Nos actions
@@ -104,11 +135,15 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                         </svg>
                     </a>
-                    <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-32 w-56 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-32 w-44 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
                         <a href="{{route ('agenda')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Agenda</a>
                         <a href="{{route ('actualites')}}" class="block px-4 py-2 font-semibold hover:text-jaune">Actualités</a>
                     </div>     
                 </div>
+
+
+
+                
     
                 <div class="h-24 hover:bg-jaune flex items-center px-6"> 
                     <a href="{{route ('nospartenaires')}}" class="text-lg font-medium">Nos partenaires</a>

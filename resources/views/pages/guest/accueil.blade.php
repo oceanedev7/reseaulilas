@@ -19,135 +19,76 @@
 
     <div class="relative z-10 flex justify-center">
         
-        <div class="absolute -top-20 bg-jaune h-40 w-7/10 p-6 rounded-xl flex items-center justify-center space-x-16 shadow-lg">
+        <div class="absolute -top-20 bg-jaune h-40 w-7/10 p-6 rounded-xl flex items-center justify-center space-x-8 shadow-lg">
             
             <div class="flex flex-col items-center text-center">
-                <div class="font-black text-6xl" id="counter1">0</div>
-                <div class="text-xl">adhérentes</div>
+                <div class="font-black text-6xl" id="counter1"></div>
+                <div class="text-sm">des entreprises sont <br> créées par des femmes</div>
             </div>
     
        
             <div class="h-full border-l-2 border-black"></div>
     
             <div class="flex flex-col items-center text-center">
-                <div class="font-black text-6xl" id="counter2">14</div>
-                <div class="text-xl">partenaires</div>
+                <div class="font-black text-6xl" id="counter2"></div>
+                <div class="text-sm">des entrepreneuses sans <br> réseau ne se rémunèrent pas</div>
             </div>
     
             
             <div class="h-full border-l-2 border-black"></div>
     
             <div class="flex flex-col items-center text-center ">
-                <div class="font-black text-6xl" id="counter3">11</div>
-                <div class="text-xl">rencontres</div>
+                <div class="font-black text-6xl" id="counter3"></div>
+                <div class="text-sm">d'entrepreuneuses <br> manque de financements</div>
             </div>
     
         
             <div class="h-full border-l-2 border-black"></div>
     
             <div class="flex flex-col items-center text-center">
-                <div class="font-black text-6xl">90</div>
-                <div class="text-xl">adhérentes</div>
+                <div class="font-black text-6xl">90%</div>
+                <div class="text-sm">des entreprises sont <br> créées par des femmes</div>
             </div>
         </div>
     </div>
     
-       
-        <div class="w-full h-screen">
-            <div class="relative w-full h-3/5 flex justify-center">
-                <div class="mt-20 font-black text-3xl">
-                    RECONTREZ L'ÉQUIPE
-                </div>
+       <div class="w-full h-screen">
+
+        <div class="uppercase text-3xl font-black text-center relative top-32"> Les raisons de rejoindre notre réseau </div>
+
+        <div class="flex flex-row justify-center items-center space-x-24 mt-52">
+
+          <div class="relative bg-white max-w-xs rounded-xl custom-shadow w-60 h-72 overflow-hidden ">
+            <div class="absolute top-0 left-0 w-full h-2/5 bg-jaune flex justify-center items-center">
+              <i class="fa-solid fa-plus text-6xl "></i>
             </div>
-
-            <div class="bg-jaune w-full relative h-2/5 flex flex-row">
-            
-                  <div class="relative w-full h-[400px] -translate-y-1/2">
-                   
-                    <div class="w-full h-full overflow-hidden relative ">
-                     
-                      <div id="slider" class="p-2  h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
-                      
-                        <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                          <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                          <div class="flex flex-col items-center justify-center mt-6">
-                            <div>Marie DUPOND</div>
-                            <div class="font-bold">Directrice Commerciale</div>
-                          </div>
-                        </div>
-                        <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                            <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                            <div class="flex flex-col items-center justify-center mt-6">
-                              <div>Marie DUPOND</div>
-                              <div class="font-bold">Directrice Commerciale</div>
-                            </div>
-                          </div>
-                          <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                            <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                            <div class="flex flex-col items-center justify-center mt-6">
-                              <div>Marie DUPOND</div>
-                              <div class="font-bold">Directrice Commerciale</div>
-                            </div>
-                          </div>
-                          <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                            <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                            <div class="flex flex-col items-center justify-center mt-6">
-                              <div>Marie DUPOND</div>
-                              <div class="font-bold">Directrice Commerciale</div>
-                            </div>
-                          </div>
-                          <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                            <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                            <div class="flex flex-col items-center justify-center mt-6">
-                              <div>Marie DUPOND</div>
-                              <div class="font-bold">Directrice Commerciale</div>
-                            </div>
-                          </div>
-                          <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                            <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                            <div class="flex flex-col items-center justify-center mt-6">
-                              <div>Marie DUPOND</div>
-                              <div class="font-bold">Directrice Commerciale</div>
-                            </div>
-                          </div>
-                          <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                            <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                            <div class="flex flex-col items-center justify-center mt-6">
-                              <div>Marie DUPOND</div>
-                              <div class="font-bold">Directrice Commerciale</div>
-                            </div>
-                          </div>
-                          <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                            <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                            <div class="flex flex-col items-center justify-center mt-6">
-                              <div>Marie DUPOND</div>
-                              <div class="font-bold">Directrice Commerciale</div>
-                            </div>
-                          </div>
-                          <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                            <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                            <div class="flex flex-col items-center justify-center mt-6">
-                              <div>Marie DUPOND</div>
-                              <div class="font-bold">Directrice Commerciale</div>
-                            </div>
-                          </div>
-                        
-                      </div>
-                    </div>
-                    <button aria-label="slide backward" class="absolute z-30 left-0 ml-4 top-1/2 transform -translate-y-1/2" id="prev">
-                      <i class="fa-solid fa-circle-arrow-left text-3xl text-white"></i>
-                    </button>
-                    <button aria-label="slide forward" class="absolute z-30 right-0 mr-4 top-1/2 transform -translate-y-1/2" id="next">
-                      <i class="fa-solid fa-circle-arrow-right text-3xl text-white"></i>
-                    </button>
-                  </div>
-                  
-                  
-
-              </div>
-            
-
+            <div class="relative z-10 p-4 h-full flex items-center justify-center text-center mt-14">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur.
+            </div>
         </div>
+
+        <div class="relative bg-white max-w-xs rounded-xl custom-shadow w-60 h-72 overflow-hidden ">
+          <div class="absolute top-0 left-0 w-full h-2/5 bg-jaune flex justify-center items-center">
+            <i class="fa-solid fa-plus text-6xl "></i></div>
+            <div class="relative z-10 p-4 h-full flex items-center justify-center text-center mt-14">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur.
+            </div>
+      </div>
+
+      <div class="relative bg-white max-w-xs rounded-xl custom-shadow w-60 h-72 overflow-hidden ">
+        <div class="absolute top-0 left-0 w-full h-2/5 bg-jaune flex justify-center items-center">
+          <i class="fa-solid fa-plus text-6xl "></i>
+        </div>
+        <div class="relative z-10 p-4 h-full flex items-center justify-center text-center mt-14">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur.
+        </div>
+    </div>
+        
+        </div>
+
+       </div>
+    
+      
 
         <div class="w-full h-screen p-12"> 
 
@@ -204,10 +145,54 @@
         </div>
     </div> --}}
    
-    
-        
+   
+    <div class="w-full h-screen">
+      <div class="relative w-full h-3/5 flex justify-center">
+          <div class="mt-20 font-black text-3xl uppercase">
+            Témoignages inspirants
+          </div>
+      </div>
 
-    <div class="h-60 w-full bg-gray-200 p-8">
+      <div class="bg-jaune w-full relative h-2/5 flex flex-row justify-center space-x-6">
+
+        <div class="relative">
+          <i class="fa-solid fa-quote-left text-jaune text-8xl absolute -top-36 right-6 z-10"></i>
+          <div class="bg-white -translate-y-1/2 flex flex-col justify-center max-w-sm min-h-min rounded-xl custom-shadow p-6 text-center overflow-auto">
+              <div class="mt-4">
+            <div>
+                  Participer à l'atelier sur l'entrepreneuriat a été une expérience déterminante pour moi. Les sessions étaient enrichissantes, pratiques et pleines de conseils concrets.
+              </div>
+              <div class="mt-2 font-semibold">Marie DUPOND</div>
+              </div>
+          </div>
+      </div>
+      <div class="relative">
+        <i class="fa-solid fa-quote-left text-jaune text-8xl absolute -top-36 right-6 z-10"></i>
+        <div class="bg-white -translate-y-1/2 flex flex-col justify-center max-w-sm min-h-min rounded-xl custom-shadow p-6 text-center overflow-auto">
+            <div class="mt-4">
+          <div>
+                Participer à l'atelier sur l'entrepreneuriat a été une expérience déterminante pour moi. Les sessions étaient enrichissantes, pratiques et pleines de conseils concrets.
+            </div>
+            <div class="mt-2 font-semibold">Marie DUPOND</div>
+            </div>
+        </div>
+    </div>
+    <div class="relative">
+      <i class="fa-solid fa-quote-left text-jaune text-8xl absolute -top-36 right-6 z-10"></i>
+      <div class="bg-white -translate-y-1/2 flex flex-col justify-center max-w-sm min-h-min rounded-xl custom-shadow p-6 text-center overflow-auto">
+          <div class="mt-4">
+        <div>
+              Participer à l'atelier sur l'entrepreneuriat a été une expérience déterminante pour moi. Les sessions étaient enrichissantes, pratiques et pleines de conseils concrets.
+          </div>
+          <div class="mt-2 font-semibold">Marie DUPOND</div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+        
+    <div class="h-60 w-full p-8">
         <div class="text-center font-black text-2xl"> ILS NOUS SOUTIENNENT </div> 
     
     <div class="overflow-hidden whitespace-nowrap relative mt-8">
