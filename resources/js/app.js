@@ -97,4 +97,3 @@ nextButton.addEventListener( 'click', function() {
   rotateCarousel();
 });
 
-

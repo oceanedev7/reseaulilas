@@ -17,9 +17,15 @@
     </div>
 
 
-    <div class="w-full p-14">
+    <div class="w-full p-10">
 
-        <div class="text-2xl font-bold text-center mt-4"> DÉCOUVREZ NOS FORMULES </div>
+        <div class="flex space-x-2 font-bold text-lg">
+            <div> Nos actions </div> 
+            <div> / </div> 
+            <a href="{{route ('devenir-benevole')}}"> Devenir bénévole </a>
+        </div>
+
+        <div class="text-2xl font-bold text-center mt-8"> DÉCOUVREZ NOS FORMULES </div>
 
         <div class="flex justify-center space-x-12 mt-20">
             <div class=" flex flex-col space-y-4">

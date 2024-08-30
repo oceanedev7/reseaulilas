@@ -17,10 +17,16 @@
         <div class="font-black text-4xl"> ACTUALITÉS </div>
     </div>
 
-    <div class="w-full p-12">
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-6 justify-items-center ">
-            <div class="flex flex-col bg-white max-w-xs w-full rounded-xl custom-shadow overflow-hidden">
+    <div class="w-full p-10">
+
+        <div class="flex space-x-2 font-bold text-lg">
+        <div> Nos actions </div> 
+        <div> / </div> 
+        <a href="{{route ('actualites')}}"> Actualités </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-6 justify-items-center mt-6">
+            <div class="bg-white max-w-xs w-full rounded-xl custom-shadow overflow-hidden">
                 <div class="relative rounded-lg overflow-hidden">
                     <div class="p-4">
                         <img class="w-full h-40 rounded-lg object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="Image d'exemple">
@@ -44,9 +50,8 @@
             </div>
             
             
-
-            
-            
+  
+        </div>
         
             
             

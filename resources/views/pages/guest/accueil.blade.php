@@ -93,20 +93,26 @@
         <div class="w-full h-screen p-12"> 
 
         <div class="text-center text-3xl font-black"> NOS FORMULES </div>
-
-        <div class="relative mx-auto my-[40px] w-[210px] h-[140px] perspective-[1000px]">
-          <div class=" carousel absolute w-full h-full transform-gpu transition-transform duration-1000" style="transform: translateZ(-288px); transform-style: preserve-3d;">
-              <div style="transform: rotateY(0deg) translateZ(288px);" class="bg-blue-300 absolute w-[190px] h-[120px] left-[10px] top-[10px] border-2 border-black leading-[116px] text-[80px] font-bold  text-center">1</div>
-              <div style="transform: rotateY(40deg) translateZ(288px);" class="bg-red-300 absolute w-[190px] h-[120px] left-[10px] top-[10px] border-2 border-black leading-[116px] text-[80px] font-bold  text-center">2</div>
-              <div style="transform: rotateY(80deg) translateZ(288px);" class="bg-gray-300 absolute w-[190px] h-[120px] left-[10px] top-[10px] border-2 border-black leading-[116px] text-[80px] font-bold  text-center">3</div>
-              <div style="transform: rotateY(120deg) translateZ(288px);" class="bg-green-300 absolute w-[190px] h-[120px] left-[10px] top-[10px] border-2 border-black leading-[116px] text-[80px] font-bold  text-center">4</div>
-              <div style="transform: rotateY(160deg) translateZ(288px);" class="bg-yellow-300 absolute w-[190px] h-[120px] left-[10px] top-[10px] border-2 border-black leading-[116px] text-[80px] font-bold  text-center">5</div>
-            </div>
+        
+        <div class="scene">
+          <div class="carousel">
+            <div class="carousel__cell">1</div>
+            <div class="carousel__cell">2</div>
+            <div class="carousel__cell">3</div>
+            <div class="carousel__cell">4</div>
+            <div class="carousel__cell">5</div>
+            <div class="carousel__cell">6</div>
+            <div class="carousel__cell">7</div>
+            <div class="carousel__cell">8</div>
+            <div class="carousel__cell">9</div>
           </div>
-<p style="text-align: center;">
-  <button class="previous-button">Previous</button>
-  <button class="next-button">Next</button>
-</p>
+        </div>
+        <p style="text-align: center;">
+          <button class="previous-button">Previous</button>
+          <button class="next-button">Next</button>
+        </p>
+      
+      
         </div>
           
         
@@ -196,7 +202,7 @@
         <div class="text-center font-black text-2xl"> ILS NOUS SOUTIENNENT </div> 
     
     <div class="overflow-hidden whitespace-nowrap relative mt-8">
-        <div class="flex items-center animate-caroussel">
+        <div class="flex animate-caroussel">
           <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
           <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
           <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
@@ -215,7 +221,7 @@
       </div>
     
     </div>
-    
+  
 
     @endsection
     

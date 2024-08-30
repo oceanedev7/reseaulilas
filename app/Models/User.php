@@ -103,6 +103,20 @@ class User extends Authenticatable
          return $this->hasMany(Mission_content::class);
      }
 
+     public function jobOffers()
+     {
+         return $this->hasMany(Job_offers::class);
+     }
+
+     public function reviews()
+     {
+         return $this->hasMany(Reviews::class);
+     }
+
+     public function formules()
+     {
+         return $this->hasMany(Formules::class);
+     }
 
 
     /**

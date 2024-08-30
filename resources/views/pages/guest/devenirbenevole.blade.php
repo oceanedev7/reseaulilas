@@ -17,6 +17,12 @@
         <div class="font-black text-4xl"> DEVENIR BÉNÉVOLE </div>
     </div>
 
+    <div class="flex space-x-2 font-bold text-lg relative top-10 ml-6">
+        <div> Nos actions </div> 
+        <div> / </div> 
+        <a href="{{route ('devenir-benevole')}}"> Devenir bénévole </a>
+    </div>
+
     <div class="w-full h-72 flex justify-center items-center">
         <div class="max-w-5xl">
             <div class="text-justify">

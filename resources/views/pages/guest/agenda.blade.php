@@ -19,7 +19,13 @@
 
     <div class="w-full p-12">
 
-        <div class="font-black text-xl">FILTRER LES RÉSULTATS</div>
+        <div class="flex space-x-2 font-bold text-lg">
+            <div> Nos actions </div> 
+            <div> / </div> 
+            <a href="{{route ('agenda')}}"> Agenda </a>
+            </div>
+
+        <div class="font-black text-xl mt-8">FILTRER LES RÉSULTATS</div>
 
         <form class="flex flex-row space-x-12 mt-8"> 
             <input placeholder="Date" class="bg-gray-300 border-none rounded-lg pl-4 placeholder-gray-700" type="date">

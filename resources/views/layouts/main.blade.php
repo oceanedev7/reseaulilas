@@ -105,7 +105,7 @@
                     <ul class="z-10 absolute hidden text-center mt-52 w-52 p-2 space-y-2 bg-white border border-black rounded-lg  submenu">
                         <li class="relative submenu-item">
                       
-                          <a href="#" class="custom-border text-center  flex justify-center px-4 hover:text-yellow-400 font-semibold">
+                          <a href="{{route ('devenir-adherente')}}" class="custom-border text-center  flex justify-center px-4 hover:text-yellow-400 font-semibold">
                             <svg class="w-2 h-2 ms-2 mt-2.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                             </svg>
@@ -120,8 +120,8 @@
                             </ul>
                         </li>
                        
-                        <li><a href="#" class="block px-4  hover:text-jaune custom-border font-semibold">Devenir partenaire</a></li>
-                        <li><a href="#" class="block px-4  hover:text-jaune custom-border font-semibold">Devenir bénévole</a></li>
+                        <li><a href="{{route ('devenir-partenaire')}}" class="block px-4  hover:text-jaune custom-border font-semibold">Devenir partenaire</a></li>
+                        <li><a href="{{route ('devenir-benevole')}}" class="block px-4  hover:text-jaune custom-border font-semibold">Devenir bénévole</a></li>
                         <li><a href="#" class="block px-4  hover:text-jaune font-semibold">Recrutement</a></li>
                        
                     </ul>
