@@ -58,20 +58,25 @@
                     </div>
                     <div class="flex-1 p-4">
                         <div class="text-center">LOREM IPSUM</div>
-                        <form class="space-y-6">
+                        <form class="space-y-6" method="POST" action="{{ route('contact-request') }}">
                             @csrf
                             <div class="flex flex-row space-x-4">
-                                <input class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Nom">
-                                <input class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Prénom">
+                                <input name="nom" class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Nom" required>
+                                <input name="prenom" class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Prénom" required>
                             </div>
                             <div class="flex flex-col space-y-6">
-                                <input class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Adresse e-mail">
-                                <input class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Sujet">
-                                <textarea placeholder="Message" rows="4"   class="resize-none p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black"></textarea>
+                                <input name="email" class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Adresse e-mail" required>
+                                <input name="sujet" class="p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" placeholder="Sujet" required>
+                                <textarea name="message" placeholder="Message" rows="4" class="resize-none p-2 rounded-xl border-2 border-jaune focus:ring-0 focus:border-black" required></textarea>
                             </div>
                             <div class="flex justify-end">
                                 <button class="font-bold bg-jaune rounded-xl py-1.5 px-4">ENVOYER</button>
-                            </div>                        
+                            </div>   
+                            @if (session('success'))
+                                <div class="alert alert-success w-full text-center font-bold">
+                                    {{ session('success') }}
+                                </div>
+                            @endif                     
                         </form>
                     </div>
                 </div>

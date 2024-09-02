@@ -3,15 +3,13 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ContactRequestController;
+
 
 
 Route::get('/', function () {
     return view('pages.guest.accueil');
 })->name('accueil');
-
-Route::get('/contact', function () {
-    return view('pages.guest.contact');
-})->name('contact');
 
 Route::get('/devenir/partenaire', function () {
     return view('pages.guest.devenirpartenaire');
@@ -73,6 +71,12 @@ Route::get('/deveniradherente/formule4', function () {
     return view('pages.guest.formule4');
 })->name('formule4');
 
+Route::post('/demandecontact', [ContactRequestController::class, 'store'])->name('contact-request');
+Route::get('/contact', [ContactRequestController::class, 'index'])->name('contact');
+
+// Route::get('/contact', function () {
+//     return view('pages.guest.contact');
+// })->name('contact');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
