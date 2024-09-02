@@ -12,10 +12,66 @@
     @section('title', 'Nous découvrir')
 
     @section('content')
+    <div class="bg-jaune h-56 w-full flex justify-center items-center">
+      <div class="font-black text-4xl uppercase"> Nous découvrir </div>
+    </div>
 
-    <div class="w-full h-screen">
+    <div class="w-full h-screen p-12 flex items-center justify-center"> 
+
+      <div class="flex items-center justify-center space-x-24">
+        <img class="h-96 w-96 rounded-xl object-cover transition-transform duration-500 transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">     <div class="flex flex-col items-center space-y-4"> 
+        <div class="font-black text-3xl uppercase text-center">  Notre histoire </div>
+        <div class="max-w-2xl text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices consectetur. Vivamus lacinia risus non nunc dignissim, ut tristique sapien euismod. Nullam sed mi varius ipsum blandit mollis. Sed lacinia tempus est in efficitur. Integer aliquam ut eros ac elementum. Fusce et libero metus. Nulla et metus in nibh finibus sodales. In eget bibendum sapien, sit amet tempor velit. Nulla facilisi. Morbi eu elementum augue. 
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices consectetur. Vivamus lacinia risus non nunc dignissim, ut tristique sapien euismod. Nullam sed mi varius ipsum blandit mollis. Sed lacinia tempus est in efficitur. Integer aliquam ut eros ac elementum. Fusce et libero metus. Nulla et metus in nibh finibus sodales. In eget bibendum sapien, sit amet tempor velit. Nulla facilisi. Morbi eu elementum augue. 
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+
+
+    <div class="flex items-center justify-center p-52 relative">
+
+      <div class="absolute top-2 left-1/2 -translate-x-1/2 font-black text-3xl">
+          NOS MISSIONS
+      </div>
+  
+      <div class="relative w-[300px] h-[300px] flex items-center justify-center">
+          <!-- Cercle -->
+          <div class="absolute rounded-full border-2 border-jaune w-[300px] h-[300px] bg-transparent"></div>
+  
+          <!-- Top card -->
+          <div class="bg-jaune rounded-xl absolute w-[120px] h-[120px] bg-cover bg-center -translate-y-[150px] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-1 box-border overflow-hidden">
+              <div class="font-bold text-sm">LOREM IPSUM</div>
+              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in.</div>
+          </div>
+  
+          <!-- Right card -->
+          <div class="rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center top-1/2 left-full -translate-x-[40%] -translate-y-[40%] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-1 box-border overflow-hidden">
+              <div class="font-bold text-sm">LOREM IPSUM</div>
+              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in.</div>
+          </div>
+  
+          <!-- Left card -->
+          <div class="rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center top-1/2 left-0 -translate-x-1/2 -translate-y-[40%] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-1 box-border overflow-hidden">
+              <div class="font-bold text-sm">LOREM IPSUM</div>
+              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in.</div>
+          </div>
+  
+          <!-- Bottom card -->
+          <div class="rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-1 box-border overflow-hidden">
+              <div class="font-bold text-sm">LOREM IPSUM</div>
+              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in.</div>
+          </div>
+      </div>
+  </div>
+  
+   
+
+    <div class="w-full h-96">
         <div class="relative w-full h-3/5 flex justify-center">
-            <div class="mt-20 font-black text-3xl">
+            <div class="font-black text-3xl">
                 RECONTREZ L'ÉQUIPE
             </div>
         </div>
@@ -28,69 +84,68 @@
                  
                   <div id="slider" class="p-2  h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                   
-                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                      <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                      <div class="flex flex-col items-center justify-center mt-6">
+                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
+                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                      <div class="flex flex-col items-center mt-1.5">
                         <div>Marie DUPOND</div>
                         <div class="font-bold">Directrice Commerciale</div>
                       </div>
                     </div>
-                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                        <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                        <div class="flex flex-col items-center justify-center mt-6">
-                          <div>Marie DUPOND</div>
-                          <div class="font-bold">Directrice Commerciale</div>
-                        </div>
+                    
+                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
+                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                      <div class="flex flex-col items-center mt-1.5">
+                        <div>Marie DUPOND</div>
+                        <div class="font-bold">Directrice Commerciale</div>
                       </div>
-                      <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                        <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                        <div class="flex flex-col items-center justify-center mt-6">
-                          <div>Marie DUPOND</div>
-                          <div class="font-bold">Directrice Commerciale</div>
-                        </div>
+                    </div>
+                    
+                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
+                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                      <div class="flex flex-col items-center mt-1.5">
+                        <div>Marie DUPOND</div>
+                        <div class="font-bold">Directrice Commerciale</div>
                       </div>
-                      <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                        <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                        <div class="flex flex-col items-center justify-center mt-6">
-                          <div>Marie DUPOND</div>
-                          <div class="font-bold">Directrice Commerciale</div>
-                        </div>
+                    </div>
+                    
+                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
+                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                      <div class="flex flex-col items-center mt-1.5">
+                        <div>Marie DUPOND</div>
+                        <div class="font-bold">Directrice Commerciale</div>
                       </div>
-                      <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                        <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                        <div class="flex flex-col items-center justify-center mt-6">
-                          <div>Marie DUPOND</div>
-                          <div class="font-bold">Directrice Commerciale</div>
-                        </div>
+                    </div>
+                    
+                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
+                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                      <div class="flex flex-col items-center mt-1.5">
+                        <div>Marie DUPOND</div>
+                        <div class="font-bold">Directrice Commerciale</div>
                       </div>
-                      <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                        <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                        <div class="flex flex-col items-center justify-center mt-6">
-                          <div>Marie DUPOND</div>
-                          <div class="font-bold">Directrice Commerciale</div>
-                        </div>
+                    </div>
+                    
+                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
+                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                      <div class="flex flex-col items-center mt-1.5">
+                        <div>Marie DUPOND</div>
+                        <div class="font-bold">Directrice Commerciale</div>
                       </div>
-                      <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                        <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                        <div class="flex flex-col items-center justify-center mt-6">
-                          <div>Marie DUPOND</div>
-                          <div class="font-bold">Directrice Commerciale</div>
-                        </div>
+                    </div>
+                    
+                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
+                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                      <div class="flex flex-col items-center mt-1.5">
+                        <div>Marie DUPOND</div>
+                        <div class="font-bold">Directrice Commerciale</div>
                       </div>
-                      <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                        <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                        <div class="flex flex-col items-center justify-center mt-6">
-                          <div>Marie DUPOND</div>
-                          <div class="font-bold">Directrice Commerciale</div>
-                        </div>
+                    </div>
+                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
+                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                      <div class="flex flex-col items-center mt-1.5">
+                        <div>Marie DUPOND</div>
+                        <div class="font-bold">Directrice Commerciale</div>
                       </div>
-                      <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-64 w-60 rounded-xl relative z-20">
-                        <img class="h-40 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                        <div class="flex flex-col items-center justify-center mt-6">
-                          <div>Marie DUPOND</div>
-                          <div class="font-bold">Directrice Commerciale</div>
-                        </div>
-                      </div>
+                    </div>
                     
                   </div>
                 </div>
@@ -102,14 +157,44 @@
                 </button>
               </div>
               
-              
-
-          </div>
-        
+          
+            </div>
 
     </div>
 
 
+
+    <div class="w-full h-96 p-10"> 
+      <div class="uppercase text-3xl font-black text-center mt-2"> Le réseau lilas c'est... </div>
+
+      <div class="flex items-center justify-center space-x-28 mt-6"> 
+      
+        <div class="flex flex-col text-center">
+        <div class="bordered-text">90</div>
+        <div class="uppercase font-bold text-xl">adhérentes</div>
+      </div>
+
+      
+      <div class="flex flex-col text-center">
+        <div class="bordered-text">14</div>
+        <div class="uppercase font-bold text-xl">partenaires</div>
+      </div>
+
+      
+      <div class="flex flex-col text-center">
+        <div class="bordered-text">11</div>
+        <div class="uppercase font-bold text-xl">rencontres chaque année</div>
+      </div>
+
+      
+      <div class="flex flex-col text-center">
+        <div class="bordered-text">90</div>
+        <div class="uppercase font-bold text-xl">adhérentes</div>
+      </div>
+
+      </div>
+
+    </div>
 
     @endsection
 </body>

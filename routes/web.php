@@ -33,7 +33,7 @@ Route::get('/actualites', function () {
     return view('pages.guest.actualites-liste');
 })->name('actualites');
 
-Route::get('/actualites/detail', function () {
+Route::get('/actualites/details', function () {
     return view('pages.guest.actualite-detail');
 });
 
@@ -48,6 +48,30 @@ Route::get('/evenement', function () {
 Route::get('/nospartenaires', function () {
     return view('pages.guest.nospartenaires');
 })->name('nospartenaires');
+
+Route::get('/recrutement', function () {
+    return view('pages.guest.recrutement-liste');
+})->name('recrutement');
+
+Route::get('/recrutement/detail', function () {
+    return view('pages.guest.recrutement-detail');
+});
+
+Route::get('/deveniradherente/formule1', function () {
+    return view('pages.guest.formule1');
+})->name('formule1');
+
+Route::get('/deveniradherente/formule2', function () {
+    return view('pages.guest.formule2');
+})->name('formule2');
+
+Route::get('/deveniradherente/formule3', function () {
+    return view('pages.guest.formule3');
+})->name('formule3');
+
+Route::get('/deveniradherente/formule4', function () {
+    return view('pages.guest.formule4');
+})->name('formule4');
 
 
 // Route::get('/dashboard', function () {

@@ -17,7 +17,7 @@
     </div>
 
     <div class="flex space-x-2 font-bold text-lg relative top-10 ml-6">
-        <div> Nos actions </div> 
+        <div> Nous rejoindre </div> 
         <div> / </div> 
         <a href="{{route ('devenir-benevole')}}"> Devenir partenaire </a>
     </div>

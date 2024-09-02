@@ -20,7 +20,7 @@
     <div class="w-full p-10">
 
         <div class="flex space-x-2 font-bold text-lg">
-            <div> Nos actions </div> 
+            <div> Nous rejoindre </div> 
             <div> / </div> 
             <a href="{{route ('devenir-benevole')}}"> Devenir bénévole </a>
         </div>

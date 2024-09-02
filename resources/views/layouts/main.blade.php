@@ -113,16 +113,16 @@
                         </a>
               
                             <ul class="z-10 absolute top-0 right-48 hidden p-2 w-44 space-y-2 bg-white border-2 border-black rounded-lg sub-submenu overflow-auto">
-                                <li><a href="#" class="block px-4  hover:text-jaune custom-border font-medium">Formule 1 </a></li>
-                                <li><a href="#" class="block px-4  hover:text-jaune custom-border font-medium">Formule 2</a></li>
-                                <li><a href="#" class="block px-4  hover:text-jaune custom-border font-medium">Formule 3</a></li>
-                                <li><a href="#" class="block px-4  hover:text-jaune font-medium">Formule 4</a></li>
+                                <li><a href="{{route ('formule1')}}" class="block px-4  hover:text-jaune custom-border font-medium">Formule 1 </a></li>
+                                <li><a href="{{route ('formule2')}}" class="block px-4  hover:text-jaune custom-border font-medium">Formule 2</a></li>
+                                <li><a href="{{route ('formule3')}}" class="block px-4  hover:text-jaune custom-border font-medium">Formule 3</a></li>
+                                <li><a href="{{route ('formule4')}}" class="block px-4  hover:text-jaune font-medium">Formule 4</a></li>
                             </ul>
                         </li>
                        
                         <li><a href="{{route ('devenir-partenaire')}}" class="block px-4  hover:text-jaune custom-border font-semibold">Devenir partenaire</a></li>
                         <li><a href="{{route ('devenir-benevole')}}" class="block px-4  hover:text-jaune custom-border font-semibold">Devenir bénévole</a></li>
-                        <li><a href="#" class="block px-4  hover:text-jaune font-semibold">Recrutement</a></li>
+                        <li><a href="{{route ('recrutement')}}" class="block px-4  hover:text-jaune font-semibold">Recrutement</a></li>
                        
                     </ul>
                 </li>
