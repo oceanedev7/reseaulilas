@@ -19,7 +19,6 @@
             <div>
                 <a href="/">
                     <img src="{{ asset('storage/images/logologin.png') }}" alt="Logo Réseau LILAS" class="h-24 rounded-xl">
-
                 </a>
             </div>
 
