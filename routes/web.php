@@ -4,8 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactRequestController;
-
-
+use App\Http\Controllers\Volunteer_SignupController;
 
 Route::get('/', function () {
     return view('pages.guest.accueil');
@@ -14,10 +13,6 @@ Route::get('/', function () {
 Route::get('/devenir/partenaire', function () {
     return view('pages.guest.devenirpartenaire');
 })->name('devenir-partenaire');
-
-Route::get('/devenir/benevole', function () {
-    return view('pages.guest.devenirbenevole');
-})->name('devenir-benevole');
 
 Route::get('/devenir/adherente', function () {
     return view('pages.guest.deveniradherente');
@@ -73,6 +68,11 @@ Route::get('/deveniradherente/formule4', function () {
 
 Route::post('/demandecontact', [ContactRequestController::class, 'store'])->name('contact-request');
 Route::get('/contact', [ContactRequestController::class, 'index'])->name('contact');
+
+
+Route::get('/devenir/benevole', [Volunteer_SignupController::class, 'index'])->name('devenir-benevole');
+Route::post('/devenir/benevole/inscription', [Volunteer_SignupController::class, 'store'])->name('volunteer-request');
+
 
 // Route::get('/contact', function () {
 //     return view('pages.guest.contact');
