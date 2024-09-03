@@ -9,15 +9,14 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class VolunteerRequestMail extends Mailable
+class PartnerRequestMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    
-     public $data;
+    public $data;
 
      public function __construct($data)
      {
@@ -27,8 +26,8 @@ class VolunteerRequestMail extends Mailable
      public function build()
      {
          return $this->from($this->data['email'], $this->data['nom'] . ' ' . $this->data['prenom'])
-                     ->subject('Nouvelle demande pour devenir bénévole')
-                     ->view('pages.emails.volunteer-request')
+                     ->subject('Demande de Partenariat')
+                     ->view('pages.emails.partner-request')
                      ->with('data', $this->data);
      }
 
@@ -38,7 +37,7 @@ class VolunteerRequestMail extends Mailable
     // public function envelope(): Envelope
     // {
     //     return new Envelope(
-    //         subject: 'Volunteer Request Mail',
+    //         subject: 'Partner Request Mail',
     //     );
     // }
 

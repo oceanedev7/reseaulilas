@@ -69,44 +69,49 @@
 
 <div class="mt-16 w-full">
 
-    <form class="flex flex-col items-center">
+    <form class="flex flex-col items-center" method="POST" action="{{route ('partner-request')}}">
         @csrf
         <div class="flex flex-col space-y-4 w-full max-w-4xl">
             <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" placeholder="Nom">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Prénom">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="nom" placeholder="Nom" required>
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " name="prenom" placeholder="Prénom" required>
             </div>
             
             <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Raison sociale">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" placeholder="Fonction">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " name="raison_sociale" placeholder="Raison sociale" required>
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="fonction" placeholder="Fonction" required>
             </div>
             
             <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Adresse e-mail">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Numéro de téléphone">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " name="email" placeholder="Adresse e-mail" required>
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " name="telephone" placeholder="Numéro de téléphone" required>
             </div>
     
-            <input class="p-2 rounded-xl border-2 border-jaune w-full focus:ring-0 focus:border-black " placeholder="Adresse postale">
+            <input class="p-2 rounded-xl border-2 border-jaune w-full focus:ring-0 focus:border-black " name="adresse_postale" placeholder="Adresse postale" required>
     
             <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Ville">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " placeholder="Code postal">
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="ville" placeholder="Ville" required>
+                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="code_postal" placeholder="Code postal" required>
             </div>
     
-            <select class="p-2 rounded-xl border-2 border-jaune w-full focus:ring-0 focus:border-black ">
-                <option value="" disabled selected>Veuillez sélectionner un type de partenariat</option>
-                <option value="">Sponsoring</option>
-                <option value="">Mécénat</option>
-                <option value="">Collaboration</option>
-                <option value="">Parrainage</option>
+            <select class="p-2 rounded-xl border-2 border-jaune w-full focus:ring-0 focus:border-black" name="type" required>
+                <option disabled selected>Veuillez sélectionner un type de partenariat</option>
+                <option value="Sponsoring">Sponsoring</option>
+                <option value="Mécénat">Mécénat</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="Parrainage">Parrainage</option>
             </select>
     
-            <textarea class="p-2 rounded-xl border-2 border-jaune resize-none w-full text-gray-500 focus:ring-0 focus:border-black " rows="5" placeholder="Message"></textarea>
+            <textarea class="p-2 rounded-xl border-2 border-jaune resize-none w-full focus:ring-0 focus:border-black " rows="5" name="message" placeholder="Message" required></textarea>
         </div>
         <div class="flex justify-end w-full max-w-4xl mt-4">
             <button class="font-bold bg-jaune rounded-xl py-1.5 px-4">ENVOYER</button>
         </div>
+        @if (session('success'))
+            <div class="alert alert-success w-full text-center font-bold">
+                {{ session('success') }}
+            </div>
+        @endif  
     </form>
     
 

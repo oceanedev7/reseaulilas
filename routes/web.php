@@ -4,15 +4,12 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactRequestController;
+use App\Http\Controllers\Partner_SignupController;
 use App\Http\Controllers\Volunteer_SignupController;
 
 Route::get('/', function () {
     return view('pages.guest.accueil');
 })->name('accueil');
-
-Route::get('/devenir/partenaire', function () {
-    return view('pages.guest.devenirpartenaire');
-})->name('devenir-partenaire');
 
 Route::get('/devenir/adherente', function () {
     return view('pages.guest.deveniradherente');
@@ -73,10 +70,11 @@ Route::get('/contact', [ContactRequestController::class, 'index'])->name('contac
 Route::get('/devenir/benevole', [Volunteer_SignupController::class, 'index'])->name('devenir-benevole');
 Route::post('/inscription/benevole', [Volunteer_SignupController::class, 'store'])->name('volunteer-request');
 
+Route::get('/devenir/partenaire', [Partner_SignupController::class, 'index'])->name('devenir-partenaire');
+Route::post('/inscription/partenaire', [Partner_SignupController::class, 'store'])->name('partner-request');
 
-// Route::get('/contact', function () {
-//     return view('pages.guest.contact');
-// })->name('contact');
+
+
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
