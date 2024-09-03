@@ -71,7 +71,7 @@ Route::get('/contact', [ContactRequestController::class, 'index'])->name('contac
 
 
 Route::get('/devenir/benevole', [Volunteer_SignupController::class, 'index'])->name('devenir-benevole');
-Route::post('/devenir/benevole/inscription', [Volunteer_SignupController::class, 'store'])->name('volunteer-request');
+Route::post('/inscription/benevole', [Volunteer_SignupController::class, 'store'])->name('volunteer-request');
 
 
 // Route::get('/contact', function () {
