@@ -88,14 +88,13 @@
 
        </div>
     
-      
-    
+  
         
        <div class="w-full h-screen p-12"> 
 
         <div class="uppercase text-3xl font-black text-center"> Nos formules</div>
         
-        <div class="container min-h-screen flex  items-center justify-center">
+        <div class="container min-h-screen flex w-full items-center justify-center">
           <div class="carousel flex  items-center justify-center">
 
             <div style="transform: rotateY(0deg) translateZ(250px);" class="p-4 space-y-4 flex flex-col item border border-2 border-jaune bg-white absolute w-[250px] h-[200px] text-white rounded-xl">
@@ -137,15 +136,18 @@
               </a>
             </div>
           </div>
-          <div class="next">Next</div>
-          <div class="prev">Prev</div>
+   
+
+        <div class="next"><i class="fa-solid fa-circle-arrow-right text-4xl"></i></div>
+        <div class="prev"><i class="fa-solid fa-circle-arrow-left text-4xl"></i></div>
+
       </div>
       
-      
+        
     </div>
       
         
-
+    
           
         
    

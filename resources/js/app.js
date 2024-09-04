@@ -94,27 +94,26 @@ $(document).ready(function() {
     var carousel = $(".carousel"),
         currdeg = 0,
         itemCount = $(".item").length,
-        degreeIncrement = 300 / itemCount; // Calculate degrees per item
+        degreeIncrement = 300 / itemCount; 
+    
 
-    // Event listeners for next and prev buttons
     $(".next").on("click", { d: "n" }, rotate);
     $(".prev").on("click", { d: "p" }, rotate);
 
     function rotate(e) {
         if (e.data.d === "n") {
-            currdeg -= degreeIncrement; // Rotate to next item
+            currdeg -= degreeIncrement; 
         } else if (e.data.d === "p") {
-            currdeg += degreeIncrement; // Rotate to previous item
+            currdeg += degreeIncrement; 
         }
 
-        // Normalize the degree to keep it within bounds
+   
         if (currdeg <= -300) {
             currdeg = 0;
         } else if (currdeg > 0) {
             currdeg = -300 * (itemCount - 1);
         }
 
-        // Apply the transform
         carousel.css({
             "-webkit-transform": "rotateY(" + currdeg + "deg)",
             "-moz-transform": "rotateY(" + currdeg + "deg)",
@@ -123,5 +122,8 @@ $(document).ready(function() {
         });
     }
 });
+
+
+
 
 
