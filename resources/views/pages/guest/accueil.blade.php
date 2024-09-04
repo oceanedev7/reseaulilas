@@ -89,68 +89,65 @@
        </div>
     
       
-
-        <div class="w-full h-screen p-12"> 
-
-        <div class="text-center text-3xl font-black"> NOS FORMULES </div>
-        
-        <div class="scene">
-          <div class="carousel">
-            <div class="carousel__cell">1</div>
-            <div class="carousel__cell">2</div>
-            <div class="carousel__cell">3</div>
-            <div class="carousel__cell">4</div>
-            <div class="carousel__cell">5</div>
-            <div class="carousel__cell">6</div>
-            <div class="carousel__cell">7</div>
-            <div class="carousel__cell">8</div>
-            <div class="carousel__cell">9</div>
-          </div>
-        </div>
-        <p style="text-align: center;">
-          <button class="previous-button">Previous</button>
-          <button class="next-button">Next</button>
-        </p>
-      
-      
-        </div>
-          
-        
-    {{-- <div class="bg-gray-700 flex items-center justify-center p-60 relative">
-
-        <div class="absolute top-4 left-1/2 -translate-x-1/2 font-black text-3xl ">
-            NOS FORMULES
-        </div>
     
-        <div class="relative w-[400px] h-[400px] flex items-center justify-center">
-            <!-- Cercle -->
-            <div class="absolute rounded-full border-2 border-jaune w-full h-full bg-transparent"></div>
-    
-            <!-- Top card -->
-            <div class="rounded-xl absolute w-[150px] h-[150px] bg-cover bg-center -translate-y-[200px] transition-transform transform hover:scale-220 hover:z-10 flex flex-col justify-center items-center text-center p-2 box-border overflow-hidden" style="background-image: url('{{ asset('storage/images/photoaccueil.jpg') }}');">
-                <div class="font-bold"> LOREM IPSUM </div>
-                <div class="text-xs"> Vestibulum egestas vehicula augue, vitae suscipit urna congue in. Pellentesque egestas gravida felis quis convallis. </div>
+        
+       <div class="w-full h-screen p-12"> 
+
+        <div class="uppercase text-3xl font-black text-center"> Nos formules</div>
+        
+        <div class="container min-h-screen flex  items-center justify-center">
+          <div class="carousel flex  items-center justify-center">
+
+            <div style="transform: rotateY(0deg) translateZ(250px);" class="p-4 space-y-4 flex flex-col item border border-2 border-jaune bg-white absolute w-[250px] h-[200px] text-white rounded-xl">
+              <div class="uppercase text-lg text-center font-bold text-black">FORMULE 1</div>
+              <div class="text-justify whitespace-normal text-xs text-black">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, pretium eget egestas sed, fringilla sit amet mi. Vestibulum et fermentum sapien.
+              </div>
+              <a href="#" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
+                Voir plus <i class="fa-solid fa-circle-arrow-right ml-1 "></i>
+              </a>
             </div>
             
-    
-            <!-- Right card -->
-            <div class="rounded-xl absolute w-[150px] h-[150px] bg-cover bg-center top-1/2 left-full -translate-x-[60%] -translate-y-[60%] transition-transform transform hover:scale-220 hover:z-10 flex flex-col justify-center items-center text-center p-2 box-border overflow-hidden" style="background-image: url('{{ asset('storage/images/photoaccueil.jpg') }}');">
-                <div class="font-bold"> LOREM IPSUM </div>
-                <div class="text-xs"> Vestibulum egestas vehicula augue, vitae suscipit urna congue in. Pellentesque egestas gravida felis quis convallis. </div>
+              <div style="transform: rotateY(60deg) translateZ(250px);" class=" p-4 space-y-4 flex flex-col item border border-2 border-jaune absolute bg-white w-[250px] h-[200px] leading-[200px] text-5xl text-center text-white  rounded-xl b">
+                <div class="uppercase text-lg text-center font-bold text-black"> FORMULE 2 </div>
+                <div class="text-justify whitespace-normal text-xs text-black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, pretium eget egestas sed, fringilla sit amet mi. Vestibulum et fermentum sapien.</div>  
+                <a href="#" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
+                  Voir plus <i class="fa-solid fa-circle-arrow-right ml-1 "></i>
+                </a>
+              </div>
+              <div style="transform: rotateY(120deg) translateZ(250px);" class="p-4 space-y-4 flex flex-col item border border-2 border-jaune absolute bg-white w-[250px] h-[200px] leading-[200px] text-5xl text-center text-white rounded-xl c">
+                <div class="uppercase text-lg text-center font-bold text-black"> FORMULE 3 </div>
+                <div class="text-justify whitespace-normal text-xs text-black "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, pretium eget egestas sed, fringilla sit amet mi. Vestibulum et fermentum sapien.</div>  
+                <a href="#" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
+                  Voir plus <i class="fa-solid fa-circle-arrow-right ml-1 "></i>
+                </a>
+              </div>
+              <div style="transform: rotateY(180deg) translateZ(250px);" class="p-4 space-y-4 flex flex-col item border border-2 border-jaune absolute bg-white w-[250px] h-[200px] leading-[200px] text-5xl text-center text-white  rounded-xl d">              
+                <div class="uppercase text-lg text-center font-bold text-black"> FORMULE 4 </div>
+              <div class="text-justify whitespace-normal text-xs text-black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, pretium eget egestas sed, fringilla sit amet mi. Vestibulum et fermentum sapien.</div>
+              <a href="#" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
+                Voir plus <i class="fa-solid fa-circle-arrow-right ml-1 "></i>
+              </a>
             </div>
-    
-            <!-- Left card -->
-            <div class="rounded-xl absolute w-[150px] h-[150px] bg-cover bg-center top-1/2 left-0 -translate-x-1/2 -translate-y-[60%] transition-transform transform hover:scale-220 hover:z-10"
-                style="background-image: url('{{ asset('storage/images/photoaccueil.jpg') }}');">
+              <div style="transform: rotateY(240deg) translateZ(250px);" class="p-4 space-y-4 flex flex-col item border border-2 border-jaune absolute bg-white w-[250px] h-[200px] leading-[200px] text-5xl text-center text-white  rounded-xl e">              
+                <div class="uppercase text-lg text-center font-bold text-black"> Application </div>
+              <div class="text-justify whitespace-normal text-xs text-black "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, pretium eget egestas sed, fringilla sit amet mi. Vestibulum et fermentum sapien.</div>
+              <a href="#" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
+                Voir plus <i class="fa-solid fa-circle-arrow-right ml-1 "></i>
+              </a>
             </div>
-    
-            <!-- Bottom card -->
-            <div class="rounded-xl absolute w-[150px] h-[150px] bg-cover bg-center bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition-transform transform hover:scale-220 hover:z-10"
-                style="background-image: url('{{ asset('storage/images/photoaccueil.jpg') }}');">
-            </div>
-        </div>
-    </div> --}}
-   
+          </div>
+          <div class="next">Next</div>
+          <div class="prev">Prev</div>
+      </div>
+      
+      
+    </div>
+      
+        
+
+          
+        
    
     <div class="w-full h-screen">
       <div class="relative w-full h-3/5 flex justify-center">
@@ -197,6 +194,7 @@
   </div>
 
   </div>
+
         
     <div class="h-60 w-full p-8">
         <div class="text-center font-black text-2xl"> ILS NOUS SOUTIENNENT </div> 
@@ -225,7 +223,8 @@
 
     @endsection
     
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{ asset('js/app.js') }}"></script>
 
-
-</body>
+  </body>
 </html>

@@ -58,42 +58,70 @@ Alpine.start();
 
 // Caroussel des membres de l'équipe (vue nous découvrir)
 
-let defaultTransform = 0;
-function goNext() {
-    defaultTransform = defaultTransform - 398;
-    var slider = document.getElementById("slider");
-    if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) defaultTransform = 0;
-    slider.style.transform = "translateX(" + defaultTransform + "px)";
-}
-next.addEventListener("click", goNext);
-function goPrev() {
-    var slider = document.getElementById("slider");
-    if (Math.abs(defaultTransform) === 0) defaultTransform = 0;
-    else defaultTransform = defaultTransform + 398;
-    slider.style.transform = "translateX(" + defaultTransform + "px)";
-}
-prev.addEventListener("click", goPrev);
+document.addEventListener('DOMContentLoaded', function() {
+    let defaultTransform = 0;
 
+    function goNext() {
+        defaultTransform = defaultTransform - 398;
+        let slider = document.getElementById("slider");
+        if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) defaultTransform = 0;
+        slider.style.transform = "translateX(" + defaultTransform + "px)";
+    }
 
-//Caroussel 3D (vue accueil)
-var carousel = document.querySelector('.carousel');
-var cellCount = 9;
-var selectedIndex = 0;
+    function goPrev() {
+        let slider = document.getElementById("slider");
+        if (Math.abs(defaultTransform) === 0) defaultTransform = 0;
+        else defaultTransform = defaultTransform + 398;
+        slider.style.transform = "translateX(" + defaultTransform + "px)";
+    }
 
-function rotateCarousel() {
-  var angle = selectedIndex / cellCount * -360;
-  carousel.style.transform = 'translateZ(-288px) rotateY(' + angle + 'deg)';
-}
+    let next = document.getElementById("next");
+    let prev = document.getElementById("prev");
 
-var prevButton = document.querySelector('.previous-button');
-prevButton.addEventListener( 'click', function() {
-  selectedIndex--;
-  rotateCarousel();
+    if (next) {
+        next.addEventListener("click", goNext);
+    }
+
+    if (prev) {
+        prev.addEventListener("click", goPrev);
+    }
 });
 
-var nextButton = document.querySelector('.next-button');
-nextButton.addEventListener( 'click', function() {
-  selectedIndex++;
-  rotateCarousel();
+
+// Caroussel 3D (vue accueil)
+
+$(document).ready(function() {
+    var carousel = $(".carousel"),
+        currdeg = 0,
+        itemCount = $(".item").length,
+        degreeIncrement = 300 / itemCount; // Calculate degrees per item
+
+    // Event listeners for next and prev buttons
+    $(".next").on("click", { d: "n" }, rotate);
+    $(".prev").on("click", { d: "p" }, rotate);
+
+    function rotate(e) {
+        if (e.data.d === "n") {
+            currdeg -= degreeIncrement; // Rotate to next item
+        } else if (e.data.d === "p") {
+            currdeg += degreeIncrement; // Rotate to previous item
+        }
+
+        // Normalize the degree to keep it within bounds
+        if (currdeg <= -300) {
+            currdeg = 0;
+        } else if (currdeg > 0) {
+            currdeg = -300 * (itemCount - 1);
+        }
+
+        // Apply the transform
+        carousel.css({
+            "-webkit-transform": "rotateY(" + currdeg + "deg)",
+            "-moz-transform": "rotateY(" + currdeg + "deg)",
+            "-o-transform": "rotateY(" + currdeg + "deg)",
+            "transform": "rotateY(" + currdeg + "deg)"
+        });
+    }
 });
+
 

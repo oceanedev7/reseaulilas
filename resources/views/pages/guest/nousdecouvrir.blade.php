@@ -151,10 +151,10 @@
                 </div>
                 <button aria-label="slide backward" class="absolute z-30 left-0 ml-4 top-1/2 transform -translate-y-1/2" id="prev">
                   <i class="fa-solid fa-circle-arrow-left text-3xl text-white"></i>
-                </button>
-                <button aria-label="slide forward" class="absolute z-30 right-0 mr-4 top-1/2 transform -translate-y-1/2" id="next">
+              </button>
+              <button aria-label="slide forward" class="absolute z-30 right-0 mr-4 top-1/2 transform -translate-y-1/2" id="next">
                   <i class="fa-solid fa-circle-arrow-right text-3xl text-white"></i>
-                </button>
+              </button>
               </div>
               
           
@@ -197,5 +197,7 @@
     </div>
 
     @endsection
+
+
 </body>
 </html>
