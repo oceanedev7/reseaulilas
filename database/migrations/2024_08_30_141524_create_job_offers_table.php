@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('job_offers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('titre');
             $table->text('description');
             $table->text('photo');
             $table->text('qualification');
             $table->text('mission');
             $table->string('lieu');
-            $table->decimal('salaire');
+            $table->decimal('salaire')->nullable();
             $table->string('type_contrat');
             $table->string('email');
             $table->string('telephone');

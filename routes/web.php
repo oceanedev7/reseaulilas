@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactRequestController;
+use App\Http\Controllers\Job_offerController;
 use App\Http\Controllers\Partner_SignupController;
 use App\Http\Controllers\Volunteer_SignupController;
 
@@ -94,6 +95,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     
     Route::middleware('admin')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+        Route::get('/espaceadmin/offre-emploi', [Job_offerController::class, 'index'])->name('emploi');
+        Route::post('/espaceadmin/nouvelle-offre-emploi', [Job_offerController::class, 'create'])->name('new-emploi');
+        Route::get('/delete/emploi/{id}', [Job_offerController::class, 'destroy'])->name('delete-emploi');
+        Route::get('/espaceadmin/offre-emploi/details/{id}', [Job_offerController::class, 'show'])->name('emploi-detail');
+        Route::get('/espaceadmin/offre-emploi/edit/{id}', [Job_offerController::class, 'edit'])->name('emploi-edit');
+        Route::post('/espaceadmin/offre-emploi/update/{id}', [Job_offerController::class, 'update'])->name('emploi-update');
+
     });
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
