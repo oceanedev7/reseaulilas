@@ -22,7 +22,7 @@
         <div class="absolute -top-20 bg-jaune h-40 w-7/10 p-6 rounded-xl flex items-center justify-center space-x-8 shadow-lg">
             
             <div class="flex flex-col items-center text-center">
-                <div class="font-black text-6xl" id="counter1"></div>
+                <div class="font-black text-6xl" id="counter1">35</div>
                 <div class="text-sm">des entreprises sont <br> créées par des femmes</div>
             </div>
     
@@ -30,7 +30,7 @@
             <div class="h-full border-l-2 border-black"></div>
     
             <div class="flex flex-col items-center text-center">
-                <div class="font-black text-6xl" id="counter2"></div>
+                <div class="font-black text-6xl" id="counter2">48</div>
                 <div class="text-sm">des entrepreneuses sans <br> réseau ne se rémunèrent pas</div>
             </div>
     
@@ -38,7 +38,7 @@
             <div class="h-full border-l-2 border-black"></div>
     
             <div class="flex flex-col items-center text-center ">
-                <div class="font-black text-6xl" id="counter3"></div>
+                <div class="font-black text-6xl" id="counter3">89</div>
                 <div class="text-sm">d'entrepreuneuses <br> manque de financements</div>
             </div>
     
@@ -46,7 +46,7 @@
             <div class="h-full border-l-2 border-black"></div>
     
             <div class="flex flex-col items-center text-center">
-                <div class="font-black text-6xl">90%</div>
+                <div class="font-black text-6xl">90</div>
                 <div class="text-sm">des entreprises sont <br> créées par des femmes</div>
             </div>
         </div>

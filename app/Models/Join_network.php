@@ -5,16 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Formules extends Model
+class Join_network extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'titre',
-        'photo',
-        'description1',
-        'description2',
-        'description3',
+        
+        'description',
         
     ];
 

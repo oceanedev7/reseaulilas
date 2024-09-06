@@ -10,17 +10,17 @@ Alpine.start();
 
         // Premier compteur
         var depart1 = 0;
-        const arrivee1 = 35;
+        const arrivee1 = parseInt(document.getElementById("counter1").textContent, 10);
         const interval1 = 10;
 
         // Deuxième compteur
         var depart2 = 0;
-        const arrivee2 = 48;
+        const arrivee2 = parseInt(document.getElementById("counter2").textContent, 10);
         const interval2 = 10;
 
         // Troisième compteur
         var depart3 = 0;
-        const arrivee3 = 89;
+        const arrivee3 = parseInt(document.getElementById("counter3").textContent, 10);
         const interval3 = 10;
 
         function augmenter1() {

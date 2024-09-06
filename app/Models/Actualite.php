@@ -11,6 +11,7 @@ class Actualite extends Model
 
     protected $fillable = [
         'titre',
+        'date',
         'photo',
         'description',
     ];

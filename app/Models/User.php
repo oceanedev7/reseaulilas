@@ -118,6 +118,16 @@ class User extends Authenticatable
          return $this->hasMany(Formules::class);
      }
 
+     public function joinNetwork()
+     {
+         return $this->hasMany(Join_network::class);
+     }
+
+     public function globalNumber()
+     {
+         return $this->hasMany(Global_number_content::class);
+     }
+
 
     /**
      * The attributes that should be hidden for serialization.

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('titre');
             $table->string('photo');
+            $table->date('date');
             $table->text('description');
             $table->timestamps();
         

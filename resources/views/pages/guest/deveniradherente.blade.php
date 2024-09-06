@@ -22,7 +22,7 @@
         <div class="flex space-x-2 font-bold text-lg">
             <div> Nous rejoindre </div> 
             <div> / </div> 
-            <a href="{{route ('devenir-benevole')}}"> Devenir bénévole </a>
+            <a href="{{route ('devenir-adherente')}}"> Devenir adhérente </a>
         </div>
 
         <div class="text-2xl font-bold text-center mt-8"> DÉCOUVREZ NOS FORMULES </div>

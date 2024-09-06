@@ -179,7 +179,7 @@
                                 <a href="{{route ('devenir-adherente')}}" class="text-sm hover:font-bold transition-all duration-500">- Devenir adhérente</a>
                                 <a href="{{route ('devenir-partenaire')}}" class="text-sm hover:font-bold transition-all duration-500">- Devenir partenaire</a>
                                 <a href="{{route ('devenir-benevole')}}" class="text-sm hover:font-bold transition-all duration-500">- Devenir bénévole</a>
-                                <a href="#" class="text-sm hover:font-bold transition-all duration-500">- Postuler</a>
+                                <a href="{{route ('recrutement')}}" class="text-sm hover:font-bold transition-all duration-500">- Postuler</a>
 
                             </div>
                         </div>
