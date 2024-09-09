@@ -10,6 +10,7 @@ class Partner_logo extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'photo',
     ];
 

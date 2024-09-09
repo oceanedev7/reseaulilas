@@ -10,6 +10,7 @@ class Formules extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'titre',
         'photo',
         'description1',

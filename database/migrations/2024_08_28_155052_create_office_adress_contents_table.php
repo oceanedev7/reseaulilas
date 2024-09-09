@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('office_adress_contents', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('adresse_postale');
             $table->timestamps();
 

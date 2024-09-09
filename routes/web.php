@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
@@ -101,6 +102,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/espaceadmin/offre-emploi/details/{id}', [Job_offerController::class, 'show'])->name('emploi-detail');
         Route::get('/espaceadmin/offre-emploi/edit/{id}', [Job_offerController::class, 'edit'])->name('emploi-edit');
         Route::post('/espaceadmin/offre-emploi/update/{id}', [Job_offerController::class, 'update'])->name('emploi-update');
+        Route::get('/espaceadmin/actualites', [ActualiteController::class, 'index'])->name('actu');
+        Route::post('/espaceadmin/nouvelle-actualite', [ActualiteController::class, 'create'])->name('new-actu');
+        Route::get('/espaceadmin/actualite/details/{id}', [ActualiteController::class, 'show'])->name('actu-detail');
+        Route::get('/delete/actualite/{id}', [ActualiteController::class, 'destroy'])->name('delete-actu');
+        Route::get('/espaceadmin/actualite/edit/{id}', [ActualiteController::class, 'edit'])->name('actu-edit');
+        Route::post('/espaceadmin/actualite/update/{id}', [ActualiteController::class, 'update'])->name('actu-update');
+
 
     });
 

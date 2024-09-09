@@ -10,6 +10,7 @@ class Volunteer_content extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'description',
     ];
 

@@ -10,6 +10,7 @@ class Number_content extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'chiffre',
         'titre',
     ];

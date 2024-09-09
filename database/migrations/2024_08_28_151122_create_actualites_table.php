@@ -13,10 +13,9 @@ return new class extends Migration
     {
         Schema::create('actualites', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('titre');
             $table->string('photo');
-            $table->date('date');
             $table->text('description');
             $table->timestamps();
         

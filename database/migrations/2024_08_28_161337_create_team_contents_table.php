@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('team_contents', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('nom');
             $table->string('prenom');
             $table->string('fontion');

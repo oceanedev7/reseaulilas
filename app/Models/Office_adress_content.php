@@ -10,6 +10,7 @@ class Office_adress_content extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'adresse_postale',
     ];
 

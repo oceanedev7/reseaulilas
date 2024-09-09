@@ -10,6 +10,7 @@ class Global_number_content extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'titre',
         'description',
         

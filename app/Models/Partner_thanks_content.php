@@ -10,6 +10,7 @@ class Partner_thanks_content extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'description',
     ];
 

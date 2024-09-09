@@ -10,6 +10,7 @@ class Team_content extends Model
     use HasFactory;
 
     protected $fillable = [
+        'user_id',
         'nom',
         'prenom',
         'fonction',

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('global_number_contents', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('titre');
             $table->text('description');
             $table->timestamps();
