@@ -5,6 +5,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactRequestController;
+use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\Job_offerController;
 use App\Http\Controllers\Partner_SignupController;
 use App\Http\Controllers\Volunteer_SignupController;
@@ -96,18 +97,26 @@ Route::middleware(['auth', 'verified'])->group(function () {
     
     Route::middleware('admin')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-        Route::get('/espaceadmin/offre-emploi', [Job_offerController::class, 'index'])->name('emploi');
+        Route::get('/espaceadmin/offres-emploi', [Job_offerController::class, 'index'])->name('emploi');
         Route::post('/espaceadmin/nouvelle-offre-emploi', [Job_offerController::class, 'create'])->name('new-emploi');
         Route::get('/delete/emploi/{id}', [Job_offerController::class, 'destroy'])->name('delete-emploi');
         Route::get('/espaceadmin/offre-emploi/details/{id}', [Job_offerController::class, 'show'])->name('emploi-detail');
         Route::get('/espaceadmin/offre-emploi/edit/{id}', [Job_offerController::class, 'edit'])->name('emploi-edit');
         Route::post('/espaceadmin/offre-emploi/update/{id}', [Job_offerController::class, 'update'])->name('emploi-update');
+       
         Route::get('/espaceadmin/actualites', [ActualiteController::class, 'index'])->name('actu');
         Route::post('/espaceadmin/nouvelle-actualite', [ActualiteController::class, 'create'])->name('new-actu');
         Route::get('/espaceadmin/actualite/details/{id}', [ActualiteController::class, 'show'])->name('actu-detail');
         Route::get('/delete/actualite/{id}', [ActualiteController::class, 'destroy'])->name('delete-actu');
         Route::get('/espaceadmin/actualite/edit/{id}', [ActualiteController::class, 'edit'])->name('actu-edit');
         Route::post('/espaceadmin/actualite/update/{id}', [ActualiteController::class, 'update'])->name('actu-update');
+
+        Route::get('/espaceadmin/evenement', [EvenementController::class, 'index'])->name('event');
+        Route::post('/espaceadmin/nouvel-evenement', [EvenementController::class, 'create'])->name('new-event');
+        Route::get('/delete/evenement/{id}', [EvenementController::class, 'destroy'])->name('delete-event');
+        Route::get('/espaceadmin/evenement/edit/{id}', [EvenementController::class, 'edit'])->name('event-edit');
+        Route::get('/espaceadmin/evenement/details/{id}', [EvenementController::class, 'show'])->name('event-details');
+        Route::post('/espaceadmin/evenement/update/{id}', [EvenementController::class, 'update'])->name('event-update');
 
 
     });

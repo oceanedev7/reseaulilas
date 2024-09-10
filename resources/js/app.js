@@ -7,6 +7,7 @@ window.Alpine = Alpine;
 Alpine.start();
 
 // Compteur automatique chiffres marquants (vue accueil)
+document.addEventListener('DOMContentLoaded', () => {
 
         // Premier compteur
         var depart1 = 0;
@@ -54,7 +55,7 @@ Alpine.start();
         const intervalId1 = setInterval(augmenter1, interval1);
         const intervalId2 = setInterval(augmenter2, interval2);
         const intervalId3 = setInterval(augmenter3, interval3);
-
+    });
 
 // Caroussel des membres de l'équipe (vue nous découvrir)
 

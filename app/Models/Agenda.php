@@ -14,8 +14,10 @@ class Agenda extends Model
         'categorie',
         'titre',
         'photo',
+        'lieu',
         'date',
-        'heure',
+        'heure_debut',
+        'heure_fin',
         'description',
     ];
 

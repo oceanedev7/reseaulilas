@@ -17,8 +17,10 @@ return new class extends Migration
             $table->string('categorie');
             $table->string('titre');
             $table->string('photo');
+            $table->string('lieu');
             $table->date('date');
-            $table->time('heure');
+            $table->time('heure_debut');
+            $table->time('heure_fin')->nullable();
             $table->text('description');
             
             $table->timestamps();
