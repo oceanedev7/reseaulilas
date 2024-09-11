@@ -81,6 +81,7 @@ class EvenementController extends Controller
     public function update(Request $request, string $id)
     {
         // dd($request);
+
         $request->validate([
             'titre' => 'string|max:255',
             'description' => 'string',
@@ -110,9 +111,9 @@ class EvenementController extends Controller
         
         $evenement->save();
     
-        return redirect('/espaceadmin/evenement/details/' . $evenement->id);  
-        
-      }
+        return redirect('/espaceadmin/evenement/details/' . $evenement->id);
+
+    }
     
 
     /**

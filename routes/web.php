@@ -119,7 +119,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/espaceadmin/evenement/edit/{id}', [EvenementController::class, 'edit'])->name('event-edit');
         Route::get('/espaceadmin/evenement/details/{id}', [EvenementController::class, 'show'])->name('event-details');
         Route::post('/espaceadmin/evenement/update/{id}', [EvenementController::class, 'update'])->name('event-update');
-       
+        
         Route::get('/espaceadmin/contenu', function () {
             return view('pages.admin.contenu');
         })->name('contenu');

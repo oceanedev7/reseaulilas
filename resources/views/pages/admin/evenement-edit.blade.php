@@ -28,7 +28,7 @@
                 @csrf
             
                 <div class="mb-4">
-                    <img src="{{ Storage::url($evenement->photo) }}" alt="Photo de l'événement" class="w-full h-64 object-cover rounded-lg shadow-md">
+                    <img src="{{ Storage::url($evenement->photo) }}" alt="" class="w-full h-64 object-cover rounded-lg shadow-md">
                     <input name="photo" type="file" accept="image/*" class="mt-2"/>
                 </div>
             
