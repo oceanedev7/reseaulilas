@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActualiteController;
+use App\Http\Controllers\ContactContentController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
@@ -149,6 +150,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/espaceadmin/nouveau-logo', [PartnerLogosController::class, 'create'])->name('new-logo');
         Route::get('/delete/partner-logos/{id}', [PartnerLogosController::class, 'destroy'])->name('delete-logo');
 
+        Route::get('/espaceadmin/contact-content', [ContactContentController::class, 'index'])->name('contact-content');
+        Route::post('/espaceadmin/nouveau-contact', [ContactContentController::class, 'create'])->name('new-contact');
+        Route::get('/espaceadmin/contact-content/edit/{id}', [ContactContentController::class, 'edit'])->name('contact-edit');
+        Route::post('/espaceadmin/contact-content/update/{id}', [ContactContentController::class, 'update'])->name('contact-update');
 
     });
 

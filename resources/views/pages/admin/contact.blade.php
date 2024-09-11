@@ -11,7 +11,7 @@
           <i class="fa-solid fa-pencil text-3xl"></i>
           <div class="text-lg font-bold text-center"> Gérer les <br> adresses des locaux </div>
       </a>
-      <a class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
+      <a href="{{route ('contact-content')}}" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
           <i class="fa-solid fa-pencil text-3xl"></i>
           <div class="text-lg font-bold text-center"> Gérer les <br> informations <br> de contact </div>
       </a>
