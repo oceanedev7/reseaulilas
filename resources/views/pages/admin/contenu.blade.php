@@ -5,7 +5,7 @@
 
     <div class="flex items-center justify-center space-x-12 mt-40">  
 
-            <a class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
+            <a href="{{route ('accueil-admin')}}" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
                 <i class="fa-solid fa-pencil text-3xl"></i>
                 <div class="text-lg font-bold text-center"> Gérer la page <br> Accueil </div>
             </a>

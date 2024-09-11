@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\EvenementController;
+use App\Http\Controllers\GlobalNumberController;
 use App\Http\Controllers\Job_offerController;
 use App\Http\Controllers\OfficeAddressController;
 use App\Http\Controllers\Partner_SignupController;
@@ -135,6 +136,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
             return view('pages.admin.partenaires');
         })->name('partenaires-admin');
 
+        Route::get('/espaceadmin/accueil', function () {
+            return view('pages.admin.accueil');
+        })->name('accueil-admin');
+
         Route::get('/espaceadmin/office-adresses', [OfficeAddressController::class, 'index'])->name('adresse');
         Route::post('/espaceadmin/nouvelle-adresse', [OfficeAddressController::class, 'create'])->name('new-adress');
         Route::get('/delete/office-adresse/{id}', [OfficeAddressController::class, 'destroy'])->name('delete-adress');
@@ -154,6 +159,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/espaceadmin/nouveau-contact', [ContactContentController::class, 'create'])->name('new-contact');
         Route::get('/espaceadmin/contact-content/edit/{id}', [ContactContentController::class, 'edit'])->name('contact-edit');
         Route::post('/espaceadmin/contact-content/update/{id}', [ContactContentController::class, 'update'])->name('contact-update');
+
+        Route::get('/espaceadmin/global-numbers', [GlobalNumberController::class, 'index'])->name('global-number');
+        Route::post('/espaceadmin/new-global-number', [GlobalNumberController::class, 'create'])->name('new-global-number');
+        Route::get('/espaceadmin/global-number/edit/{id}', [GlobalNumberController::class, 'edit'])->name('global-number-edit');
+        Route::post('/espaceadmin/global-number/update/{id}', [GlobalNumberController::class, 'update'])->name('global-number-update');
 
     });
 
