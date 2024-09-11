@@ -3,7 +3,7 @@
 
     <div class="flex items-center justify-center mt-16">
         <div class="grid grid-cols-2 gap-y-8 gap-x-16 justify-items-center ">
-            <a class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
+            <a href="{{route ('contenu')}}" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
                 <i class="fa-solid fa-pencil text-3xl"></i>
                 <div class="text-lg font-bold text-center"> Gérer le contenu </div>
             </a>

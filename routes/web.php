@@ -7,8 +7,10 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\Job_offerController;
+use App\Http\Controllers\OfficeAddressController;
 use App\Http\Controllers\Partner_SignupController;
 use App\Http\Controllers\Volunteer_SignupController;
+use App\Models\Office_adress_content;
 
 Route::get('/', function () {
     return view('pages.guest.accueil');
@@ -117,6 +119,20 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/espaceadmin/evenement/edit/{id}', [EvenementController::class, 'edit'])->name('event-edit');
         Route::get('/espaceadmin/evenement/details/{id}', [EvenementController::class, 'show'])->name('event-details');
         Route::post('/espaceadmin/evenement/update/{id}', [EvenementController::class, 'update'])->name('event-update');
+       
+        Route::get('/espaceadmin/contenu', function () {
+            return view('pages.admin.contenu');
+        })->name('contenu');
+
+        Route::get('/espaceadmin/contact', function () {
+            return view('pages.admin.contact');
+        })->name('contact-admin');
+
+        Route::get('/espaceadmin/office-adresses', [OfficeAddressController::class, 'index'])->name('adresse');
+        Route::post('/espaceadmin/nouvelle-adresse', [OfficeAddressController::class, 'create'])->name('new-adress');
+        Route::get('/delete/office-adresse/{id}', [OfficeAddressController::class, 'destroy'])->name('delete-adress');
+        Route::get('/espaceadmin/office-adress/edit/{id}', [OfficeAddressController::class, 'edit'])->name('adress-edit');
+        Route::post('/espaceadmin/office-adress/update/{id}', [OfficeAddressController::class, 'update'])->name('adress-update');
 
 
     });
