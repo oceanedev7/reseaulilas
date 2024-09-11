@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,31 +11,31 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
 
-    <title>Les adresses des locaux</title>
+    <title>Remerciements - Partenaires</title>
 </head>
 <body class="bg-gray-200">
 
     
 <a href="{{route ('adresse')}}" class="hover:underline relative top-8 left-8"> 
     <i class="fa-solid fa-arrow-left"></i>
-    Revenir à la page des adresses des locaux
+    Revenir à la page d'édition des remerciements
 </a>
 
 <div class="flex flex-col items-center p-12 space-y-6"> 
-    <div class="uppercase text-3xl font-black text-center"> Modifier l'adresse</div>
+    <div class="uppercase text-3xl font-black text-center"> Modifier la description</div>
 
     <div class="bg-white custom-shadow p-8 rounded-lg shadow-lg w-full max-w-4xl">
-    <form method="POST" action="{{route ('adress-update', $adresse->id)}}" >
+    <form method="POST" action="{{route ('partner-update', $description->id)}}" >
         @csrf
 
         <div class="mb-4">
-            <label for="titre" class="block text-sm font-semibold  mb-2">Adresse postale :</label>
-            <input value="{{ $adresse->adresse_postale }}" name="adresse_postale" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune">
+            <label for="description" class="block text-sm font-semibold  mb-2">Description :</label>
+        <textarea class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune" name="description">{{ $description->description }}</textarea>
         </div>
         
 
         <div class="mb-4">
-            <button  class="w-full mt-4 py-2 bg-jaune font-bold rounded-xl shadow-sm hover:bg-yellow-300">Modifier cette adresse</button>
+            <button  class="w-full mt-4 py-2 bg-jaune font-bold rounded-xl shadow-sm hover:bg-yellow-300">Modifier cette description</button>
         </div>
     </form>
     </div>

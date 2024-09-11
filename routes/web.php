@@ -9,6 +9,8 @@ use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\Job_offerController;
 use App\Http\Controllers\OfficeAddressController;
 use App\Http\Controllers\Partner_SignupController;
+use App\Http\Controllers\PartnerLogosController;
+use App\Http\Controllers\PartnerThanksController;
 use App\Http\Controllers\Volunteer_SignupController;
 use App\Models\Office_adress_content;
 
@@ -128,11 +130,24 @@ Route::middleware(['auth', 'verified'])->group(function () {
             return view('pages.admin.contact');
         })->name('contact-admin');
 
+        Route::get('/espaceadmin/partenaires', function () {
+            return view('pages.admin.partenaires');
+        })->name('partenaires-admin');
+
         Route::get('/espaceadmin/office-adresses', [OfficeAddressController::class, 'index'])->name('adresse');
         Route::post('/espaceadmin/nouvelle-adresse', [OfficeAddressController::class, 'create'])->name('new-adress');
         Route::get('/delete/office-adresse/{id}', [OfficeAddressController::class, 'destroy'])->name('delete-adress');
         Route::get('/espaceadmin/office-adress/edit/{id}', [OfficeAddressController::class, 'edit'])->name('adress-edit');
         Route::post('/espaceadmin/office-adress/update/{id}', [OfficeAddressController::class, 'update'])->name('adress-update');
+
+        Route::get('/espaceadmin/partner-thanks', [PartnerThanksController::class, 'index'])->name('partners');
+        Route::post('/espaceadmin/nouvelle-description', [PartnerThanksController::class, 'create'])->name('new-description');
+        Route::get('/espaceadmin/partner-thanks/edit/{id}', [PartnerThanksController::class, 'edit'])->name('partner-edit');
+        Route::post('/espaceadmin/partner-thanks/update/{id}', [PartnerThanksController::class, 'update'])->name('partner-update');
+
+        Route::get('/espaceadmin/partner-logos', [PartnerLogosController::class, 'index'])->name('partner-logo');
+        Route::post('/espaceadmin/nouveau-logo', [PartnerLogosController::class, 'create'])->name('new-logo');
+        Route::get('/delete/partner-logos/{id}', [PartnerLogosController::class, 'destroy'])->name('delete-logo');
 
 
     });
