@@ -13,6 +13,7 @@ class Formules extends Model
         'user_id',
         'titre',
         'photo',
+        'presentation',
         'description1',
         'description2',
         'description3',

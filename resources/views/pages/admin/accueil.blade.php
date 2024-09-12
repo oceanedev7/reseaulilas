@@ -12,15 +12,15 @@
           <div class="text-lg font-bold text-center"> Gérer les <br> statistiques </div>
       </a>
 
-      <a href="" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
+      <a href="{{route('network')}}" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
         <i class="fa-solid fa-pencil text-3xl"></i>
         <div class="text-lg font-bold text-center"> Gérer les raisons de <br>  rejoindre le réseau </div>
     </a>
-    <a href="" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
+    <a href="{{route('formules')}}" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
         <i class="fa-solid fa-pencil text-3xl"></i>
         <div class="text-lg font-bold text-center"> Gérer les formules </div>
     </a>
-      <a href="" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
+      <a href="{{route('reviews')}}" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
           <i class="fa-solid fa-pencil text-3xl"></i>
           <div class="text-lg font-bold text-center"> Gérer les <br> témoignages </div>
       </a>

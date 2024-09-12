@@ -7,12 +7,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\EvenementController;
+use App\Http\Controllers\FormulesController;
 use App\Http\Controllers\GlobalNumberController;
 use App\Http\Controllers\Job_offerController;
+use App\Http\Controllers\NetworkController;
 use App\Http\Controllers\OfficeAddressController;
 use App\Http\Controllers\Partner_SignupController;
 use App\Http\Controllers\PartnerLogosController;
 use App\Http\Controllers\PartnerThanksController;
+use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\Volunteer_SignupController;
 use App\Models\Office_adress_content;
 
@@ -164,6 +167,20 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/espaceadmin/new-global-number', [GlobalNumberController::class, 'create'])->name('new-global-number');
         Route::get('/espaceadmin/global-number/edit/{id}', [GlobalNumberController::class, 'edit'])->name('global-number-edit');
         Route::post('/espaceadmin/global-number/update/{id}', [GlobalNumberController::class, 'update'])->name('global-number-update');
+
+        Route::get('/espaceadmin/reviews', [ReviewsController::class, 'index'])->name('reviews');
+        Route::post('/espaceadmin/new-review', [ReviewsController::class, 'create'])->name('new-review');
+        Route::get('/espaceadmin/review/edit/{id}', [ReviewsController::class, 'edit'])->name('review-edit');
+        Route::post('/espaceadmin/review/update/{id}', [ReviewsController::class, 'update'])->name('review-update');
+
+        Route::get('/espaceadmin/network', [NetworkController::class, 'index'])->name('network');
+        Route::post('/espaceadmin/new-network', [NetworkController::class, 'create'])->name('new-network');
+        Route::get('/espaceadmin/network/edit/{id}', [NetworkController::class, 'edit'])->name('network-edit');
+        Route::post('/espaceadmin/network/update/{id}', [NetworkController::class, 'update'])->name('network-update');
+
+        Route::get('/espaceadmin/formules', [FormulesController::class, 'index'])->name('formules');
+        Route::post('/espaceadmin/new-formule', [FormulesController::class, 'create'])->name('new-formule');
+        Route::get('/espaceadmin/formules/photos/{id}', [FormulesController::class, 'show'])->name('formule-photos');
 
     });
 
