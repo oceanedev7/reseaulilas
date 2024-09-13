@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('team_contents', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
+            $table->string('photo')->nullable();
             $table->string('nom');
             $table->string('prenom');
-            $table->string('fontion');
+            $table->string('fonction');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

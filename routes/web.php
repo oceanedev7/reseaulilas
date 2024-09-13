@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ContactContentController;
 use App\Http\Controllers\ProfileController;
@@ -10,12 +11,14 @@ use App\Http\Controllers\EvenementController;
 use App\Http\Controllers\FormulesController;
 use App\Http\Controllers\GlobalNumberController;
 use App\Http\Controllers\Job_offerController;
+use App\Http\Controllers\MissionsController;
 use App\Http\Controllers\NetworkController;
 use App\Http\Controllers\OfficeAddressController;
 use App\Http\Controllers\Partner_SignupController;
 use App\Http\Controllers\PartnerLogosController;
 use App\Http\Controllers\PartnerThanksController;
 use App\Http\Controllers\ReviewsController;
+use App\Http\Controllers\TeamController;
 use App\Http\Controllers\Volunteer_SignupController;
 use App\Models\Office_adress_content;
 
@@ -143,6 +146,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
             return view('pages.admin.accueil');
         })->name('accueil-admin');
 
+        Route::get('/espaceadmin/nous-decouvrir', function () {
+            return view('pages.admin.decouvrir');
+        })->name('decouvrir-admin');
+
         Route::get('/espaceadmin/office-adresses', [OfficeAddressController::class, 'index'])->name('adresse');
         Route::post('/espaceadmin/nouvelle-adresse', [OfficeAddressController::class, 'create'])->name('new-adress');
         Route::get('/delete/office-adresse/{id}', [OfficeAddressController::class, 'destroy'])->name('delete-adress');
@@ -181,6 +188,21 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/espaceadmin/formules', [FormulesController::class, 'index'])->name('formules');
         Route::post('/espaceadmin/new-formule', [FormulesController::class, 'create'])->name('new-formule');
         Route::get('/espaceadmin/formules/photos/{id}', [FormulesController::class, 'show'])->name('formule-photos');
+
+        Route::get('/espaceadmin/about', [AboutController::class, 'index'])->name('about-content');
+        Route::post('/espaceadmin/new-about-content', [AboutController::class, 'create'])->name('new-about-content');
+        Route::get('/espaceadmin/about-content/edit/{id}', [AboutController::class, 'edit'])->name('about-content-edit');
+        Route::post('/espaceadmin/about-content/update/{id}', [AboutController::class, 'update'])->name('about-content-update');
+
+        Route::get('/espaceadmin/missions', [MissionsController::class, 'index'])->name('missions');
+        Route::post('/espaceadmin/new-mission', [MissionsController::class, 'create'])->name('new-mission');
+        Route::get('/espaceadmin/mission/edit/{id}', [MissionsController::class, 'edit'])->name('mission-edit');
+        Route::post('/espaceadmin/mission/update/{id}', [MissionsController::class, 'update'])->name('mission-update');
+
+        Route::get('/espaceadmin/team-content', [TeamController::class, 'index'])->name('team-content');
+        Route::post('/espaceadmin/new-team-content', [TeamController::class, 'create'])->name('new-team');
+        Route::get('/espaceadmin/team/edit/{id}', [TeamController::class, 'edit'])->name('team-edit');
+        Route::post('/espaceadmin/team/update/{id}', [TeamController::class, 'update'])->name('team-update');
 
     });
 

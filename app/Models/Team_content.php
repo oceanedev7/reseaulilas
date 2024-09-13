@@ -11,6 +11,7 @@ class Team_content extends Model
 
     protected $fillable = [
         'user_id',
+        'photo',
         'nom',
         'prenom',
         'fonction',

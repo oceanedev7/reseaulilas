@@ -42,27 +42,27 @@
           <div class="absolute rounded-full border-2 border-jaune w-[300px] h-[300px] bg-transparent"></div>
   
           <!-- Top card -->
-          <div class="bg-jaune rounded-xl absolute w-[120px] h-[120px] bg-cover bg-center -translate-y-[150px] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-1 box-border overflow-hidden">
+          <div class="space-y-1.5 bg-jaune rounded-xl absolute w-[120px] h-[120px] bg-cover bg-center -translate-y-[150px] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-2 box-border overflow-hidden">
               <div class="font-bold text-sm">LOREM IPSUM</div>
-              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in.</div>
+              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in vitae.</div>
           </div>
   
           <!-- Right card -->
-          <div class="rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center top-1/2 left-full -translate-x-[40%] -translate-y-[40%] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-1 box-border overflow-hidden">
+          <div class=" space-y-1.5 rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center top-1/2 left-full -translate-x-[40%] -translate-y-[40%] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-2 box-border overflow-hidden">
               <div class="font-bold text-sm">LOREM IPSUM</div>
-              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in.</div>
+              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in vitae.</div>
           </div>
   
           <!-- Left card -->
-          <div class="rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center top-1/2 left-0 -translate-x-1/2 -translate-y-[40%] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-1 box-border overflow-hidden">
+          <div class="space-y-1.5 rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center top-1/2 left-0 -translate-x-1/2 -translate-y-[40%] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-2 box-border overflow-hidden">
               <div class="font-bold text-sm">LOREM IPSUM</div>
-              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in.</div>
+              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in vitae.</div>
           </div>
   
           <!-- Bottom card -->
-          <div class="rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-1 box-border overflow-hidden">
+          <div class="space-y-1.5 rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-2 box-border overflow-hidden">
               <div class="font-bold text-sm">LOREM IPSUM</div>
-              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in.</div>
+              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in vitae.</div>
           </div>
       </div>
   </div>
