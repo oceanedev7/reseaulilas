@@ -16,11 +16,13 @@ use App\Http\Controllers\NetworkController;
 use App\Http\Controllers\NumberContentController;
 use App\Http\Controllers\OfficeAddressController;
 use App\Http\Controllers\Partner_SignupController;
+use App\Http\Controllers\PartnerContentController;
 use App\Http\Controllers\PartnerLogosController;
 use App\Http\Controllers\PartnerThanksController;
 use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\Volunteer_SignupController;
+use App\Http\Controllers\VolunteerContentController;
 use App\Models\Office_adress_content;
 
 Route::get('/', function () {
@@ -151,6 +153,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
             return view('pages.admin.decouvrir');
         })->name('decouvrir-admin');
 
+        Route::get('/espaceadmin/nous-rejoindre', function () {
+            return view('pages.admin.rejoindre');
+        })->name('rejoindre-admin');
+
+
         Route::get('/espaceadmin/office-adresses', [OfficeAddressController::class, 'index'])->name('adresse');
         Route::post('/espaceadmin/nouvelle-adresse', [OfficeAddressController::class, 'create'])->name('new-adress');
         Route::get('/delete/office-adresse/{id}', [OfficeAddressController::class, 'destroy'])->name('delete-adress');
@@ -209,6 +216,16 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/espaceadmin/new-number-content', [NumberContentController::class, 'create'])->name('new-number');
         Route::get('/espaceadmin/number/edit/{id}', [NumberContentController::class, 'edit'])->name('number-edit');
         Route::post('/espaceadmin/number/update/{id}', [NumberContentController::class, 'update'])->name('number-update');
+
+        Route::get('/espaceadmin/partner-content', [PartnerContentController::class, 'index'])->name('partner-content');
+        Route::post('/espaceadmin/new-partner-content', [PartnerContentController::class, 'create'])->name('new-partner-content');
+        Route::get('/espaceadmin/partner-content/edit/{id}', [PartnerContentController::class, 'edit'])->name('partner-content-edit');
+        Route::post('/espaceadmin/partner-content/update/{id}', [PartnerContentController::class, 'update'])->name('partner-content-update');
+
+        Route::get('/espaceadmin/volunteer-content', [VolunteerContentController::class, 'index'])->name('volunteer-content');
+        Route::post('/espaceadmin/new-volunteer-content', [VolunteerContentController::class, 'create'])->name('new-volunteer-content');
+        Route::get('/espaceadmin/volunteer-content/edit/{id}', [VolunteerContentController::class, 'edit'])->name('volunteer-content-edit');
+        Route::post('/espaceadmin/volunteer-content/update/{id}', [VolunteerContentController::class, 'update'])->name('volunteer-content-update');
 
     });
 
