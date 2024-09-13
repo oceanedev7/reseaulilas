@@ -32,7 +32,7 @@
         </div>
 
         <div class="mb-4">
-            <label for="Adresse postale" class="block text-sm font-semibold  mb-2">Adresse postale :</label>
+            <label for="Adresse postale" class="block text-sm font-semibold  mb-2">Adresse postale principale :</label>
             <input name="adresse" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune" required>
         </div>
 
@@ -45,6 +45,12 @@
             <label for="Numéro de téléphone" class="block text-sm font-semibold  mb-2">Numéro de téléphone :</label>
             <input name="telephone" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune" required>
         </div>
+
+        @if ($errors->has('max_elements'))
+        <div class="text-red-600 text-sm mt-1 mb-4">
+            {{ $errors->first('max_elements') }}
+        </div>
+    @endif
     
         <div class="mb-4">
             <button  class="w-full mt-4 py-2 bg-jaune font-bold rounded-xl shadow-sm hover:bg-yellow-300">Créer les informations de contact</button>
@@ -58,13 +64,13 @@
 <div class="w-full h-72 flex flex-col items-center justify-center p-12"> 
     @foreach ($contacts as $contact)
         
-    <div class="mb-4 flex space-x-2">
+    <div class="mb-4 flex flex-start space-x-2">
         <label class="block font-semibold  mb-2">Horaires :</label>
         <div>{{$contact->horaire}}</div>   
      </div>
 
      <div class="mb-4 flex space-x-2">
-        <label class="block font-semibold  mb-2">Adresse :</label>
+        <label class="block font-semibold  mb-2">Adresse postale principale :</label>
         <div>{{$contact->adresse}}</div>  
      </div>
 

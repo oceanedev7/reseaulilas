@@ -25,11 +25,21 @@ class OfficeAddressController extends Controller
      */
     public function create(Request $request)
     {
-         // dd($request);
+        $existingMissionsCount = Office_adress_content::count();
+
+        if ($existingMissionsCount >= 3) {
+            return redirect("/espaceadmin/office-adresses")->withErrors([
+                'max_elements' => 'Vous ne pouvez pas créer plus de 3 données.',
+            ]);
+        }
+
          $request->validate(
             [
-            'adresse_postale'=>'required|string|min:3',
-            ]);
+            'adresse_postale'=>'required|string|max:110',
+        ],
+        [
+            'adresse_postale.max' => 'La description ne doit pas dépasser 110 caractères.', 
+        ]);
 
          Office_adress_content::create($request->all());
  
@@ -69,8 +79,10 @@ class OfficeAddressController extends Controller
         // dd($request);
         $request->validate([
 
-            'adresse_postale' => 'required|string',
-            
+            'adresse_postale' => 'required|string|max:110',
+        ],
+        [
+            'adresse_postale.max' => 'La description ne doit pas dépasser 110 caractères.', 
         ]);
     
         $adresse = Office_adress_content::findOrFail($id);

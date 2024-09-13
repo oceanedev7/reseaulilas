@@ -26,6 +26,14 @@ class ContactContentController extends Controller
     public function create(Request $request)
     {
 
+        $existingMissionsCount = Contact_content::count();
+
+        if ($existingMissionsCount >= 1) {
+            return redirect("/espaceadmin/contact-content")->withErrors([
+                'max_elements' => 'Vous ne pouvez pas créer plus d\'une donnée.',
+            ]);
+        }
+
         $request->validate(
             [
             'horaire' => 'required|string',

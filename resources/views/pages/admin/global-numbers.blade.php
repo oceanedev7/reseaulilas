@@ -36,6 +36,12 @@
             <input name="description" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune" required>
         </div>
 
+        @if ($errors->has('max_elements'))
+            <div class="text-red-600 text-sm mt-1 mb-4">
+                {{ $errors->first('max_elements') }}
+            </div>
+        @endif
+
     
         <div class="mb-4">
             <button  class="w-full mt-4 py-2 bg-jaune font-bold rounded-xl shadow-sm hover:bg-yellow-300">Créer une statistique</button>
@@ -49,7 +55,7 @@
 <div class="w-full h-72 flex flex-col items-center justify-center p-12"> 
  
         
-        <div class=" h-40 w-7/10 py-24 rounded-xl flex items-center justify-center space-x-8 bg-jaune">
+        <div class=" h-40 w-7/10 py-24 rounded-xl flex items-center justify-center space-x-20 bg-jaune">
             @foreach ($globals as $global)
                 
             

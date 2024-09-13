@@ -25,6 +25,15 @@ class ReviewsController extends Controller
      */
     public function create(Request $request)
     {
+
+        $existingMissionsCount = Reviews::count();
+
+        if ($existingMissionsCount >= 3) {
+            return redirect("/espaceadmin/reviews")->withErrors([
+                'max_elements' => 'Vous ne pouvez pas créer plus de 3 données.',
+            ]);
+        }
+
         $request->validate(
             [
             'nom' => 'required|string',

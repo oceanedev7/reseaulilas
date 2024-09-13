@@ -31,7 +31,7 @@
 
         <div class="mb-4">
             <label class="block text-sm font-semibold  mb-2">Description :</label>
-            <input value="{{ $aboutcontent->description }}" name="description" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune">
+            <textarea name="description" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune" required> {{ $aboutcontent->description }} </textarea>
         </div>
   
         @error('description')

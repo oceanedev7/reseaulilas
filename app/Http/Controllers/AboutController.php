@@ -25,6 +25,14 @@ class AboutController extends Controller
      */
     public function create(Request $request)
     {
+        $existingMissionsCount = About_content::count();
+
+        if ($existingMissionsCount >= 1) {
+            return redirect("/espaceadmin/about")->withErrors([
+                'max_elements' => 'Vous ne pouvez pas créer plus d\'une donnée.',
+            ]);
+        }
+
         $request->validate(
             [
             'description' => 'required|string|max:1000',

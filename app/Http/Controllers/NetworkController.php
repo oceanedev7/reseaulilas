@@ -24,7 +24,17 @@ class NetworkController extends Controller
      * Show the form for creating a new resource.
      */
     public function create(Request $request)
+
     {
+
+        $existingMissionsCount = Join_network::count();
+
+        if ($existingMissionsCount >= 3) {
+            return redirect("/espaceadmin/network")->withErrors([
+                'max_elements' => 'Vous ne pouvez pas créer plus de 3 données.',
+            ]);
+        }
+
         $request->validate(
             [
             'description' => 'required|string|max:150',

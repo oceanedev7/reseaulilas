@@ -39,6 +39,12 @@
         @error('description')
             <div class="text-red-600 text-sm mt-1 mb-4">{{ $message }}</div>  
         @enderror
+
+        @if ($errors->has('max_elements'))
+        <div class="text-red-600 text-sm mt-1 mb-4">
+            {{ $errors->first('max_elements') }}
+        </div>
+    @endif
     
         <div class="mb-4">
             <button  class="w-full mt-4 py-2 bg-jaune font-bold rounded-xl shadow-sm hover:bg-yellow-300">Créer un témoignage</button>

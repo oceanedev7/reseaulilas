@@ -25,10 +25,21 @@ class PartnerThanksController extends Controller
      */
     public function create(Request $request)
     {
+        $existingMissionsCount = Partner_thanks_content::count();
+
+        if ($existingMissionsCount >= 1) {
+            return redirect("/espaceadmin/partner-thanks")->withErrors([
+                'max_elements' => 'Vous ne pouvez pas créer plus d\'une donnée.',
+            ]);
+        }
+
         $request->validate(
             [
-            'description'=>'required|string|min:3',
-            ]);
+            'description'=>'required|string|max:990',
+        ],
+        [
+            'description.max' => 'La description ne doit pas dépasser 990 caractères.', 
+        ]);
 
          Partner_thanks_content::create($request->all());
  
@@ -67,8 +78,10 @@ class PartnerThanksController extends Controller
     {
         $request->validate([
 
-            'description' => 'required|string',
-            
+            'description' => 'required|string|max:990',
+        ],
+        [
+            'description.max' => 'La description ne doit pas dépasser 990 caractères.', 
         ]);
     
         $description = Partner_thanks_content::findOrFail($id);

@@ -25,6 +25,14 @@ class GlobalNumberController extends Controller
      */
     public function create(Request $request)
     {
+        $existingMissionsCount = Global_number_content::count();
+
+        if ($existingMissionsCount >= 4) {
+            return redirect("/espaceadmin/global-numbers")->withErrors([
+                'max_elements' => 'Vous ne pouvez pas créer plus de 4 données.',
+            ]);
+        }
+
         $request->validate(
             [
             'titre' => 'required|string',
