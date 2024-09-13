@@ -20,9 +20,9 @@
         <i class="fa-solid fa-pencil text-3xl"></i>
         <div class="text-lg font-bold text-center"> Gérer les <br> membres de l'équipe </div>
     </a>
-      <a href="" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
+      <a href="{{route ('number-content')}}" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
           <i class="fa-solid fa-pencil text-3xl"></i>
-          <div class="text-lg font-bold text-center"> Gérer les <br> statistiques <br> liées au réseau </div>
+          <div class="text-lg font-bold text-center"> Gérer les chiffres <br> liées au réseau </div>
       </a>
       
     

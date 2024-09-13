@@ -13,6 +13,7 @@ use App\Http\Controllers\GlobalNumberController;
 use App\Http\Controllers\Job_offerController;
 use App\Http\Controllers\MissionsController;
 use App\Http\Controllers\NetworkController;
+use App\Http\Controllers\NumberContentController;
 use App\Http\Controllers\OfficeAddressController;
 use App\Http\Controllers\Partner_SignupController;
 use App\Http\Controllers\PartnerLogosController;
@@ -203,6 +204,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/espaceadmin/new-team-content', [TeamController::class, 'create'])->name('new-team');
         Route::get('/espaceadmin/team/edit/{id}', [TeamController::class, 'edit'])->name('team-edit');
         Route::post('/espaceadmin/team/update/{id}', [TeamController::class, 'update'])->name('team-update');
+
+        Route::get('/espaceadmin/number-content', [NumberContentController::class, 'index'])->name('number-content');
+        Route::post('/espaceadmin/new-number-content', [NumberContentController::class, 'create'])->name('new-number');
+        Route::get('/espaceadmin/number/edit/{id}', [NumberContentController::class, 'edit'])->name('number-edit');
+        Route::post('/espaceadmin/number/update/{id}', [NumberContentController::class, 'update'])->name('number-update');
 
     });
 
