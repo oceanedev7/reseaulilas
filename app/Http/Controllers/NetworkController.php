@@ -37,10 +37,10 @@ class NetworkController extends Controller
 
         $request->validate(
             [
-            'description' => 'required|string|max:150',
+            'description' => 'required|string|max:160',
             ],
             [
-                'description.max' => 'La description ne doit pas dépasser 150 caractères.', 
+                'description.max' => 'La description ne doit pas dépasser 160 caractères.', 
             ]
         
         
