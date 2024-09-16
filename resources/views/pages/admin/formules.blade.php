@@ -10,7 +10,7 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
-    <title>Les formules</title>
+    <title>Nos formules</title>
 </head>
 <body>
 
@@ -20,7 +20,7 @@
     </a>
     
     <div class="bg-jaune w-full p-12 space-y-12 flex flex-col items-center"> 
-<div class="text-center font-black uppercase text-3xl"> Les formules </div>
+<div class="text-center font-black uppercase text-3xl"> Nos formules </div>
 <div class="bg-white custom-shadow p-8 rounded-lg shadow-lg w-full max-w-4xl">
 
     <form method="POST" action="{{route ('new-formule')}}" enctype="multipart/form-data">
@@ -78,6 +78,11 @@
         <div class="text-red-600 text-sm mt-1 mb-4">{{ $message }}</div>  
     @enderror
 
+    @if ($errors->has('max_elements'))
+    <div class="text-red-600 text-sm mt-1 mb-4">
+        {{ $errors->first('max_elements') }}
+    </div>
+@endif
 
         <div class="mb-4">
             <button  class="w-full mt-4 py-2 bg-jaune font-bold rounded-xl shadow-sm hover:bg-yellow-300">Créer une formule</button>
@@ -90,7 +95,8 @@
 
 <div class="w-full grid grid-cols-3 gap-8 items-center justify-center p-12"> 
     @foreach ($formules as $formule)
-        <div class="flex flex-col bg-white border border-2 border-jaune rounded-xl p-4 relative w-[250px] h-[200px]">
+        <div class="flex flex-col items-center justify-center">
+    <div class="flex flex-col bg-white border border-2 border-jaune rounded-xl p-4 relative w-[250px] h-[200px]">
             <div class="uppercase text-lg text-center font-bold text-black mb-2">
                 {{ $formule->titre }}
             </div>
@@ -101,6 +107,10 @@
                 Voir plus <i class="fa-solid fa-circle-arrow-right ml-1"></i>
             </a>
             
+        </div>
+
+       <a href="{{route ('formule-edit', $formule->id)}}" class="font-bold bg-green-600 text-white rounded-xl py-1.5 px-4 mt-4">Modifier</a> 
+           
         </div>
     @endforeach
 </div>

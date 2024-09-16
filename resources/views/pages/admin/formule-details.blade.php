@@ -76,14 +76,12 @@
         </div>
 
         <div class="flex flex-col w-full text-center mt-8">
-        <a href="" class="font-bold bg-green-600 text-white rounded-xl py-1.5 px-4 mt-4">Modifier</a> 
-        </div>
-
-
+        <a href="{{route('formule-edit', $formule->id)}}" class="font-bold bg-green-600 text-white rounded-xl py-1.5 px-4 mt-4">Modifier</a> 
+        </div> 
         
     </div>
     
-    
+   
 </body>
 </html>
 

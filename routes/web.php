@@ -23,6 +23,7 @@ use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\Volunteer_SignupController;
 use App\Http\Controllers\VolunteerContentController;
+use App\Models\Formules;
 use App\Models\Office_adress_content;
 
 Route::get('/', function () {
@@ -196,6 +197,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/espaceadmin/formules', [FormulesController::class, 'index'])->name('formules');
         Route::post('/espaceadmin/new-formule', [FormulesController::class, 'create'])->name('new-formule');
         Route::get('/espaceadmin/formule/details/{id}', [FormulesController::class, 'show'])->name('formule-details');
+        Route::get('/espaceadmin/formule/edit/{id}', [FormulesController::class, 'edit'])->name('formule-edit');
+        Route::post('/espaceadmin/formule/update/{id}', [FormulesController::class, 'update'])->name('formule-update');        
 
         Route::get('/espaceadmin/about', [AboutController::class, 'index'])->name('about-content');
         Route::post('/espaceadmin/new-about-content', [AboutController::class, 'create'])->name('new-about-content');
