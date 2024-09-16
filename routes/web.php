@@ -195,7 +195,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
         Route::get('/espaceadmin/formules', [FormulesController::class, 'index'])->name('formules');
         Route::post('/espaceadmin/new-formule', [FormulesController::class, 'create'])->name('new-formule');
-        Route::get('/espaceadmin/formules/photos/{id}', [FormulesController::class, 'show'])->name('formule-photos');
+        Route::get('/espaceadmin/formule/details/{id}', [FormulesController::class, 'show'])->name('formule-details');
 
         Route::get('/espaceadmin/about', [AboutController::class, 'index'])->name('about-content');
         Route::post('/espaceadmin/new-about-content', [AboutController::class, 'create'])->name('new-about-content');

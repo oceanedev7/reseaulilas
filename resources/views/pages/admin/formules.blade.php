@@ -56,7 +56,7 @@
             <textarea name="description1" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jaune focus:border-jaune" required></textarea>
         </div>
 
-        @error('description')
+        @error('description1')
         <div class="text-red-600 text-sm mt-1 mb-4">{{ $message }}</div>  
     @enderror
 
@@ -65,7 +65,7 @@
             <textarea name="description2" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jaune focus:border-jaune" required></textarea>
         </div>
 
-        @error('description')
+        @error('description2')
         <div class="text-red-600 text-sm mt-1 mb-4">{{ $message }}</div>  
     @enderror
 
@@ -94,22 +94,13 @@
             <div class="uppercase text-lg text-center font-bold text-black mb-2">
                 {{ $formule->titre }}
             </div>
-            <div class="text-justify whitespace-normal text-xs text-black mb-2">
+            <div class="text-justify whitespace-normal text-black text-sm mb-2">
                 {{ $formule->presentation }}
             </div>
-            <a href="" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
+            <a href="{{route('formule-details', $formule->id)}}" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2">
                 Voir plus <i class="fa-solid fa-circle-arrow-right ml-1"></i>
             </a>
             
-            @if(isset($photoPaths) && is_array($photoPaths))
-                @foreach ($photoPaths as $path)
-                    <div class="p-2">
-                        <img src="{{ Storage::url($path) }}" alt="Photo" class="w-32 h-32 object-cover">
-                    </div>
-                @endforeach
-            @else
-                <p>Aucune photo disponible.</p>
-            @endif
         </div>
     @endforeach
 </div>

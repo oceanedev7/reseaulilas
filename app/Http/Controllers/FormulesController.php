@@ -29,16 +29,17 @@ class FormulesController extends Controller
             [
             'titre' => 'required|string|max:20',
             'photo.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg', 
-            'presentation' => 'required|string|max:190',
+            'presentation' => 'required|string|max:195',
             'description1' => 'required|string|max:560',
             'description2' => 'required|string|max:560',
             'description3' => 'required|string|max:870',
             ],
             [
                 'titre.max' => 'La description ne doit pas dépasser 20 caractères.', 
-                'presentation.max' => 'La description ne doit pas dépasser 190 caractères.', 
-                'description.max' => 'La description ne doit pas dépasser 560 caractères.', 
-                'description3.max' => 'La description ne doit pas dépasser 870 caractères.', 
+                'presentation.max' => 'La présentation ne doit pas dépasser 195 caractères.', 
+                'description1.max' => 'La description 1 ne doit pas dépasser 560 caractères.', 
+                'description2.max' => 'La description 2 ne doit pas dépasser 560 caractères.', 
+                'description3.max' => 'La description 3 ne doit pas dépasser 870 caractères.', 
             ]
         );
 
@@ -70,9 +71,8 @@ class FormulesController extends Controller
     public function show(string $id)
     {
         $formule = Formules::findOrFail($id);
-    $photoPaths = json_decode($formule->photo, true);
 
-    return view('pages.admin.formules', compact('formule', 'photoPaths'));
+    return view('pages.admin.formule-details', compact('formule'));
     }
 
     /**
