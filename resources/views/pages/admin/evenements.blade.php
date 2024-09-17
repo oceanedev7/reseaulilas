@@ -56,12 +56,12 @@
 
         <div class="mb-4">
             <label for="heure" class="block text-sm font-semibold  mb-2">Heure du début de l'évènement :</label>
-            <input type="date" name="heure_debut" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jaune focus:border-jaune" required>
+            <input name="heure_debut" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jaune focus:border-jaune" required>
         </div>
 
         <div class="mb-4">
             <label for="heure" class="block text-sm font-semibold  mb-2">Heure de fin de l'évènement :</label>
-            <input type="date" name="heure_fin" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jaune focus:border-jaune">
+            <input  name="heure_fin" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jaune focus:border-jaune">
         </div>
 
         <div class="mb-4">
@@ -108,7 +108,9 @@
 
 </div>
 
-
+<div class="mt-6">
+    {{ $evenements->links('vendor.pagination.tailwind-page') }}
+</div>
 
 
 </body>

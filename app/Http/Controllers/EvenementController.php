@@ -14,7 +14,8 @@ class EvenementController extends Controller
      */
     public function index()
     {
-        $evenements = Agenda::all();
+        // $evenements = Agenda::all();
+        $evenements = Agenda::paginate(9);
 
         return view('pages.admin.evenements', [
             'evenements' => $evenements,

@@ -13,7 +13,8 @@ class ActualiteController extends Controller
      */
     public function index()
     {
-        $actualites = Actualite::all();
+        // $actualites = Actualite::all();
+        $actualites = Actualite::paginate(9);
 
         return view('pages.admin.actualites', [
             'actualites' => $actualites,

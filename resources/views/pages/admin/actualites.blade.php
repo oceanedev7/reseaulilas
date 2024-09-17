@@ -47,8 +47,8 @@
 </div>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-6 justify-items-center mt-6">
-
     @foreach ($actualites as $actualite)
+    <div class="flex flex-col"> 
     <div class="bg-white max-w-xs w-full rounded-xl custom-shadow overflow-hidden p-3">
         <div class="relative rounded-lg overflow-hidden">
             <div class="p-4">
@@ -64,27 +64,30 @@
             <div class="text-center text-justify text-sm line-clamp-3">
                 {{$actualite->description}}
             </div>
-            <div class="flex space-x-2 items-center relative top-2">
-                <div class="flex space-x-1">
-                    <a href="{{route ('actu-edit', $actualite->id )}}" class="font-bold bg-green-600 text-white rounded-xl px-2 py-1 text-sm">Modifier</a>
-                    <a href="{{ route('delete-actu', $actualite->id) }}" class="font-bold bg-red-600 text-white rounded-xl px-2 py-1 text-sm">Supprimer</a>
-                </div>
-            
-                <div>
-                    <a href="{{ route('actu-detail', $actualite->id) }}" class="bg-jaune font-semibold text-center mt-2 rounded px-1 py-1 text-sm">
-                        Voir plus <i class="fa-solid fa-circle-arrow-right ml-1"></i>
-                    </a>
-                </div>
+            <div class="flex space-x-2 items-center justify-center mt-2">
+                <a href="{{ route('actu-detail', $actualite->id) }}" class="bg-jaune font-semibold text-center rounded px-2 py-1 text-sm">
+                    Voir plus <i class="fa-solid fa-circle-arrow-right ml-1"></i>
+                </a>
             </div>
-            
         </div>
     </div>
-
+    <div class="flex justify-center space-x-4 mt-4 w-full">
+        <a href="{{ route('actu-edit', $actualite->id) }}" class="font-bold bg-green-600 text-white rounded-xl px-2 py-1 ">
+            Modifier
+        </a>
+        <a href="{{ route('delete-actu', $actualite->id) }}" class="font-bold bg-red-600 text-white rounded-xl px-2 py-1">
+            Supprimer
+        </a>
+    </div>
+</div>
     @endforeach
 </div>
 
 
 
+<div class="mt-6">
+    {{ $actualites->links('vendor.pagination.tailwind-page') }}
+</div>
 
 </body>
 </html>

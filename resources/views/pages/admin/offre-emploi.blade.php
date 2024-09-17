@@ -84,7 +84,7 @@
 <div class="grid grid-cols-2 gap-12 p-12">
     @foreach ($emplois as $emploi)
         
-   
+   <div class="flex flex-col justify-center space-y-6">
     <div class="  custom-shadow rounded-xl p-4 box-border overflow-hidden whitespace-normal p-8">
     <div class="space-y-2.5">
         <div class="flex space-x-8">
@@ -102,12 +102,15 @@
     </div>
 
     <div class="flex justify-start mt-4">
-        <a href="{{route ('emploi-edit', $emploi->id )}}" class="font-bold bg-green-600 text-white rounded-xl py-1.5 px-4 mt-4">Modifier</a>
-        <a href="{{route ('delete-emploi', $emploi->id )}}" class="font-bold bg-red-600 text-white rounded-xl py-1.5 px-4 mt-4 ml-2"> Supprimer</a>
          <a href="{{route ('emploi-detail', $emploi->id)}}" class="font-bold bg-jaune rounded-xl py-1.5 px-4 mt-4 ml-36">Voir le détail</a>
     </div>
  
     </div>
+    <div class="max-w-lg flex justify-center space-x-12">
+    <a href="{{route ('emploi-edit', $emploi->id )}}" class="font-bold bg-green-600 text-white rounded-xl py-1.5 px-4 ">Modifier</a>
+    <a href="{{route ('delete-emploi', $emploi->id )}}" class="font-bold bg-red-600 text-white rounded-xl py-1.5 px-4 "> Supprimer</a>
+    </div>
+</div>
     @endforeach 
 
 </div>

@@ -151,11 +151,11 @@
             <label for="description" class="block text-sm font-semibold mb-2">Description :</label>
             <textarea name="description" id="description" 
                       class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune" 
-                      >{{ $evenement->description}}</textarea>
+                      >{{  $evenement->description}}</textarea>
         </div>
 
         <div class="mb-4">
-            <button class="w-full mt-4 py-2 bg-jaune font-bold rounded-xl shadow-sm hover:bg-yellow-300">Mettre à jour l'événement</button>
+            <button type="submit" class="w-full mt-4 py-2 bg-jaune font-bold rounded-xl shadow-sm hover:bg-yellow-300">Mettre à jour l'événement</button>
         </div>
     </form>
             
