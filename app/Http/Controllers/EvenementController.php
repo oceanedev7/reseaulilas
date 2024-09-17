@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Agenda;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class EvenementController extends Controller
 {
@@ -25,28 +27,33 @@ class EvenementController extends Controller
      */
     public function create(Request $request)
     {
-        // dd($request);
-        $validatedData = $request->validate([
+        $request->validate([
             'titre' => 'required|string|max:255',
-            'description' => 'required|string',
-            'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',  
-            'categorie' => 'required|string',
+            'categorie' => 'required|string|max:255',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'lieu' => 'required|string|max:255',
-            'date' => 'required|date',  
-            'heure_debut' => 'required|date_format:H:i',  
-            'heure_fin' => 'nullable|date_format:H:i',  
- 
+            'date' => 'required|date',
+            'heure_debut' => 'required|date_format:H:i',
+            'heure_fin' => 'nullable|date_format:H:i',
+            'description' => 'required|string'
         ]);
     
-        if ($request->hasFile('photo')) {
-            $path = $request->file('photo')->store('public/images');
-            $validatedData['photo'] = $path; 
-        }
+        $path = $request->file('photo')->store('public/images');
     
-        Agenda::create($validatedData);
+        $evenement = new Agenda([
+            'titre' => $request->input('titre'),
+            'categorie' => $request->input('categorie'),
+            'photo' => $path,
+            'lieu' => $request->input('lieu'),
+            'date' => $request->input('date'),
+            'heure_debut' => $request->input('heure_debut'),
+            'heure_fin' => $request->input('heure_fin'),
+            'description' => $request->input('description')
+        ]);
     
-        
-        return redirect()->back();  
+        $evenement->save();
+    
+        return redirect()->route('event-details', ['id' => $evenement->id]);
     }
 
     /**
@@ -63,6 +70,7 @@ class EvenementController extends Controller
     public function show(string $id)
     {
         $evenement = Agenda::findOrFail($id); 
+        // dd($evenement);
         return view("pages.admin.evenement-details", compact('evenement'));
     }
 
@@ -71,8 +79,8 @@ class EvenementController extends Controller
      */
     public function edit(string $id)
     {
-        $evenement=Agenda::findOrFail($id); 
-        return view("pages.admin.evenement-edit", compact('evenement'));
+        $evenement = Agenda::findOrFail($id);
+        return view('pages.admin.evenement-edit', compact('evenement'));
     }
 
     /**
@@ -81,36 +89,35 @@ class EvenementController extends Controller
     public function update(Request $request, string $id)
     {
         // dd($request);
-
         $request->validate([
-            'titre' => 'string|max:255',
+            'titre' => 'string',
             'description' => 'string',
-            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',  
+            'photo' => 'image|mimes:jpeg,png,jpg,gif,svg',
             'categorie' => 'string',
-            'lieu' => 'string|max:255',
+            'lieu' => 'string',
             'date' => 'date',  
             'heure_debut' => 'date_format:H:i',  
             'heure_fin' => 'nullable|date_format:H:i',  
         ]);
     
         $evenement = Agenda::findOrFail($id);
-    
+      
         if ($request->hasFile('photo')) {
     
             $path = $request->file('photo')->store('public/images');
             $evenement->photo = $path;
         }
-    
         $evenement->titre = $request->input('titre');
+        $evenement->description = $request->input('description');
         $evenement->categorie = $request->input('categorie');
         $evenement->lieu = $request->input('lieu');
         $evenement->date = $request->input('date');
         $evenement->heure_debut = $request->input('heure_debut');
         $evenement->heure_fin = $request->input('heure_fin');
-        $evenement->description = $request->input('description');
-        
+
         $evenement->save();
-    
+   
+
         return redirect('/espaceadmin/evenement/details/' . $evenement->id);
 
     }

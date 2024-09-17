@@ -129,9 +129,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
         Route::get('/espaceadmin/evenement', [EvenementController::class, 'index'])->name('event');
         Route::post('/espaceadmin/nouvel-evenement', [EvenementController::class, 'create'])->name('new-event');
+        Route::get('/espaceadmin/evenement/details/{id}', [EvenementController::class, 'show'])->name('event-details');
         Route::get('/delete/evenement/{id}', [EvenementController::class, 'destroy'])->name('delete-event');
         Route::get('/espaceadmin/evenement/edit/{id}', [EvenementController::class, 'edit'])->name('event-edit');
-        Route::get('/espaceadmin/evenement/details/{id}', [EvenementController::class, 'show'])->name('event-details');
         Route::post('/espaceadmin/evenement/update/{id}', [EvenementController::class, 'update'])->name('event-update');
         
         Route::get('/espaceadmin/contenu', function () {
