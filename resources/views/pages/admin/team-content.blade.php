@@ -28,7 +28,7 @@
 
         <div class="mb-4">
             <label  class="block text-sm font-semibold  mb-2">Photo de la membre de l'équipe :</label>
-            <input type="file" name="photo" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border file:border-gray-300 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" accept="image/*" required>
+            <input type="file" name="photo" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border file:border-gray-300 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" accept="image/*">
         </div>
 
         <div class="mb-4">
@@ -65,16 +65,18 @@
               <div class="flex flex-col">  
 
                 <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
-                    <img class="h-36 w-60 rounded-xl object-cover w-full" src="{{ Storage::url($team->photo) }}" alt="">
+                    <img src="{{ $team->photo ? Storage::url($team->photo) : asset('images/logoreseaulilas.png') }}" alt="" class="h-36 w-60 rounded-xl object-cover w-full">
+
                     <div class="flex flex-col items-center mt-1.5">
                       <div>{{$team->prenom}} {{$team->nom}}</div>
                       <div class="font-bold">{{$team->fonction}}</div>
                     </div>
                   </div>
                 
-
-            <a href="{{route('team-edit', $team->id)}}" class="font-bold text-center bg-green-600 text-white rounded-xl py-1.5 px-4 mt-4">Modifier</a>
-              
+        <div class="flex justify-center mt-4 space-x-6">
+            <a href="{{route('team-edit', $team->id)}}" class="font-bold text-center bg-green-600 text-white rounded-xl py-1.5 px-4">Modifier</a>
+            <a href="{{route('delete-team', $team->id)}}" class="font-bold text-center bg-red-600 text-white rounded-xl py-1.5 px-4 "> Supprimer</a>
+        </div>
         </div>
 
         @endforeach

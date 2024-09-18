@@ -56,12 +56,12 @@
 
         <div class="mb-4">
             <label for="heure" class="block text-sm font-semibold  mb-2">Heure du début de l'évènement :</label>
-            <input name="heure_debut" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jaune focus:border-jaune" required>
+            <input  type="time" name="heure_debut" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jaune focus:border-jaune" required>
         </div>
 
         <div class="mb-4">
             <label for="heure" class="block text-sm font-semibold  mb-2">Heure de fin de l'évènement :</label>
-            <input  name="heure_fin" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jaune focus:border-jaune">
+            <input  type="time" name="heure_fin" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-jaune focus:border-jaune">
         </div>
 
         <div class="mb-4">
@@ -78,29 +78,29 @@
 
 
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 p-12"> 
-    @foreach ($evenements as $evenement)
+    @foreach ($eventsAgenda as $eventAgenda)
         <div class="flex flex-col space-y-6 items-center"> 
-    <a href="{{route ('event-details' , $evenement->id)}}" class="bg-white max-w-xs w-full rounded-xl custom-shadow overflow-hidden relative"> 
+    <a href="{{route ('event-details' , $eventAgenda->id)}}" class="bg-white max-w-xs w-full rounded-xl custom-shadow overflow-hidden relative"> 
         <div class="relative rounded-lg overflow-hidden">
-            <img class="w-full h-40 object-cover"  src="{{ Storage::url($evenement->photo) }}"alt="">
+            <img class="w-full h-40 object-cover"  src="{{ Storage::url($eventAgenda->photo) }}"alt="">
             <div class="absolute top-0 left-0 right-0 h-14 z-10 flex items-center justify-center">
                 <div class="absolute inset-0 bg-jaune opacity-70 z-0"></div>
-                <div class="font-bold text-xl z-10 relative"> {{$evenement->date}}</div>
+                <div class="font-bold text-xl z-10 relative"> {{$eventAgenda->date}}</div>
             </div>
             
         </div>
       
         <div class="absolute left-6 transform -translate-y-1/2 bg-jaune max-w-full rounded-lg p-1 px-3 z-20 whitespace-nowrap overflow-x-auto" style="top: 160px;">
-            <span class="font-bold">  {{$evenement->categorie}}</span>
+            <span class="font-bold">  {{$eventAgenda->categorie}}</span>
         </div>  
         
         <div class="uppercase p-8 font-black text-center overflow-hidden whitespace-normal">
-            {{$evenement->titre}}
+            {{$eventAgenda->titre}}
         </div>
      </a>
    <div class="flex justify-center space-x-4">
-    <a href="{{route ('event-edit', $evenement->id )}}" class="font-bold bg-green-600 text-white rounded-xl px-2 py-1">Modifier</a>
-    <a href="{{ route('delete-event', $evenement->id) }}" class="font-bold bg-red-600 text-white rounded-xl px-2 py-1">Supprimer</a>
+    <a href="{{route ('event-edit', $eventAgenda->id )}}" class="font-bold bg-green-600 text-white rounded-xl px-2 py-1">Modifier</a>
+    <a href="{{ route('delete-event', $eventAgenda->id) }}" class="font-bold bg-red-600 text-white rounded-xl px-2 py-1">Supprimer</a>
     </div>
 
         </div>
@@ -109,7 +109,7 @@
 </div>
 
 <div class="mt-6">
-    {{ $evenements->links('vendor.pagination.tailwind-page') }}
+    {{ $eventsAgenda->links('vendor.pagination.tailwind-page') }}
 </div>
 
 

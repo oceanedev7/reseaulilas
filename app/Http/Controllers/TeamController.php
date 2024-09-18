@@ -29,12 +29,14 @@ class TeamController extends Controller
             'nom' => 'required|string',
             'prenom' => 'required|string',
             'fonction' => 'required|string',
-            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg', 
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg', 
         ]);
     
         if ($request->hasFile('photo')) {
             $path = $request->file('photo')->store('public/images');
             $validatedData['photo'] = $path; 
+        } else {
+            $validatedData['photo'] = $team->photo ?? 'public/images/logoreseaulilas.png'; 
         }
     
         Team_content::create($validatedData);
@@ -93,7 +95,6 @@ class TeamController extends Controller
         
         $team->save();
     
-            // return redirect('/espaceadmin/team-content/' . $team->id);
             return redirect()->route('team-content', ['id' => $team->id]);
 
     }
@@ -103,6 +104,9 @@ class TeamController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $delete  = Team_content::findOrFail($id);
+        $delete->delete();
+
+        return redirect("/espaceadmin/team-content");
     }
 }

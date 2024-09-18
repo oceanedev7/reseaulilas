@@ -14,13 +14,14 @@ class EvenementController extends Controller
      */
     public function index()
     {
-        // $evenements = Agenda::all();
-        $evenements = Agenda::paginate(9);
-
+       
+        $eventsAgenda = Agenda::paginate(9);
         return view('pages.admin.evenements', [
-            'evenements' => $evenements,
-    
+            'eventsAgenda' => $eventsAgenda,
+
         ]);
+    
+      
     }
 
     /**
@@ -28,7 +29,8 @@ class EvenementController extends Controller
      */
     public function create(Request $request)
     {
-        $request->validate([
+    
+        $validatedData = $request->validate([
             'titre' => 'required|string|max:255',
             'categorie' => 'required|string|max:255',
             'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -36,25 +38,18 @@ class EvenementController extends Controller
             'date' => 'required|date',
             'heure_debut' => 'required|date_format:H:i',
             'heure_fin' => 'nullable|date_format:H:i',
-            'description' => 'required|string'
+            'description' => 'required|string|max:1000'
         ]);
-    
-        $path = $request->file('photo')->store('public/images');
-    
-        $evenement = new Agenda([
-            'titre' => $request->input('titre'),
-            'categorie' => $request->input('categorie'),
-            'photo' => $path,
-            'lieu' => $request->input('lieu'),
-            'date' => $request->input('date'),
-            'heure_debut' => $request->input('heure_debut'),
-            'heure_fin' => $request->input('heure_fin'),
-            'description' => $request->input('description')
-        ]);
-    
-        $evenement->save();
-    
-        return redirect()->route('event-details', ['id' => $evenement->id]);
+
+        if ($request->hasFile('photo')) {
+            $path = $request->file('photo')->store('images', 'public');
+            $validatedData['photo'] = $path;
+        }
+
+        Agenda::create($validatedData);
+
+        return redirect()->back();
+        
     }
 
     /**
@@ -71,7 +66,6 @@ class EvenementController extends Controller
     public function show(string $id)
     {
         $evenement = Agenda::findOrFail($id); 
-        // dd($evenement);
         return view("pages.admin.evenement-details", compact('evenement'));
     }
 
@@ -89,22 +83,11 @@ class EvenementController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        // dd($request);
-        $request->validate([
-            'titre' => 'string',
-            'description' => 'string',
-            'photo' => 'image|mimes:jpeg,png,jpg,gif,svg',
-            'categorie' => 'string',
-            'lieu' => 'string',
-            'date' => 'date',  
-            'heure_debut' => 'date_format:H:i',  
-            'heure_fin' => 'nullable|date_format:H:i',  
-        ]);
-    
+
         $evenement = Agenda::findOrFail($id);
-      
+
         if ($request->hasFile('photo')) {
-    
+
             $path = $request->file('photo')->store('public/images');
             $evenement->photo = $path;
         }
@@ -117,10 +100,9 @@ class EvenementController extends Controller
         $evenement->heure_fin = $request->input('heure_fin');
 
         $evenement->save();
-   
+
 
         return redirect('/espaceadmin/evenement/details/' . $evenement->id);
-
     }
     
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Agenda;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ContactContentController;
@@ -85,15 +86,11 @@ Route::get('/deveniradherente/formule4', function () {
 Route::post('/demandecontact', [ContactRequestController::class, 'store'])->name('contact-request');
 Route::get('/contact', [ContactRequestController::class, 'index'])->name('contact');
 
-
 Route::get('/devenir/benevole', [Volunteer_SignupController::class, 'index'])->name('devenir-benevole');
 Route::post('/inscription/benevole', [Volunteer_SignupController::class, 'store'])->name('volunteer-request');
 
 Route::get('/devenir/partenaire', [Partner_SignupController::class, 'index'])->name('devenir-partenaire');
 Route::post('/inscription/partenaire', [Partner_SignupController::class, 'store'])->name('partner-request');
-
-
-
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -127,6 +124,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/espaceadmin/actualite/edit/{id}', [ActualiteController::class, 'edit'])->name('actu-edit');
         Route::post('/espaceadmin/actualite/update/{id}', [ActualiteController::class, 'update'])->name('actu-update');
 
+        
         Route::get('/espaceadmin/evenement', [EvenementController::class, 'index'])->name('event');
         Route::post('/espaceadmin/nouvel-evenement', [EvenementController::class, 'create'])->name('new-event');
         Route::get('/espaceadmin/evenement/details/{id}', [EvenementController::class, 'show'])->name('event-details');
@@ -214,6 +212,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/espaceadmin/new-team-content', [TeamController::class, 'create'])->name('new-team');
         Route::get('/espaceadmin/team/edit/{id}', [TeamController::class, 'edit'])->name('team-edit');
         Route::post('/espaceadmin/team/update/{id}', [TeamController::class, 'update'])->name('team-update');
+        Route::get('/delete/team/{id}', [TeamController::class, 'destroy'])->name('delete-team');
+
 
         Route::get('/espaceadmin/number-content', [NumberContentController::class, 'index'])->name('number-content');
         Route::post('/espaceadmin/new-number-content', [NumberContentController::class, 'create'])->name('new-number');

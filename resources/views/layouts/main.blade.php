@@ -70,7 +70,7 @@
                 <img src="{{ asset('storage/images/logoreseaulilas.png') }}" alt="Logo Réseau LILAS" class="h-52">
             </a>
     
-            <!-- Conteneur pour les carrés -->
+
             <div class="flex-grow flex items-center justify-end">
                 <div class="h-24 hover:bg-jaune flex items-center px-6">
                     <a href="{{route ('accueil')}}" class="text-lg font-medium">Accueil</a>
