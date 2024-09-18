@@ -20,6 +20,16 @@ class Job_offerController extends Controller
         ]);
     }
 
+    public function indexView()
+    {
+        $emploisView = Job_offers::all();
+
+        return view('pages.guest.recrutement-liste', [
+            'emploisView' => $emploisView,
+    
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -66,6 +76,13 @@ class Job_offerController extends Controller
        $emploi = Job_offers::findOrFail($id); 
         // dd($edit);
         return view("pages.admin.offre-emploi-details", compact('emploi'));
+    }
+
+    public function showView(string $id)
+    {
+       $emploiView = Job_offers::findOrFail($id); 
+        // dd($edit);
+        return view("pages.guest.recrutement-detail", compact('emploiView'));
     }
 
     /**
@@ -128,6 +145,6 @@ class Job_offerController extends Controller
         $delete  = Job_offers::findOrFail($id);
         $delete->delete();
 
-        return redirect("/espaceadmin/offre-emploi");
+        return redirect("/espaceadmin/offres-emploi");
     }
 }

@@ -27,7 +27,8 @@
         </a>
     
             <div class="text-jaune font-black uppercase text-3xl text-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                {{$actualiteView->titre}}                  
+
             </div>
 
         <div class="container mx-auto px-4 md:px-8 lg:px-12 space-y-12">
@@ -37,17 +38,11 @@
             <div class="mx-4 md:mx-8 lg:mx-12">
                 
                 <div class="italic font-medium text-gray-600">
-                    Publié le 19/09/2024 à 10h42
+                    Publié le {{ $actualiteView->created_at->format('d/m/Y à H:i') }}  
                 </div>
         
                 <div class="text-justify mt-10">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, arcu venenatis sodales venenatis, magna elit eleifend nulla, non blandit orci arcu non dui.
-                    Vestibulum dui tortor, fermentum ut ligula id, rutrum ornare purus. Aliquam consectetur fermentum vulputate. Nunc quis molestie ipsum. Fusce turpis tellus, viverra sed pretium ac, interdum vel diam. Vivamus rhoncus eros a ante varius malesuada. Ut at mattis eros. Ut commodo a eros eu vestibulum.
-                    Integer eleifend mauris vitae enim iaculis porta. Suspendisse sit amet tortor massa.
-                    Curabitur molestie sodales lorem, ac porttitor lectus vestibulum at. Nunc ac sollicitudin augue, bibendum molestie ligula. Nam eu auctor metus. Nullam magna odio, fermentum vel hendrerit sit amet, mattis nec metus. Sed sed condimentum nunc. Praesent nisl enim, rhoncus in efficitur ut, rhoncus maximus est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, arcu venenatis sodales venenatis, magna elit eleifend nulla, non blandit orci arcu non dui.
-                    Vestibulum dui tortor, fermentum ut ligula id, rutrum ornare purus. Aliquam consectetur fermentum vulputate. Nunc quis molestie ipsum. Fusce turpis tellus, viverra sed pretium ac, interdum vel diam. Vivamus rhoncus eros a ante varius malesuada. Ut at mattis eros. Ut commodo a eros eu vestibulum.
-                    Integer eleifend mauris vitae enim iaculis porta. Suspendisse sit amet tortor massa.
-                    Curabitur molestie sodales lorem, ac porttitor lectus vestibulum at. Nunc ac sollicitudin augue, bibendum molestie ligula. Nam eu auctor metus. Nullam magna odio, fermentum vel hendrerit sit amet, mattis nec metus. Sed sed condimentum nunc. Praesent nisl enim, rhoncus in efficitur ut, rhoncus maximus est.
+                    {{$actualiteView->description}}                  
                 </div>
             </div>
         </div>

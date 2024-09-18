@@ -22,6 +22,17 @@ class ActualiteController extends Controller
         ]);
     }
 
+    public function indexView()
+    {
+        // $actualites = Actualite::all();
+        $actualitesView = Actualite::paginate(9);
+
+        return view('pages.guest.actualites-liste', [
+            'actualitesView' => $actualitesView,
+    
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -58,8 +69,13 @@ class ActualiteController extends Controller
     public function show(string $id)
     {
         $actualite = Actualite::findOrFail($id); 
-        // dd($edit);
         return view("pages.admin.actualite-details", compact('actualite'));
+    }
+
+    public function showView(string $id)
+    {
+        $actualiteView = Actualite::findOrFail($id); 
+        return view("pages.guest.actualite-detail", compact('actualiteView'));
     }
 
     /**

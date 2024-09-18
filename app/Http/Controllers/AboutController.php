@@ -12,10 +12,20 @@ class AboutController extends Controller
      */
     public function index()
     {
-        $aboutcontents = About_content::all();
+        $aboutcontent = About_content::first();
 
         return view('pages.admin.about', [
-            'aboutcontents' => $aboutcontents,
+            'aboutcontent' => $aboutcontent,
+    
+        ]);
+    }
+
+    public function indexView()
+    {
+        $aboutcontentView = About_content::first();
+
+        return view('pages.guest.nousdecouvrir', [
+            'aboutcontentView' => $aboutcontentView,
     
         ]);
     }

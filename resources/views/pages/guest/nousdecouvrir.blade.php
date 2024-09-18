@@ -21,9 +21,7 @@
       <div class="flex items-center justify-center space-x-24">
         <img class="h-96 w-96 rounded-xl object-cover transition-transform duration-500 transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">     <div class="flex flex-col items-center space-y-4"> 
         <div class="font-black text-3xl uppercase text-center">  Notre histoire </div>
-        <div class="max-w-2xl text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices consectetur. Vivamus lacinia risus non nunc dignissim, ut tristique sapien euismod. Nullam sed mi varius ipsum blandit mollis. Sed lacinia tempus est in efficitur. Integer aliquam ut eros ac elementum. Fusce et libero metus. Nulla et metus in nibh finibus sodales. In eget bibendum sapien, sit amet tempor velit. Nulla facilisi. Morbi eu elementum augue. 
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices consectetur. Vivamus lacinia risus non nunc dignissim, ut tristique sapien euismod. Nullam sed mi varius ipsum blandit mollis. Sed lacinia tempus est in efficitur. Integer aliquam ut eros ac elementum. Fusce et libero metus. Nulla et metus in nibh finibus sodales. In eget bibendum sapien, sit amet tempor velit. Nulla facilisi. Morbi eu elementum augue. 
-        </div>
+        <div class="max-w-2xl text-justify">{{$aboutcontentView->description}}</div>
 
       </div>
     </div>

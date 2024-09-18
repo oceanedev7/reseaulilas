@@ -9,53 +9,33 @@ Alpine.start();
 // Compteur automatique chiffres marquants (vue accueil)
 document.addEventListener('DOMContentLoaded', () => {
 
-        // Premier compteur
-        var depart1 = 0;
-        const arrivee1 = parseInt(document.getElementById("counter1").textContent, 10);
-        const interval1 = 10;
+    // Fonction pour faire le comptage pour chaque élément
+    function startCounter(counterElement) {
+        const targetValue = parseInt(counterElement.getAttribute('data-target'), 10);
+        let currentValue = 0;
+        const interval = 10; 
+        const increment = Math.ceil(targetValue / 100); 
 
-        // Deuxième compteur
-        var depart2 = 0;
-        const arrivee2 = parseInt(document.getElementById("counter2").textContent, 10);
-        const interval2 = 10;
-
-        // Troisième compteur
-        var depart3 = 0;
-        const arrivee3 = parseInt(document.getElementById("counter3").textContent, 10);
-        const interval3 = 10;
-
-        function augmenter1() {
-            if (depart1 < arrivee1) {
-                depart1++;
-                document.getElementById("counter1").innerHTML = depart1 + '%';
+        function updateCounter() {
+            if (currentValue < targetValue) {
+                currentValue += increment; 
+                if (currentValue > targetValue) currentValue = targetValue; 
+                counterElement.innerHTML = currentValue + '%'; 
             } else {
-                clearInterval(intervalId1);
+                clearInterval(intervalId); 
             }
         }
 
-        function augmenter2() {
-            if (depart2 < arrivee2) {
-                depart2++;
-                document.getElementById("counter2").innerHTML = depart2  + '%';
-            } else {
-                clearInterval(intervalId2);
-            }
-        }
+        const intervalId = setInterval(updateCounter, interval);
+    }
 
-        function augmenter3() {
-            if (depart3 < arrivee3) {
-                depart3++;
-                document.getElementById("counter3").innerHTML = depart3  + '%';
-            } else {
-                clearInterval(intervalId3);
-            }
-        }
+    const counters = document.querySelectorAll('.counter');
 
-        // Utilisation de setInterval pour chaque compteur
-        const intervalId1 = setInterval(augmenter1, interval1);
-        const intervalId2 = setInterval(augmenter2, interval2);
-        const intervalId3 = setInterval(augmenter3, interval3);
+    counters.forEach(counter => {
+        startCounter(counter);
     });
+});
+
 
 // Caroussel des membres de l'équipe (vue nous découvrir)
 

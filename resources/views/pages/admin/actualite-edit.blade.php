@@ -40,7 +40,7 @@
         
         <div class="mb-4">
             <label for="photo" class="block text-sm font-semibold  mb-2">Photo :</label>
-            <img src="{{ Storage::url($actualite->photo) }}" alt="Photo de l'emploi" class="w-full h-64 object-cover rounded-lg shadow-md">
+            <img src="{{ Storage::url($actualite->photo) }}" class="w-full h-64 object-cover rounded-lg shadow-md">
             <input class="" aria-describedby="user_avatar_help" name="photo" type="file" accept="image/*"/>
 
         </div>

@@ -31,21 +31,17 @@ Route::get('/', function () {
     return view('pages.guest.accueil');
 })->name('accueil');
 
+Route::get('/accueil/statistiques', [GlobalNumberController::class, 'indexView'])->name('accueil-statistiques');
+
 Route::get('/devenir/adherente', function () {
     return view('pages.guest.deveniradherente');
 })->name('devenir-adherente');
 
-Route::get('/nous/decouvrir', function () {
-    return view('pages.guest.nousdecouvrir');
-})->name('nous-decouvrir');
 
-Route::get('/actualites', function () {
-    return view('pages.guest.actualites-liste');
-})->name('actualites');
+Route::get('/nous/decouvrir', [AboutController::class, 'indexView'])->name('nous-decouvrir');
+Route::get('/actualites', [ActualiteController::class, 'indexView'])->name('actualites');
+Route::get('/actualite/details/{id}', [ActualiteController::class, 'showView'])->name('actualite-details');
 
-Route::get('/actualites/details', function () {
-    return view('pages.guest.actualite-detail');
-});
 
 Route::get('/agenda', function () {
     return view('pages.guest.agenda');
@@ -59,13 +55,10 @@ Route::get('/nospartenaires', function () {
     return view('pages.guest.nospartenaires');
 })->name('nospartenaires');
 
-Route::get('/recrutement', function () {
-    return view('pages.guest.recrutement-liste');
-})->name('recrutement');
 
-Route::get('/recrutement/detail', function () {
-    return view('pages.guest.recrutement-detail');
-});
+Route::get('/recrutement', [Job_offerController::class, 'indexView'])->name('recrutement');
+Route::get('/recrutement/detail/{id}', [Job_offerController::class, 'showView'])->name('recrutement-details');
+
 
 Route::get('/deveniradherente/formule1', function () {
     return view('pages.guest.formule1');

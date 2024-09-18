@@ -53,7 +53,6 @@
 
 <div class="w-full flex space-x-8 items-center justify-center p-12"> 
 
-        @foreach ($aboutcontents as $aboutcontent)
                 
             <div class="max-w-2xl text-justify">
                 {{$aboutcontent->description}}
@@ -61,7 +60,6 @@
             
             <a href="{{route('about-content-edit', $aboutcontent->id)}}" class="font-bold text-center bg-green-600 text-white rounded-xl py-1.5 px-4 mt-4">Modifier</a>
 
-        @endforeach
     
 </div>
    

@@ -20,6 +20,16 @@ class GlobalNumberController extends Controller
         ]);
     }
 
+    public function indexView()
+    {
+        
+        $globalsView = Global_number_content::all();
+        return view('pages.guest.accueil', [
+            'globalsView' => $globalsView,
+    
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      */

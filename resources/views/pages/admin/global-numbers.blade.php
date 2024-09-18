@@ -55,7 +55,7 @@
 <div class="w-full h-72 flex flex-col items-center justify-center p-12"> 
  
         
-        <div class=" h-40 w-7/10 py-24 rounded-xl flex items-center justify-center space-x-20 bg-jaune">
+        <div class=" h-40 w-7/10 p-28 rounded-xl flex items-center justify-center space-x-20 bg-jaune">
             @foreach ($globals as $global)
                 
             
