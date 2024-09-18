@@ -15,12 +15,12 @@
 
     
     <div class="relative h-80 w-full">
-        <img class="h-80 w-full object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="Photo accueil">
+        <img class="h-80 w-full object-cover" src="{{  Storage::url($eventAgendaView->photo) }}" alt="Photo accueil">
     </div>
 
     <div class="w-full p-12 ">
 
-        <a href="#" class="items-center p-3 bg-jaune rounded-xl space-x-2">
+        <a href="{{route ('agenda')}}" class="items-center p-3 bg-jaune rounded-xl space-x-2">
             <i class="fa-solid fa-calendar-alt text-xl"></i> 
             <span class="font-bold">Voir l'agenda</span>
         </a>
@@ -28,21 +28,27 @@
 
         <div class="container mx-auto space-y-12">
 
-        <div class="font-black uppercase text-3xl text-center"> - TITRE -  </div>
+        <div class="font-black uppercase text-3xl text-center"> - {{$eventAgendaView->titre}} -  </div>
 
         <div class="flex font-bold flex-row justify-center text-xl space-x-24"> 
-            <div>Fort-de-France </div>
-            <div> 19/09/2024</div>
+            <div>Lieu : {{$eventAgendaView->lieu}} </div>
+        <div class="flex space-x-2">
+            <div> Le {{ \Carbon\Carbon::parse($eventAgendaView->date)->translatedFormat('d F Y') }}</div>
+            
+            @if ($eventAgendaView->heure_fin)
+            <div>de {{ \Carbon\Carbon::parse($eventAgendaView->heure_debut)->format('H:i') }} à {{ \Carbon\Carbon::parse($eventAgendaView->heure_fin)->format('H:i') }}</div>
+        @else
+            <div>à {{ \Carbon\Carbon::parse($eventAgendaView->heure_debut)->format('H:i') }}</div>
+        @endif
+        
+             
+
+
+    </div>
         </div>
 
         <div class="text-justify mt-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, arcu venenatis sodales venenatis, magna elit eleifend nulla, non blandit orci arcu non dui.
-            Vestibulum dui tortor, fermentum ut ligula id, rutrum ornare purus. Aliquam consectetur fermentum vulputate. Nunc quis molestie ipsum. Fusce turpis tellus, viverra sed pretium ac, interdum vel diam. Vivamus rhoncus eros a ante varius malesuada. Ut at mattis eros. Ut commodo a eros eu vestibulum.
-            Integer eleifend mauris vitae enim iaculis porta. Suspendisse sit amet tortor massa.
-            Curabitur molestie sodales lorem, ac porttitor lectus vestibulum at. Nunc ac sollicitudin augue, bibendum molestie ligula. Nam eu auctor metus. Nullam magna odio, fermentum vel hendrerit sit amet, mattis nec metus. Sed sed condimentum nunc. Praesent nisl enim, rhoncus in efficitur ut, rhoncus maximus est. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, arcu venenatis sodales venenatis, magna elit eleifend nulla, non blandit orci arcu non dui.
-            Vestibulum dui tortor, fermentum ut ligula id, rutrum ornare purus. Aliquam consectetur fermentum vulputate. Nunc quis molestie ipsum. Fusce turpis tellus, viverra sed pretium ac, interdum vel diam. Vivamus rhoncus eros a ante varius malesuada. Ut at mattis eros. Ut commodo a eros eu vestibulum.
-            Integer eleifend mauris vitae enim iaculis porta. Suspendisse sit amet tortor massa.
-            Curabitur molestie sodales lorem, ac porttitor lectus vestibulum at. Nunc ac sollicitudin augue, bibendum molestie ligula. Nam eu auctor metus. Nullam magna odio, fermentum vel hendrerit sit amet, mattis nec metus. Sed sed condimentum nunc. Praesent nisl enim, rhoncus in efficitur ut, rhoncus maximus est.
+            {{$eventAgendaView->description}}        
         </div>
         </div>
     </div>

@@ -20,8 +20,17 @@ class EvenementController extends Controller
             'eventsAgenda' => $eventsAgenda,
 
         ]);
-    
-      
+
+    }
+
+    public function indexView()
+    {
+        $eventsAgendaView = Agenda::paginate(9);
+        return view('pages.guest.agenda', [
+            'eventsAgendaView' => $eventsAgendaView,
+
+        ]);
+
     }
 
     /**
@@ -69,6 +78,12 @@ class EvenementController extends Controller
         return view("pages.admin.evenement-details", compact('evenement'));
     }
 
+
+    public function showView(string $id)
+    {
+        $eventAgendaView = Agenda::findOrFail($id); 
+        return view("pages.guest.evenement", compact('eventAgendaView'));
+    }
     /**
      * Show the form for editing the specified resource.
      */

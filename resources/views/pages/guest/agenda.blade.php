@@ -41,26 +41,34 @@
         
        
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-16"> 
-            <a class="bg-white max-w-xs w-full rounded-xl custom-shadow overflow-hidden relative"> 
+
+            @foreach ($eventsAgendaView as $eventAgendaView)
+                
+            <a href="{{route('evenement-details', $eventAgendaView->id )}}" class="bg-white max-w-xs w-full rounded-xl custom-shadow overflow-hidden relative"> 
                 <div class="relative rounded-lg overflow-hidden">
-                    <img class="w-full h-40 object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                    <img class="w-full h-40 object-cover" src="{{ Storage::url($eventAgendaView->photo) }}" alt="">
                     <div class="absolute top-0 left-0 right-0 h-14 z-10 flex items-center justify-center">
                         <div class="absolute inset-0 bg-jaune opacity-70 z-0"></div>
-                        <div class="font-bold text-xl z-10 relative">19/08/2024</div>
+                        <div class="font-bold text-xl z-10 relative">{{$eventAgendaView->date}}</div>
                     </div>
                     
                 </div>
               
                 <div class="absolute left-6 transform -translate-y-1/2 bg-jaune max-w-full rounded-lg p-1 px-3 z-20 whitespace-nowrap overflow-x-auto" style="top: 160px;">
-                    <span class="font-bold">Catégorie</span>
+                    <span class="font-bold">{{$eventAgendaView->categorie}}</span>
                 </div>  
                 
                 <div class="uppercase p-10 font-black text-center overflow-hidden whitespace-normal">
-                    Titre
+                    {{$eventAgendaView->titre}}
                 </div>
             </a>
-        </div>
-        
+        @endforeach
+    </div>
+   
+    </div>
+
+    <div>
+        {{ $eventsAgendaView->links('vendor.pagination.tailwind-page') }}
     </div>
 
     @endsection

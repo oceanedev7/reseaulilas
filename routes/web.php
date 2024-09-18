@@ -43,9 +43,12 @@ Route::get('/actualites', [ActualiteController::class, 'indexView'])->name('actu
 Route::get('/actualite/details/{id}', [ActualiteController::class, 'showView'])->name('actualite-details');
 
 
-Route::get('/agenda', function () {
-    return view('pages.guest.agenda');
-})->name('agenda');
+// Route::get('/agenda', function () {
+//     return view('pages.guest.agenda');
+// })->name('agenda');
+Route::get('/agenda', [EvenementController::class, 'indexView'])->name('agenda');
+Route::get('/agenda/details/{id}', [EvenementController::class, 'showView'])->name('evenement-details');
+
 
 Route::get('/evenement', function () {
     return view('pages.guest.evenement');

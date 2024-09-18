@@ -58,7 +58,7 @@
      
     </div>
 
-    <div class="">
+    <div>
         {{ $actualitesView->links('vendor.pagination.tailwind-page') }}
     </div>
 
