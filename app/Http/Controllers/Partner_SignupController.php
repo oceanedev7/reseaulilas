@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\PartnerRequestMail;
+use App\Models\Partner_content;
 
 class Partner_SignupController extends Controller
 {
@@ -13,7 +14,12 @@ class Partner_SignupController extends Controller
      */
     public function index()
     {
-        return view('pages.guest.devenirpartenaire');
+        $partnerView = Partner_content::first();
+
+        return view('pages.guest.devenirpartenaire', [
+            'partnerView' => $partnerView,
+    
+        ]);
     }
 
     /**

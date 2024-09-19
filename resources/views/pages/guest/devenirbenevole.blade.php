@@ -26,12 +26,9 @@
     <div class="w-full h-72 flex justify-center items-center">
         <div class="max-w-5xl">
             <div class="text-justify">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices consectetur. 
-                Vivamus lacinia risus non nunc dignissim, ut tristique sapien euismod. Nullam sed mi varius ipsum blandit mollis. 
-                Sed lacinia tempus est in efficitur. Integer aliquam ut eros ac elementum. Fusce et libero metus. Nulla et metus in nibh finibus sodales. In eget bibendum sapien, sit amet tempor velit. Nulla facilisi. Morbi eu elementum augue. 
-                Sed lacinia tempus est in efficitur. Integer aliquam ut eros ac elementum. Fusce et libero metus. Nulla et metus in nibh finibus sodales. In eget bibendum sapien, sit amet tempor velit. Nulla facilisi. Morbi eu elementum augue. 
+                {{$volunteerView->description}}
             </div>
-        </div>
+        </div> 
     </div>
 
     <div class="bg-jaune w-full h-52 flex flex-row justify-center items-center space-x-24">
@@ -72,14 +69,13 @@
 
     <div class="w-full p-12 flex flex-col justify-center items-center">
 
-        <div class="max-w-5xl ">
+        <div class="max-w-4xl ">
             <div class="text-justify flex flex-row justify-center">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non sem condimentum, ullamcorper ante et, efficitur leo. Aenean eget urna fringilla, fringilla ipsum eu, porta erat. Fusce gravida justo ut orci ultrices consectetur. 
-            </div>
+                Pour devenir bénévole et nous rejoindre dans nos actions, veuillez remplir ce formulaire afin que nous puissions vous intégrer au mieux dans nos équipes.            </div>
         </div>
     
     
-    <div class="mt-16 w-full">
+    <div class="mt-10 w-full">
     
         <form class="flex flex-col items-center" method="post" action="{{ route('volunteer-request') }}">
             @csrf

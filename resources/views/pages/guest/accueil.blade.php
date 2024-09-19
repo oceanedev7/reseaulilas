@@ -24,7 +24,7 @@
           @foreach ($globalsView as $key => $globalView)
     <div class="flex flex-col items-center text-center">
         <div class="font-black text-6xl counter" data-target="{{$globalView->titre}}">0%</div>
-        <div class="text-sm">{{$globalView->description}}</div>
+        <div class="text-sm max-w-72">{{$globalView->description}}</div>
     </div>
     
     @if ($key < count($globalsView) - 1)

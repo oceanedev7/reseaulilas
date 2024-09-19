@@ -14,7 +14,12 @@ class Volunteer_SignupController extends Controller
      */
     public function index()
     {
-        return view('pages.guest.devenirbenevole');
+        $volunteerView = Volunteer_content::first();
+
+        return view('pages.guest.devenirbenevole', [
+            'volunteerView' => $volunteerView,
+    
+        ]);
     }
 
     /**
