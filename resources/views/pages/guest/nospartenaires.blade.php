@@ -37,78 +37,18 @@
 
         <div class="container mx-auto p-4"> 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-12 mt-12 ">
-                <!-- Logo 1 -->
+                
+                @foreach ($logosView as $logoView)
+                    
+                
                 <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
+                    <img src="{{  Storage::url($logoView->photo)  }}" alt="" class="">
                 </div>
-        
-                <!-- Logo 2 -->
-                <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-        
-                <!-- Logo 3 -->
-                <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-        
-                <!-- Logo 4 -->
-                <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-
-                <!-- Logo 1 -->
-                <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-        
-                <!-- Logo 2 -->
-                <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-        
-                <!-- Logo 3 -->
-                <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-        
-                <!-- Logo 4 -->
-                <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-
-                 <!-- Logo 1 -->
-                 <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-        
-                <!-- Logo 2 -->
-                <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-        
-                <!-- Logo 3 -->
-                <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-        
-                <!-- Logo 4 -->
-                <div class="flex items-center justify-center p-4 rounded-lg custom-shadow">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="" class="">
-                </div>
-        
+        @endforeach
+               
                 
             </div>
         </div>
-        
-   
-        
-    
-        
-        
-        
-        
-        
 
     </div>
 

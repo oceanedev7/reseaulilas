@@ -6,8 +6,8 @@ use App\Models\Contact_request;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactRequestMail;
-
-
+use App\Models\Contact_content;
+use App\Models\Office_adress_content;
 
 class ContactRequestController extends Controller
 {
@@ -16,7 +16,13 @@ class ContactRequestController extends Controller
      */
     public function index()
     {
-        return view('pages.guest.contact');
+        $adressesView = Office_adress_content::all();
+        $contactsView = Contact_content::all();
+
+        return view('pages.guest.contact', [
+            'adressesView' => $adressesView,
+            'contactsView' => $contactsView,
+        ]);
     }
 
     /**

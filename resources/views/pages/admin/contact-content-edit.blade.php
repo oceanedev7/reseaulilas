@@ -34,7 +34,7 @@
         </div>
 
         <div class="mb-4">
-            <label class="block text-sm font-semibold  mb-2">Adresse postale :</label>
+            <label class="block text-sm font-semibold  mb-2">Adresse postale principale :</label>
             <input value="{{ $contact->adresse }}" name="adresse" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune">
         </div>
 

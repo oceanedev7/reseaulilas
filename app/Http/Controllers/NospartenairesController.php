@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Partner_logo;
 use App\Models\Partner_thanks_content;
 use Illuminate\Http\Request;
 
@@ -13,9 +14,11 @@ class NospartenairesController extends Controller
     public function index()
     {
         $descriptionView = Partner_thanks_content::first();
+        $logosView = Partner_logo::all();
 
         return view('pages.guest.nospartenaires', [
             'descriptionView' => $descriptionView,
+            'logosView' => $logosView,
             
         ]);
     }

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\EvenementController;
+use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FormulesController;
 use App\Http\Controllers\GlobalNumberController;
 use App\Http\Controllers\Job_offerController;
@@ -50,11 +51,6 @@ Route::get('/agenda/details/{id}', [EvenementController::class, 'showView'])->na
 Route::get('/agenda/evenement/filtrer', [EvenementController::class, 'filtrer'])->name('filtrer');
 
 
-Route::get('/evenement', function () {
-    return view('pages.guest.evenement');
-});
-
-
 Route::get('/nospartenaires', [NospartenairesController::class, 'index'])->name('nospartenaires');
 
 Route::get('/recrutement', [Job_offerController::class, 'indexView'])->name('recrutement');
@@ -85,6 +81,7 @@ Route::post('/inscription/benevole', [Volunteer_SignupController::class, 'store'
 
 Route::get('/devenir/partenaire', [Partner_SignupController::class, 'index'])->name('devenir-partenaire');
 Route::post('/inscription/partenaire', [Partner_SignupController::class, 'store'])->name('partner-request');
+
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

@@ -115,11 +115,7 @@
       
         
     </div>
-      
-        
-    
-          
-        
+  
    
     <div class="w-full h-screen">
       <div class="relative w-full h-3/5 flex justify-center">
@@ -143,28 +139,6 @@
               </div>
           </div>
       </div> @endforeach
-      {{-- <div class="relative">
-        <i class="fa-solid fa-quote-left text-jaune text-8xl absolute -top-36 right-6 z-10"></i>
-        <div class="bg-white -translate-y-1/2 flex flex-col justify-center max-w-sm min-h-min rounded-xl custom-shadow p-6 text-center overflow-auto">
-            <div class="mt-4">
-          <div>
-                Participer à l'atelier sur l'entrepreneuriat a été une expérience déterminante pour moi. Les sessions étaient enrichissantes, pratiques et pleines de conseils concrets.
-            </div>
-            <div class="mt-2 font-semibold">Marie DUPOND</div>
-            </div>
-        </div>
-    </div>
-    <div class="relative">
-      <i class="fa-solid fa-quote-left text-jaune text-8xl absolute -top-36 right-6 z-10"></i>
-      <div class="bg-white -translate-y-1/2 flex flex-col justify-center max-w-sm min-h-min rounded-xl custom-shadow p-6 text-center overflow-auto">
-          <div class="mt-4">
-        <div>
-              Participer à l'atelier sur l'entrepreneuriat a été une expérience déterminante pour moi. Les sessions étaient enrichissantes, pratiques et pleines de conseils concrets.
-          </div>
-          <div class="mt-2 font-semibold">Marie DUPOND</div>
-          </div>
-      </div>
-    </div> --}}
   </div>
 
   </div>
@@ -175,26 +149,16 @@
     
     <div class="overflow-hidden whitespace-nowrap relative mt-8">
         <div class="flex animate-caroussel">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-          <img class="max-h-24 mx-2" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+
+          @foreach ($logosView as $logoView)
+                <img class="max-h-24 mx-2" src="{{ Storage::url($logoView->photo) }}" alt="">
+          @endforeach
+         
         </div>
       </div>
     
     </div>
   
-
     @endsection
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

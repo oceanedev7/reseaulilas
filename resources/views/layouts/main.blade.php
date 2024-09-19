@@ -184,6 +184,7 @@
                             </div>
                         </div>
                 
+                        
                         <div class="space-y-4">
                             <div class="text-base font-bold">Horaires</div>
                             <div class="flex flex-col space-y-1 text-base">

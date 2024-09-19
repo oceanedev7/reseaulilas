@@ -77,68 +77,17 @@
                  
                   <div id="slider" class="p-2  h-full flex lg:gap-8 md:gap-6 gap-14 items-center justify-start transition ease-out duration-700">
                   
+                    @foreach ($teamsView as $teamView)
+            
                     <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
-                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                      <img class="h-36 w-60 rounded-xl object-cover" src="{{Storage::url($teamView->photo) }}" alt="">
                       <div class="flex flex-col items-center mt-1.5">
-                        <div>Marie DUPOND</div>
-                        <div class="font-bold">Directrice Commerciale</div>
+                        <div>{{$teamView->prenom}} {{$teamView->nom}}</div>
+                        <div class="font-bold">{{$teamView->fonction}}</div>
                       </div>
                     </div>
                     
-                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
-                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                      <div class="flex flex-col items-center mt-1.5">
-                        <div>Marie DUPOND</div>
-                        <div class="font-bold">Directrice Commerciale</div>
-                      </div>
-                    </div>
-                    
-                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
-                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                      <div class="flex flex-col items-center mt-1.5">
-                        <div>Marie DUPOND</div>
-                        <div class="font-bold">Directrice Commerciale</div>
-                      </div>
-                    </div>
-                    
-                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
-                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                      <div class="flex flex-col items-center mt-1.5">
-                        <div>Marie DUPOND</div>
-                        <div class="font-bold">Directrice Commerciale</div>
-                      </div>
-                    </div>
-                    
-                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
-                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                      <div class="flex flex-col items-center mt-1.5">
-                        <div>Marie DUPOND</div>
-                        <div class="font-bold">Directrice Commerciale</div>
-                      </div>
-                    </div>
-                    
-                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
-                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                      <div class="flex flex-col items-center mt-1.5">
-                        <div>Marie DUPOND</div>
-                        <div class="font-bold">Directrice Commerciale</div>
-                      </div>
-                    </div>
-                    
-                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
-                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                      <div class="flex flex-col items-center mt-1.5">
-                        <div>Marie DUPOND</div>
-                        <div class="font-bold">Directrice Commerciale</div>
-                      </div>
-                    </div>
-                    <div class="border border-black flex flex-shrink-0 w-full sm:w-auto flex-col items-center bg-white h-52 w-60 rounded-xl relative z-20">
-                      <img class="h-36 w-60 rounded-xl object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                      <div class="flex flex-col items-center mt-1.5">
-                        <div>Marie DUPOND</div>
-                        <div class="font-bold">Directrice Commerciale</div>
-                      </div>
-                    </div>
+                      @endforeach
                     
                   </div>
                 </div>

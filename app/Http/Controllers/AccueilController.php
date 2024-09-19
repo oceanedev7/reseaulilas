@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Join_network;
 use App\Models\Global_number_content;
+use App\Models\Partner_logo;
 use App\Models\Reviews;
 
 class AccueilController extends Controller
@@ -17,11 +18,13 @@ class AccueilController extends Controller
         $globalsView = Global_number_content::all();
         $networksView = Join_network::all();
         $reviewsView = Reviews::all();
+        $logosView = Partner_logo::all();
 
         return view('pages.guest.accueil', [
             'globalsView' => $globalsView,
             'networksView' => $networksView,
             'reviewsView' => $reviewsView ,
+            'logosView' => $logosView,
         ]);
     }
 

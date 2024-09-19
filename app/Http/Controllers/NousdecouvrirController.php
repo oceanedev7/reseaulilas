@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Mission_content;
 use App\Models\About_content;
 use App\Models\Number_content;
+use App\Models\Team_content;
 
 class NousdecouvrirController extends Controller
 {
@@ -17,11 +18,14 @@ class NousdecouvrirController extends Controller
         $aboutcontentView = About_content::first();
         $missionsView = Mission_content::all();
         $numbersView = Number_content::all();
+        $teamsView = Team_content::all();
 
         return view('pages.guest.nousdecouvrir', [
             'aboutcontentView' => $aboutcontentView,
             'missionsView' => $missionsView,
             'numbersView' => $numbersView,
+            'teamsView' => $teamsView,
+
 
         ]);
     }
