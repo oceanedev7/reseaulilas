@@ -60,54 +60,26 @@
     
   
     
-       <div class="w-full h-screen p-12"> 
+       <div class="w-full h-[500px]"> 
 
         <div class="uppercase text-3xl font-black text-center"> Nos formules</div>
         
-        <div class="container min-h-screen flex w-full items-center justify-center">
-          <div class="carousel flex  items-center justify-center">
+        <div class="container flex w-full items-center justify-center">
 
-            <div style="transform: rotateY(0deg) translateZ(250px);" class="p-4 space-y-4 flex flex-col item border border-2 border-jaune bg-white absolute w-[250px] h-[200px] text-white rounded-xl">
-              <div class="uppercase text-lg text-center font-bold text-black">FORMULE 1</div>
-              <div class="text-justify whitespace-normal text-xs text-black">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, pretium eget egestas sed, fringilla sit amet mi. Vestibulum et fermentum sapien.
-              </div>
-              <a href="#" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
-                Voir plus <i class="fa-solid fa-circle-arrow-right ml-1 "></i>
-              </a>
-            </div>
-            
-              <div style="transform: rotateY(60deg) translateZ(250px);" class=" p-4 space-y-4 flex flex-col item border border-2 border-jaune absolute bg-white w-[250px] h-[200px] leading-[200px] text-5xl text-center text-white  rounded-xl b">
-                <div class="uppercase text-lg text-center font-bold text-black"> FORMULE 2 </div>
-                <div class="text-justify whitespace-normal text-xs text-black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, pretium eget egestas sed, fringilla sit amet mi. Vestibulum et fermentum sapien.</div>  
-                <a href="#" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
-                  Voir plus <i class="fa-solid fa-circle-arrow-right ml-1 "></i>
-                </a>
-              </div>
-              <div style="transform: rotateY(120deg) translateZ(250px);" class="p-4 space-y-4 flex flex-col item border border-2 border-jaune absolute bg-white w-[250px] h-[200px] leading-[200px] text-5xl text-center text-white rounded-xl c">
-                <div class="uppercase text-lg text-center font-bold text-black"> FORMULE 3 </div>
-                <div class="text-justify whitespace-normal text-xs text-black "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, pretium eget egestas sed, fringilla sit amet mi. Vestibulum et fermentum sapien.</div>  
-                <a href="#" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
-                  Voir plus <i class="fa-solid fa-circle-arrow-right ml-1 "></i>
-                </a>
-              </div>
-              <div style="transform: rotateY(180deg) translateZ(250px);" class="p-4 space-y-4 flex flex-col item border border-2 border-jaune absolute bg-white w-[250px] h-[200px] leading-[200px] text-5xl text-center text-white  rounded-xl d">              
-                <div class="uppercase text-lg text-center font-bold text-black"> FORMULE 4 </div>
-              <div class="text-justify whitespace-normal text-xs text-black"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, pretium eget egestas sed, fringilla sit amet mi. Vestibulum et fermentum sapien.</div>
-              <a href="#" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
-                Voir plus <i class="fa-solid fa-circle-arrow-right ml-1 "></i>
-              </a>
-            </div>
-              <div style="transform: rotateY(240deg) translateZ(250px);" class="p-4 space-y-4 flex flex-col item border border-2 border-jaune absolute bg-white w-[250px] h-[200px] leading-[200px] text-5xl text-center text-white  rounded-xl e">              
-                <div class="uppercase text-lg text-center font-bold text-black"> Application </div>
-              <div class="text-justify whitespace-normal text-xs text-black "> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc libero quam, pretium eget egestas sed, fringilla sit amet mi. Vestibulum et fermentum sapien.</div>
-              <a href="#" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
-                Voir plus <i class="fa-solid fa-circle-arrow-right ml-1 "></i>
-              </a>
-            </div>
-          </div>
-   
-
+          <div class="carousel flex items-center justify-center">
+            @foreach ($formulesView as $index => $formuleView)
+                <div style="transform: rotateY({{ $index * (360 / count($formulesView)) }}deg) translateZ(250px);" class="p-4 space-y-4 flex flex-col item border border-2 border-jaune bg-white absolute w-[250px] h-[200px] text-black rounded-xl">
+                    <div class="uppercase text-lg text-center font-bold text-black">{{ $formuleView->titre }}</div>
+                    <div class="text-justify whitespace-normal text-xs text-black">
+                        {{ $formuleView->presentation }}
+                    </div>
+                    <a href="{{route('accueil-formule-details', $formuleView->id)}}" class="bg-jaune text-black text-center rounded mx-auto py-1 px-2 text-xs">
+                        Voir plus <i class="fa-solid fa-circle-arrow-right ml-1"></i>
+                    </a>
+                </div>
+            @endforeach
+        </div>
+        
         <div class="next"><i class="fa-solid fa-circle-arrow-right text-4xl"></i></div>
         <div class="prev"><i class="fa-solid fa-circle-arrow-left text-4xl"></i></div>
 

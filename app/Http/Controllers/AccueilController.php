@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Formules;
 use Illuminate\Http\Request;
 use App\Models\Join_network;
 use App\Models\Global_number_content;
@@ -19,12 +20,14 @@ class AccueilController extends Controller
         $networksView = Join_network::all();
         $reviewsView = Reviews::all();
         $logosView = Partner_logo::all();
-
+        $formulesView = Formules::all();
+        
         return view('pages.guest.accueil', [
             'globalsView' => $globalsView,
             'networksView' => $networksView,
             'reviewsView' => $reviewsView ,
             'logosView' => $logosView,
+            'formulesView' => $formulesView,
         ]);
     }
 
@@ -49,7 +52,9 @@ class AccueilController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $formuleView = Formules::findOrFail($id);
+        // dd($formule);
+        return view('pages.guest.formule-details', compact('formuleView'));
     }
 
     /**

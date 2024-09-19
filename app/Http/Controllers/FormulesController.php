@@ -60,8 +60,9 @@ class FormulesController extends Controller
         }
     
         Formules::create($request->except('photo') + ['photo' => json_encode($paths)]);
- 
-    return redirect("/espaceadmin/formules");
+        return redirect()->route('formules');
+
+    // return redirect("/espaceadmin/formules");
 
     }
 

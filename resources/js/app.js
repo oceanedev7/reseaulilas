@@ -71,12 +71,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Caroussel 3D (vue accueil)
 
+// $(document).ready(function() {
+//     var carousel = $(".carousel"),
+//         currdeg = 0,
+//         itemCount = $(".item").length,
+//         degreeIncrement = 300 / itemCount; 
+    
+
+//     $(".next").on("click", { d: "n" }, rotate);
+//     $(".prev").on("click", { d: "p" }, rotate);
+
+//     function rotate(e) {
+//         if (e.data.d === "n") {
+//             currdeg -= degreeIncrement; 
+//         } else if (e.data.d === "p") {
+//             currdeg += degreeIncrement; 
+//         }
+
+   
+//         if (currdeg <= -300) {
+//             currdeg = 0;
+//         } else if (currdeg > 0) {
+//             currdeg = -300 * (itemCount - 1);
+//         }
+
+//         carousel.css({
+//             "-webkit-transform": "rotateY(" + currdeg + "deg)",
+//             "-moz-transform": "rotateY(" + currdeg + "deg)",
+//             "-o-transform": "rotateY(" + currdeg + "deg)",
+//             "transform": "rotateY(" + currdeg + "deg)"
+//         });
+//     }
+// });
+
+
+
 $(document).ready(function() {
     var carousel = $(".carousel"),
         currdeg = 0,
         itemCount = $(".item").length,
-        degreeIncrement = 300 / itemCount; 
-    
+        degreeIncrement = 360 / itemCount;  
 
     $(".next").on("click", { d: "n" }, rotate);
     $(".prev").on("click", { d: "p" }, rotate);
@@ -88,23 +122,16 @@ $(document).ready(function() {
             currdeg += degreeIncrement; 
         }
 
-   
-        if (currdeg <= -300) {
+
+        if (currdeg <= -360) {
             currdeg = 0;
         } else if (currdeg > 0) {
-            currdeg = -300 * (itemCount - 1);
+            currdeg = -360 * (itemCount - 1);
         }
 
         carousel.css({
-            "-webkit-transform": "rotateY(" + currdeg + "deg)",
-            "-moz-transform": "rotateY(" + currdeg + "deg)",
-            "-o-transform": "rotateY(" + currdeg + "deg)",
             "transform": "rotateY(" + currdeg + "deg)"
         });
     }
 });
-
-
-
-
   
