@@ -21,6 +21,7 @@
       <div class="flex items-center justify-center space-x-24">
         <img class="h-96 w-96 rounded-xl object-cover transition-transform duration-500 transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">     <div class="flex flex-col items-center space-y-4"> 
         <div class="font-black text-3xl uppercase text-center">  Notre histoire </div>
+      
         <div class="max-w-2xl text-justify">{{$aboutcontentView->description}}</div>
 
       </div>
@@ -29,41 +30,35 @@
     </div>
 
 
-    <div class="flex items-center justify-center p-52 relative">
+    <div class="h-[400px] w-full relative flex items-center justify-center">
 
       <div class="absolute top-2 left-1/2 -translate-x-1/2 font-black text-3xl">
           NOS MISSIONS
       </div>
   
-      <div class="relative w-[300px] h-[300px] flex items-center justify-center">
-          <!-- Cercle -->
-          <div class="absolute rounded-full border-2 border-jaune w-[300px] h-[300px] bg-transparent"></div>
-  
-          <!-- Top card -->
-          <div class="space-y-1.5 bg-jaune rounded-xl absolute w-[120px] h-[120px] bg-cover bg-center -translate-y-[150px] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-2 box-border overflow-hidden">
-              <div class="font-bold text-sm">LOREM IPSUM</div>
-              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in vitae.</div>
-          </div>
-  
-          <!-- Right card -->
-          <div class=" space-y-1.5 rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center top-1/2 left-full -translate-x-[40%] -translate-y-[40%] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-2 box-border overflow-hidden">
-              <div class="font-bold text-sm">LOREM IPSUM</div>
-              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in vitae.</div>
-          </div>
-  
-          <!-- Left card -->
-          <div class="space-y-1.5 rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center top-1/2 left-0 -translate-x-1/2 -translate-y-[40%] transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-2 box-border overflow-hidden">
-              <div class="font-bold text-sm">LOREM IPSUM</div>
-              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in vitae.</div>
-          </div>
-  
-          <!-- Bottom card -->
-          <div class="space-y-1.5 rounded-xl absolute w-[120px] h-[120px] bg-jaune bg-cover bg-center bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 transition-transform transform hover:scale-250 hover:z-10 flex flex-col justify-center items-center text-center p-2 box-border overflow-hidden">
-              <div class="font-bold text-sm">LOREM IPSUM</div>
-              <div class="text-xs">Vestibulum egestas vehicula augue, vitae suscipit urna congue in vitae.</div>
-          </div>
-      </div>
+    
+<div class="mt-10">
+    <div class="absolute inset-0  mt-10 flex items-center justify-center pointer-events-none">
+      <div class="h-1 bg-jaune" style="width: calc(100% - 400px);"></div> <!-- Ajuster la largeur du trait -->
   </div>
+
+  <div class="flex justify-center space-x-44">
+    @foreach ($missionsView as $missionView)
+    <div class="flex flex-col items-center justify-center space-y-1.5 rounded-xl w-[120px] h-[120px] bg-jaune bg-cover transition-transform transform hover:scale-250 hover:z-10 text-center p-2">
+        <div class="font-bold text-sm">{{ $missionView->titre }}</div>
+        <div class="text-xs">{{ $missionView->description }}</div>
+       
+      </div>  
+     
+      @endforeach
+    </div>
+</div>
+  </div>
+
+ 
+    </div>
+    
+ 
   
    
 
@@ -167,28 +162,14 @@
 
       <div class="flex items-center justify-center space-x-28 mt-6"> 
       
+        @foreach ($numbersView as $numberView)
         <div class="flex flex-col text-center">
-        <div class="bordered-text">90</div>
-        <div class="uppercase font-bold text-xl">adhérentes</div>
+        <div class="bordered-text">{{$numberView->chiffre}}</div>
+        <div class="uppercase font-bold text-xl">{{$numberView->titre}}</div>
       </div>
-
+@endforeach
       
-      <div class="flex flex-col text-center">
-        <div class="bordered-text">14</div>
-        <div class="uppercase font-bold text-xl">partenaires</div>
-      </div>
 
-      
-      <div class="flex flex-col text-center">
-        <div class="bordered-text">11</div>
-        <div class="uppercase font-bold text-xl">rencontres chaque année</div>
-      </div>
-
-      
-      <div class="flex flex-col text-center">
-        <div class="bordered-text">90</div>
-        <div class="uppercase font-bold text-xl">adhérentes</div>
-      </div>
 
       </div>
 
@@ -196,6 +177,7 @@
 
     @endsection
 
-
+   
 </body>
 </html>
+

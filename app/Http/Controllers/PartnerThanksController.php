@@ -12,10 +12,10 @@ class PartnerThanksController extends Controller
      */
     public function index()
     {
-        $descriptions = Partner_thanks_content::all();
+        $description = Partner_thanks_content::first();
 
         return view('pages.admin.partner-thanks', [
-            'descriptions' => $descriptions,
+            'description' => $description,
     
         ]);
     }

@@ -2,6 +2,7 @@
 
 use App\Models\Agenda;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ActualiteController;
 use App\Http\Controllers\ContactContentController;
 use App\Http\Controllers\ProfileController;
@@ -14,6 +15,8 @@ use App\Http\Controllers\GlobalNumberController;
 use App\Http\Controllers\Job_offerController;
 use App\Http\Controllers\MissionsController;
 use App\Http\Controllers\NetworkController;
+use App\Http\Controllers\NospartenairesController;
+use App\Http\Controllers\NousdecouvrirController;
 use App\Http\Controllers\NumberContentController;
 use App\Http\Controllers\OfficeAddressController;
 use App\Http\Controllers\Partner_SignupController;
@@ -27,37 +30,32 @@ use App\Http\Controllers\VolunteerContentController;
 use App\Models\Formules;
 use App\Models\Office_adress_content;
 
-Route::get('/', function () {
-    return view('pages.guest.accueil');
-})->name('accueil');
 
-Route::get('/accueil/statistiques', [GlobalNumberController::class, 'indexView'])->name('accueil-statistiques');
+Route::get('/', [AccueilController::class, 'index'])->name('accueil');
 
 Route::get('/devenir/adherente', function () {
     return view('pages.guest.deveniradherente');
 })->name('devenir-adherente');
 
 
-Route::get('/nous/decouvrir', [AboutController::class, 'indexView'])->name('nous-decouvrir');
+Route::get('/nous/decouvrir', [NousdecouvrirController::class, 'index'])->name('nous-decouvrir');
+
+
 Route::get('/actualites', [ActualiteController::class, 'indexView'])->name('actualites');
 Route::get('/actualite/details/{id}', [ActualiteController::class, 'showView'])->name('actualite-details');
 
 
-// Route::get('/agenda', function () {
-//     return view('pages.guest.agenda');
-// })->name('agenda');
 Route::get('/agenda', [EvenementController::class, 'indexView'])->name('agenda');
 Route::get('/agenda/details/{id}', [EvenementController::class, 'showView'])->name('evenement-details');
+Route::get('/agenda/evenement/filtrer', [EvenementController::class, 'filtrer'])->name('filtrer');
 
 
 Route::get('/evenement', function () {
     return view('pages.guest.evenement');
 });
 
-Route::get('/nospartenaires', function () {
-    return view('pages.guest.nospartenaires');
-})->name('nospartenaires');
 
+Route::get('/nospartenaires', [NospartenairesController::class, 'index'])->name('nospartenaires');
 
 Route::get('/recrutement', [Job_offerController::class, 'indexView'])->name('recrutement');
 Route::get('/recrutement/detail/{id}', [Job_offerController::class, 'showView'])->name('recrutement-details');

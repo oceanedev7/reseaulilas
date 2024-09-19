@@ -82,6 +82,7 @@ class EvenementController extends Controller
     public function showView(string $id)
     {
         $eventAgendaView = Agenda::findOrFail($id); 
+
         return view("pages.guest.evenement", compact('eventAgendaView'));
     }
     /**
@@ -131,4 +132,21 @@ class EvenementController extends Controller
 
         return redirect("/espaceadmin/evenement");
     }
+
+
+
+// VotreController.php
+public function filtrer(Request $request)
+{
+    $date = $request->input('date');
+
+    if ($date) {
+        $eventsAgendaView = Agenda::whereDate('date', $date)->paginate(9); 
+    } else {
+        $eventsAgendaView = Agenda::paginate(9); 
+    }
+
+    return view('pages.guest.agenda', ['eventsAgendaView' => $eventsAgendaView]);
+}
+
 }

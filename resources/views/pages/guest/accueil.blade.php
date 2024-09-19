@@ -41,38 +41,25 @@
 
         <div class="flex flex-row justify-center items-center space-x-24 mt-52">
 
+          @foreach ($networksView as $networkView)
+            
+          
           <div class="relative bg-white max-w-xs rounded-xl custom-shadow w-60 h-72 overflow-hidden ">
             <div class="absolute top-0 left-0 w-full h-2/5 bg-jaune flex justify-center items-center">
               <i class="fa-solid fa-plus text-6xl "></i>
             </div>
             <div class="relative z-10 p-4 h-full flex items-center justify-center text-center mt-14">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur.
+              {{$networkView->description}}           
             </div>
         </div>
-
-        <div class="relative bg-white max-w-xs rounded-xl custom-shadow w-60 h-72 overflow-hidden ">
-          <div class="absolute top-0 left-0 w-full h-2/5 bg-jaune flex justify-center items-center">
-            <i class="fa-solid fa-plus text-6xl "></i></div>
-            <div class="relative z-10 p-4 h-full flex items-center justify-center text-center mt-14">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur.
-            </div>
-      </div>
-
-      <div class="relative bg-white max-w-xs rounded-xl custom-shadow w-60 h-72 overflow-hidden ">
-        <div class="absolute top-0 left-0 w-full h-2/5 bg-jaune flex justify-center items-center">
-          <i class="fa-solid fa-plus text-6xl "></i>
-        </div>
-        <div class="relative z-10 p-4 h-full flex items-center justify-center text-center mt-14">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas vel sint commodi repudiandae consequuntur.
-        </div>
-    </div>
-        
+@endforeach
+  
         </div>
 
        </div>
     
   
-        
+    
        <div class="w-full h-screen p-12"> 
 
         <div class="uppercase text-3xl font-black text-center"> Nos formules</div>
@@ -142,19 +129,21 @@
       </div>
 
       <div class="bg-jaune w-full relative h-2/5 flex flex-row justify-center space-x-6">
+ @foreach ($reviewsView  as $reviewView)
+   
 
         <div class="relative">
           <i class="fa-solid fa-quote-left text-jaune text-8xl absolute -top-36 right-6 z-10"></i>
-          <div class="bg-white -translate-y-1/2 flex flex-col justify-center max-w-sm min-h-min rounded-xl custom-shadow p-6 text-center overflow-auto">
+          <div class=" w-[400px] h-[200px]  bg-white -translate-y-1/2 flex flex-col justify-center max-w-sm min-h-min rounded-xl custom-shadow p-6 text-center overflow-auto">
               <div class="mt-4">
             <div>
-                  Participer à l'atelier sur l'entrepreneuriat a été une expérience déterminante pour moi. Les sessions étaient enrichissantes, pratiques et pleines de conseils concrets.
-              </div>
-              <div class="mt-2 font-semibold">Marie DUPOND</div>
+              {{$reviewView->description}}              
+            </div>
+              <div class="mt-2 font-semibold">{{$reviewView->nom}}</div>
               </div>
           </div>
-      </div>
-      <div class="relative">
+      </div> @endforeach
+      {{-- <div class="relative">
         <i class="fa-solid fa-quote-left text-jaune text-8xl absolute -top-36 right-6 z-10"></i>
         <div class="bg-white -translate-y-1/2 flex flex-col justify-center max-w-sm min-h-min rounded-xl custom-shadow p-6 text-center overflow-auto">
             <div class="mt-4">
@@ -175,7 +164,7 @@
           <div class="mt-2 font-semibold">Marie DUPOND</div>
           </div>
       </div>
-    </div>
+    </div> --}}
   </div>
 
   </div>

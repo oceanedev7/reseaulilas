@@ -15,7 +15,7 @@
 
     
     <div class="relative h-80 w-full">
-        <img class="h-80 w-full object-cover" src="{{  Storage::url($eventAgendaView->photo) }}" alt="Photo accueil">
+        <img class="h-80 w-full object-cover" src="{{ Storage::url($eventAgendaView->photo) }}">
     </div>
 
     <div class="w-full p-12 ">

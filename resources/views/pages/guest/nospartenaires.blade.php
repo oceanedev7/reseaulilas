@@ -24,12 +24,7 @@
             <div class="bg-white rounded-xl custom-shadow overflow-hidden p-8 max-w-3xl z-10 absolute transform translate-x-1/2">
                 <div class="uppercase font-black text-center mb-4 text-xl">LOREM IPSUM</div>
                 <div class="text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, arcu venenatis sodales venenatis, magna elit eleifend nulla, non blandit orci arcu non dui.
-                    Vestibulum dui tortor, fermentum ut ligula id, rutrum ornare purus. Aliquam consectetur fermentum vulputate. Nunc quis molestie ipsum. Fusce turpis tellus, viverra sed pretium ac, interdum vel diam. Vivamus rhoncus eros a ante varius malesuada. Ut at mattis eros. Ut commodo a eros eu vestibulum.
-                    Integer eleifend mauris vitae enim iaculis porta. Suspendisse sit amet tortor massa.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pulvinar, arcu venenatis sodales venenatis, magna elit eleifend nulla, non blandit orci arcu non dui.
-                    Vestibulum dui tortor, fermentum ut ligula id, rutrum ornare purus. Aliquam consectetur fermentum vulputate. Nunc quis molestie ipsum. Fusce turpis tellus, viverra sed pretium ac, interdum vel diam. Vivamus rhoncus eros a ante varius malesuada. Ut at mattis eros. Ut commodo a eros eu vestibulum.
-                    Integer eleifend mauris vitae enim iaculis porta. Suspendisse sit amet tortor massa.
+                    {{$descriptionView->description}}              
                 </div>
             </div>
 

@@ -49,7 +49,7 @@
 
 
 <div class="w-full p-12"> 
-    @foreach ($descriptions as $description)
+   
         
         <div class="custom-shadow w-full rounded-xl p-12 text-justify">
             {{$description->description}}
@@ -60,7 +60,7 @@
             </div>
         </div>
     
-   @endforeach
+ 
 </div>
    
 

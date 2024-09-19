@@ -20,15 +20,6 @@ class AboutController extends Controller
         ]);
     }
 
-    public function indexView()
-    {
-        $aboutcontentView = About_content::first();
-
-        return view('pages.guest.nousdecouvrir', [
-            'aboutcontentView' => $aboutcontentView,
-    
-        ]);
-    }
 
     /**
      * Show the form for creating a new resource.

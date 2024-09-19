@@ -27,20 +27,17 @@
 
         <div class="font-black text-xl mt-8">FILTRER LES RÉSULTATS</div>
 
-        <form class="flex flex-row space-x-12 mt-8"> 
-            <input placeholder="Date" class="bg-gray-300 border-none rounded-lg pl-4 placeholder-gray-700" type="date">
-            <select class="bg-gray-300 border-none rounded-lg">
-                <option value="" disabled selected>Sélectionnez une catégorie</option>
-                <option value="">Les rencontres du réseau</option>
-                <option value="">Les médias</option>
-                <option value="">Autres projets</option>
-            </select>
-        
-            <button class="bg-jaune font-bold text-center rounded px-3 py-1 text-sm">FILTRER</button>
+        <div class="flex space-x-12 mt-8 items-center">
+        <form action="{{ route('filtrer') }}" method="GET" > 
+            <input name="date" placeholder="Date" class="bg-gray-300 border-none rounded-lg placeholder-gray-700" type="date">
+            <button class="bg-jaune font-bold text-center rounded px-3 py-2 text-sm">FILTRER</button>
         </form>
+            <a class="bg-jaune font-bold text-center rounded px-3 py-2 text-sm" href="{{route('agenda')}}"> Voir tous les évènements </a>
+        </div>
         
        
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-16"> 
+            
 
             @foreach ($eventsAgendaView as $eventAgendaView)
                 
