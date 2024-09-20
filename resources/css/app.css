@@ -102,3 +102,20 @@
 .prev { left: 5em; }
 
 
+.border-submenu {
+  border-bottom: 1px solid black;
+  padding-bottom: 5px; 
+  width: 80%; 
+  margin: 0 auto;
+}
+
+.border-submenu:not(:last-child) {
+  border-bottom: 1px solid black; 
+  padding-bottom: 5px; 
+  width: 80%; 
+  margin: 0 auto;
+}
+
+.border-submenu:last-child {
+  border-bottom: none; 
+}

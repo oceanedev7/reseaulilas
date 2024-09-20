@@ -47,13 +47,14 @@
                         @if (isset($formulesView))
                         <ul class="z-10 absolute top-0 right-48 hidden p-2 w-44 space-y-2 bg-white border-2 border-black rounded-lg sub-submenu overflow-auto">
                             @foreach ($formulesView as $formule)
-                                <li>
-                                    <a href="{{ route('accueil-formule-details', $formule->id) }}" class="block px-4 hover:text-jaune custom-border font-medium uppercase">
+                                <li class="border-submenu">
+                                    <a href="{{ route('accueil-formule-details', $formule->id) }}" class="block px-4 hover:text-jaune font-medium uppercase">
                                         {{ $formule->titre }}
                                     </a>
                                 </li>
                             @endforeach
                         </ul>
+                        
                     @endif
                     
                         </li>
