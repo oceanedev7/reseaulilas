@@ -11,4 +11,5 @@ abstract class Controller
         $formules = Formules::all();
         View::share('formulesView', $formules);
     }
+    
 }

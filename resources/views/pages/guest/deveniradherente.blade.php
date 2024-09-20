@@ -28,36 +28,18 @@
         <div class="text-2xl font-bold text-center mt-8"> DÉCOUVREZ NOS FORMULES </div>
 
         <div class="flex justify-center space-x-12 mt-20">
-            <div class=" flex flex-col space-y-4">
+            @foreach ($formulesView as $formule)
+        
+            <a  href="{{ route('accueil-formule-details', $formule->id) }}" class=" flex flex-col space-y-4">
                 <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
                 <div  class=" flex flex-col">
-                <div class="text-center max-w-60 font-black"> FORMULE 1 </div>
+                <div class="text-center max-w-60 font-black uppercase"> {{$formule->titre}} </div>
                 <div class="text-center max-w-60 font-semibold"> Pour celles qui souhaitent... </div>
                 </div>
-            </div>
-            <div class=" flex flex-col space-y-4">
-                <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                <div  class=" flex flex-col">
-                    <div class="text-center max-w-60 font-black"> FORMULE 2 </div>
-                    <div class="text-center max-w-60 font-semibold"> Pour celles qui souhaitent... </div>
-                    </div>            </div>
-            <div class=" flex flex-col space-y-4">
-                <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                <div  class=" flex flex-col">
-                    <div class="text-center max-w-60 font-black"> FORMULE 3 </div>
-                    <div class="text-center max-w-60 font-semibold"> Pour celles qui souhaitent... </div>
-                    </div>            </div>
-            <div class=" flex flex-col space-y-4">
-                <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                <div  class=" flex flex-col">
-                    <div class="text-center max-w-60 font-black"> FORMULE 4 </div>
-                    <div class="text-center max-w-60 font-semibold"> Pour celles qui souhaitent... </div>
-                    </div>           
-            </div>
+            </a>
+            @endforeach
         </div>
         
-
-
         <div class="flex flex-row items-center justify-center space-x-32 mt-20">
 
        <div class="flex flex-col justify-center items-center space-y-6 ">

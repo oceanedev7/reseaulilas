@@ -35,10 +35,7 @@ use App\Models\Office_adress_content;
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');
 Route::get('/accueil/formule/details/{id}', [AccueilController::class, 'show'])->name('accueil-formule-details');
 
-Route::get('/devenir/adherente', function () {
-    return view('pages.guest.deveniradherente');
-})->name('devenir-adherente');
-
+Route::get('/devenir/adherente', [MembersController::class, 'index'])->name('devenir-adherente');
 
 Route::get('/nous/decouvrir', [NousdecouvrirController::class, 'index'])->name('nous-decouvrir');
 
