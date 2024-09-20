@@ -12,57 +12,6 @@
     <title>@yield('title')</title>
 </head>
 <body>
-
-     {{-- <nav class=" h-24 w-full flex items-center">
-        <div class="flex items-center w-full max-w-screen-xl mx-auto px-16">
-            <div class="flex-shrink-0">
-                <img src="{{ asset('storage/images/logoreseaulilas.png') }}" alt="Logo Réseau LILAS" class="h-52">
-            </div>
-            
-             <div class="flex-grow flex items-center justify-end ">
-                <a href="{{route ('accueil')}}" class="text-lg font-medium">Accueil</a>
-
-                <div class="relative group">
-                    <a href="#" class="text-lg font-medium flex items-center">
-                        Nous rejoindre
-                        <svg class="w-2 h-2 ms-2 mt-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                        </svg>
-                    </a>
-                    <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-2 w-60 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="{{route ('devenir-adherente')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir adhérente</a>
-                        <a href="{{route ('devenir-partenaire')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir partenaire</a>
-                        <a href="{{route ('devenir-benevole')}}" class="block px-4 py-2 font-semibold hover:text-jaune">Devenir bénévole</a>
-                    </div>     
-                </div> 
-                
-                
-                <div class="relative group">
-                    <a href="#" class="text-lg font-medium flex items-center">
-                        Nos actualités
-                        <svg class="w-2 h-2 ms-2 mt-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                        </svg>
-                    </a>
-                    <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-2 w-48 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="{{route ('agenda')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Agenda</a>
-                        <a href="{{route ('actualites')}}" class="block px-4 py-2 font-semibold hover:text-jaune">Actualités</a>
-                    </div>     
-                </div>
-
-                <a href="{{route ('nospartenaires')}}" class="text-lg font-medium">Nos partenaires</a>
-                
-                
-               
-                <a href="{{route ('contact')}}" class="text-lg font-medium">Contact</a>
-               
-            </div> 
-             
-        </div>
-    </nav>  --}}
-
-
- 
         
     <nav class="h-24 w-full flex items-center">
         <div class="flex items-center w-full max-w-screen-xl mx-auto">
@@ -80,23 +29,6 @@
                     <a href="{{route ('nous-decouvrir')}}" class="text-lg font-medium">Nous découvrir</a>
                 </div>
     
-                {{-- <div class="relative group h-24 hover:bg-jaune flex items-center px-6">
-                    <a href="#" class="text-lg font-medium flex items-center">
-                        Nous rejoindre
-                        <svg class="w-2 h-2 ms-2 mt-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                        </svg>
-                    </a>
-                    <div class="z-10 absolute left-1/2 -translate-x-1/2 mt-44 w-60 bg-white border border-black rounded-lg shadow-lg opacity-0 text-center group-hover:opacity-100 transition-opacity duration-300">
-                        <a href="{{route ('devenir-adherente')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir adhérente</a>        
-                        <a href="{{route ('devenir-partenaire')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir partenaire</a>
-                        <a href="{{route ('devenir-benevole')}}" class="block px-4 py-2 font-semibold hover:text-jaune custom-border">Devenir bénévole</a>
-                        <a href="#" class="block px-4 py-2 font-semibold hover:text-jaune">Recrutement</a>
-
-                    </div>     
-                </div> --}}
-
-
                  <li class=" relative h-24 hover:bg-jaune flex justify-center items-center px-6 menu-item">
                     <a href="#" class="text-lg font-medium flex items-center">Nous rejoindre<svg class="w-2 h-2 ms-2 mt-0.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -111,13 +43,17 @@
                             </svg>
                             Devenir adhérente
                         </a>
-              
-                            <ul class="z-10 absolute top-0 right-48 hidden p-2 w-44 space-y-2 bg-white border-2 border-black rounded-lg sub-submenu overflow-auto">
-                                <li><a href="{{route ('formule1')}}" class="block px-4  hover:text-jaune custom-border font-medium">Formule 1 </a></li>
-                                <li><a href="{{route ('formule2')}}" class="block px-4  hover:text-jaune custom-border font-medium">Formule 2</a></li>
-                                <li><a href="{{route ('formule3')}}" class="block px-4  hover:text-jaune custom-border font-medium">Formule 3</a></li>
-                                <li><a href="{{route ('formule4')}}" class="block px-4  hover:text-jaune font-medium">Formule 4</a></li>
-                            </ul>
+                        <ul class="z-10 absolute top-0 right-48 hidden p-2 w-44 space-y-2 bg-white border-2 border-black rounded-lg sub-submenu overflow-auto divide-y divide-black">
+                            @foreach ($formulesView as $formuleView)
+                                <li>
+                                    <a href="{{ route('accueil-formule-details', $formuleView->id) }}" class="block px-4 hover:text-jaune custom-border font-medium uppercase">
+                                        {{ $formuleView->titre }}
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                        
+                           
                         </li>
                        
                         <li><a href="{{route ('devenir-partenaire')}}" class="block px-4  hover:text-jaune custom-border font-semibold">Devenir partenaire</a></li>

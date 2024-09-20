@@ -64,7 +64,7 @@
 
         <div class="uppercase text-3xl font-black text-center"> Nos formules</div>
         
-        <div class="container flex w-full items-center justify-center">
+         <div class="container flex w-full items-center justify-center">
 
           <div class="carousel flex items-center justify-center">
             @foreach ($formulesView as $index => $formuleView)
@@ -85,6 +85,7 @@
 
       </div>
       
+
         
     </div>
   

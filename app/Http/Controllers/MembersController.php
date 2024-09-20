@@ -2,31 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Formules;
 use Illuminate\Http\Request;
-use App\Models\Join_network;
-use App\Models\Global_number_content;
-use App\Models\Partner_logo;
-use App\Models\Reviews;
 
-class AccueilController extends Controller
+class MembersController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $globalsView = Global_number_content::all();
-        $networksView = Join_network::all();
-        $reviewsView = Reviews::all();
-        $logosView = Partner_logo::all();
-        
-        return view('pages.guest.accueil', [
-            'globalsView' => $globalsView,
-            'networksView' => $networksView,
-            'reviewsView' => $reviewsView ,
-            'logosView' => $logosView,
-        ]);
+        return view('pages.guest.deveniradherente');
     }
 
     /**
@@ -50,9 +35,7 @@ class AccueilController extends Controller
      */
     public function show(string $id)
     {
-        $formuleView = Formules::findOrFail($id);
-        // dd($formule);
-        return view('pages.guest.formule-details', compact('formuleView'));
+        //
     }
 
     /**
