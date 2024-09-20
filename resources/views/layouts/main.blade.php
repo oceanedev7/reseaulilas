@@ -36,24 +36,26 @@
                 </a>
                     <ul class="z-10 absolute hidden text-center mt-52 w-52 p-2 space-y-2 bg-white border border-black rounded-lg  submenu">
                         <li class="relative submenu-item">
-                      
+                         
                           <a href="{{route ('devenir-adherente')}}" class="custom-border text-center  flex justify-center px-4 hover:text-yellow-400 font-semibold">
                             <svg class="w-2 h-2 ms-2 mt-2.5 mr-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                             </svg>
                             Devenir adhérente
                         </a>
-                        <ul class="z-10 absolute top-0 right-48 hidden p-2 w-44 space-y-2 bg-white border-2 border-black rounded-lg sub-submenu overflow-auto divide-y divide-black">
-                            @foreach ($formulesView as $formuleView)
+                    
+                        @if (isset($formulesView))
+                        <ul class="z-10 absolute top-0 right-48 hidden p-2 w-44 space-y-2 bg-white border-2 border-black rounded-lg sub-submenu overflow-auto">
+                            @foreach ($formulesView as $formule)
                                 <li>
-                                    <a href="{{ route('accueil-formule-details', $formuleView->id) }}" class="block px-4 hover:text-jaune custom-border font-medium uppercase">
-                                        {{ $formuleView->titre }}
+                                    <a href="{{ route('accueil-formule-details', $formule->id) }}" class="block px-4 hover:text-jaune custom-border font-medium uppercase">
+                                        {{ $formule->titre }}
                                     </a>
                                 </li>
                             @endforeach
                         </ul>
-                        
-                           
+                    @endif
+                    
                         </li>
                        
                         <li><a href="{{route ('devenir-partenaire')}}" class="block px-4  hover:text-jaune custom-border font-semibold">Devenir partenaire</a></li>
@@ -203,5 +205,6 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
 </body>
 </html>
