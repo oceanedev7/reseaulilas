@@ -53,12 +53,18 @@
 
 <div class="w-full flex space-x-8 items-center justify-center p-12"> 
 
-                
-            <div class="max-w-2xl text-justify">
-                {{$aboutcontent->description}}
-            </div>
+    @if ($aboutcontent && $aboutcontent->description)
+    <div class="max-w-2xl text-justify">
+        {{$aboutcontent->description}}
+    </div>
+  @endif
             
-            <a href="{{route('about-content-edit', $aboutcontent->id)}}" class="font-bold text-center bg-green-600 text-white rounded-xl py-1.5 px-4 mt-4">Modifier</a>
+            
+  @if($aboutcontent)
+  <a href="{{ route('about-content-edit', $aboutcontent->id) }}" class="font-bold text-center bg-green-600 text-white rounded-xl py-1.5 px-4 mt-4">
+      Modifier
+  </a>
+@endif
 
     
 </div>

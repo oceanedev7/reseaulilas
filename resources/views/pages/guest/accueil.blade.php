@@ -160,33 +160,3 @@ Notre vision est ambitieuse : devenir un réseau d’entrepreneuses, présente d
   </body>
 </html>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const caroussel = document.getElementById('caroussel');
-    const logos = caroussel.querySelectorAll('img');
-    
-    // Calculer la largeur totale du carrousel
-    let totalWidth = 0;
-    logos.forEach(logo => {
-        totalWidth += logo.offsetWidth + parseInt(window.getComputedStyle(logo).marginRight) * 2;
-    });
-
-    // Répéter les éléments pour un défilement infini
-    caroussel.style.width = `${totalWidth}px`;
-
-    // Appliquer l'animation avec JavaScript
-    let animationDuration = 30; // Durée de l'animation en secondes (ajustez comme nécessaire)
-    caroussel.animate(
-        [
-            { transform: 'translateX(0)' }, // Départ
-            { transform: `translateX(-${totalWidth / 2}px)` } // Fin (la moitié des éléments dupliqués)
-        ],
-        {
-            duration: animationDuration * 1000, // Convertir en millisecondes
-            iterations: Infinity, // Animation infinie
-            easing: 'linear' // Animation fluide
-        }
-    );
-});
-
-</script>

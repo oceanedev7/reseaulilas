@@ -36,10 +36,10 @@ class AboutController extends Controller
 
         $request->validate(
             [
-            'description' => 'required|string|max:1000',
+            'description' => 'required|string|max:1400',
             ],
             [
-                'description.max' => 'La description ne doit pas dépasser 1000 caractères.', 
+                'description.max' => 'La description ne doit pas dépasser 1400 caractères.', 
             ]);
 
          About_content::create($request->all());

@@ -18,11 +18,14 @@
 
     <div class="w-full h-screen p-12 flex items-center justify-center"> 
 
-      <div class="flex items-center justify-center space-x-24">
+      <div class="flex items-center justify-center space-x-20">
         <img class="h-96 w-96 rounded-xl object-cover transition-transform duration-500 transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">     <div class="flex flex-col items-center space-y-4"> 
         <div class="font-black text-3xl uppercase text-center">  Notre histoire </div>
-      
-        <div class="max-w-2xl text-justify">{{$aboutcontentView->description}}</div>
+
+        @if ($aboutcontentView && $aboutcontentView->description)
+          <div class="max-w-3xl text-justify">{{$aboutcontentView->description}}</div>
+        @endif
+
 
       </div>
     </div>

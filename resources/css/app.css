@@ -3,21 +3,21 @@
 @tailwind utilities;
 
 
-.caroussel {
-  display: flex; /* Utiliser Flexbox pour aligner les logos */
-  flex-shrink: 0; /* Empêcher le rétrécissement */
-  width: max-content; /* Permet de calculer la largeur totale des logos */
-  animation: caroussel 20s linear infinite; /* Animation continue, durée ajustable */
+/* .caroussel {
+  display: flex;
+  flex-shrink: 0; 
+  width: max-content; 
+  animation: caroussel 20s linear infinite;
 }
 
 @keyframes caroussel {
   0% {
-    transform: translateX(0); /* Départ */
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Défile sur la moitié de la largeur totale, car les logos sont dupliqués */
+    transform: translateX(-50%); 
   }
-}
+} */
 
 
 

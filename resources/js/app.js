@@ -100,3 +100,32 @@ $(document).ready(function() {
     }
 });
   
+//Défilement des logos (vue accueil)
+
+document.addEventListener("DOMContentLoaded", function() {
+    const caroussel = document.getElementById('caroussel');
+    const logos = caroussel.querySelectorAll('img');
+    
+    
+    let totalWidth = 0;
+    logos.forEach(logo => {
+        totalWidth += logo.offsetWidth + parseInt(window.getComputedStyle(logo).marginRight) * 2;
+    });
+
+
+    caroussel.style.width = `${totalWidth}px`;
+
+   
+    let animationDuration = 30;
+    caroussel.animate(
+        [
+            { transform: 'translateX(0)' },
+            { transform: `translateX(-${totalWidth / 2}px)` } 
+        ],
+        {
+            duration: animationDuration * 1000, 
+            iterations: Infinity,
+            easing: 'linear' 
+        }
+    );
+});
