@@ -63,6 +63,9 @@ Route::post('/inscription/benevole', [Volunteer_SignupController::class, 'store'
 Route::get('/devenir/partenaire', [Partner_SignupController::class, 'index'])->name('devenir-partenaire');
 Route::post('/inscription/partenaire', [Partner_SignupController::class, 'store'])->name('partner-request');
 
+Route::get('/plandusite', function () {
+    return view('pages.guest.plandusite');
+})->name('plan');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

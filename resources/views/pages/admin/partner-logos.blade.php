@@ -43,16 +43,17 @@
 
 <div class="w-full p-12 grid grid-cols-3 gap-y-12"> 
     @foreach ($logos as $logo)
-        
     <div class="flex flex-col items-center">
-            <div class="mb-4">
-                <img src="{{ Storage::url($logo->photo) }}" alt="" class=" w-64 h-64 object-cover rounded-lg shadow-md">
-            </div> 
+        <div class="mb-4 w-64 h-64">
+            <img src="{{ Storage::url($logo->photo) }}" alt="Logo" class="w-full h-full object-contain rounded-lg shadow-md">
+        </div> 
     
-            <div class="mt-4">
-                <a href="{{route ('delete-logo', $logo->id)}}" class="font-bold bg-red-600 text-white text-center rounded-xl py-1.5 px-4 ">Supprimer</a>
-            </div>
+        <div class="mt-4">
+            <a href="{{ route('delete-logo', $logo->id) }}" class="font-bold bg-red-600 text-white text-center rounded-xl py-1.5 px-4">Supprimer</a>
         </div>
+    </div>
+    
+    
 
    @endforeach
 </div>

@@ -96,8 +96,8 @@
 <div class="w-full grid grid-cols-3 gap-8 items-center justify-center p-12"> 
     @foreach ($formules as $formule)
         <div class="flex flex-col items-center justify-center">
-    <div class="flex flex-col bg-white border border-2 border-jaune rounded-xl space-y-4 p-4 relative w-[250px] h-[240px]">
-            <div class="uppercase text-lg text-center font-bold text-black mb-2">
+    <div class="flex flex-col bg-white border border-2 border-jaune rounded-xl space-y-2 p-4 relative w-[250px] h-[240px]">
+            <div class="uppercase text-lg text-center font-bold text-black ">
                 {{ $formule->titre }}
             </div>
             <div class="text-justify  text-black text-sm mb-2 max-w-[250px]">

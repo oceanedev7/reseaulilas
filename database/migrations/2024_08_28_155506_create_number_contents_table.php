@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('number_contents', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
-            $table->integer('chiffre');
+            $table->string('chiffre');
             $table->string('titre');
             $table->timestamps();
 

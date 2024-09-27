@@ -29,9 +29,9 @@ class NetworkController extends Controller
 
         $existingMissionsCount = Join_network::count();
 
-        if ($existingMissionsCount >= 3) {
+        if ($existingMissionsCount >= 4) {
             return redirect("/espaceadmin/network")->withErrors([
-                'max_elements' => 'Vous ne pouvez pas créer plus de 3 données.',
+                'max_elements' => 'Vous ne pouvez pas créer plus de 4 données.',
             ]);
         }
 

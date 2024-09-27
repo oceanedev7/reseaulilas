@@ -20,15 +20,15 @@ export default {
                 jaune: "#ffd42a",
             },
 
-            animation: {
-                caroussel: 'caroussel 20s linear infinite', 
-            },
-            keyframes: {
-                caroussel: {
-                  '0%': { transform: 'translateX(0)' },
-                  '100%': { transform: 'translateX(-100%)' },
-                },
-            },
+            // animation: {
+            //     caroussel: 'caroussel 20s linear infinite', 
+            // },
+            // keyframes: {
+            //     caroussel: {
+            //       '0%': { transform: 'translateX(0)' },
+            //       '100%': { transform: 'translateX(-100%)' },
+            //     },
+            // },
 
             width: {
                 '7/10': '72%',

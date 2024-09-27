@@ -107,7 +107,7 @@
                     <div class="flex flex-row mb-8 space-x-12 max-w-7xl">
                        
                         <div class="flex items-center flex-shrink-0">
-                            <img src="{{ asset('storage/images/logofooter1.png') }}" alt="Logo Réseau LILAS" class="h-16"> <!-- Taille du logo augmentée -->
+                            <img src="{{ asset('storage/images/logofooter.png') }}" alt="Logo Réseau LILAS" class="h-16"> <!-- Taille du logo augmentée -->
                         </div>  
                 
                         <div class="space-x-16 flex">
@@ -147,7 +147,7 @@
                                 </a>
                                 <div class="flex items-center space-x-2">
                                     <i class="fa-solid fa-phone text-xl"></i>
-                                    <div class="text-sm">0696 40 21 90</div>
+                                    <div class="text-sm"></div>
                                 </div>
                                 <a href="mailto:adressemail@gmail.com" class="flex items-center space-x-2">
                                     <i class="fa-solid fa-envelope text-xl"></i>
@@ -189,20 +189,11 @@
             <div class="inline-flex items-center space-x-2 relative top-2.5">
                 <a href="#" class="text-sm">Mentions légales</a>
                 <span class="border-l border-black h-4"></span>
-                <a href="#" class="text-sm">Politique de confidentialité</a>
-                <span class="border-l border-black h-4"></span>
-                <a href="#" class="text-sm">Conditions générales de vente</a>
-                <span class="border-l border-black h-4"></span>
-                <a href="#" class="text-sm">Plan du site</a>
+                <a href="{{route('plan')}}" class="text-sm">Plan du site</a>
             </div>
         </div>
     </footer>
     
-    
-         
-
-        
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>

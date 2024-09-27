@@ -34,7 +34,7 @@ class NumberContentController extends Controller
         }
 
         $validatedData = $request->validate([
-            'chiffre' => 'required|integer',
+            'chiffre' => 'required|string',
             'titre' => 'required|string',
             
         ]);
@@ -75,7 +75,7 @@ class NumberContentController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'chiffre' => 'integer',
+            'chiffre' => 'string',
             'titre' => 'string',
         ]
     );

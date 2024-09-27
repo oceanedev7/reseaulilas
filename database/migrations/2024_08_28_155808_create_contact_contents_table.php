@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('horaire');
             $table->string('email');
             $table->string('adresse');
-            $table->string('telephone');
+            $table->string('telephone')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

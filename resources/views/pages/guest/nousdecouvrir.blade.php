@@ -107,22 +107,20 @@
 
 
     <div class="w-full h-96 p-10"> 
-      <div class="uppercase text-3xl font-black text-center mt-2"> Le réseau lilas c'est... </div>
-
-      <div class="flex items-center justify-center space-x-28 mt-6"> 
-      
+      <div class="uppercase text-3xl font-black text-center mt-2"> Le réseau l.i.l.a.s c'est... </div>
+    
+      <div class="flex items-center justify-center space-x-24 mt-24"> 
+        
         @foreach ($numbersView as $numberView)
-        <div class="flex flex-col text-center">
-        <div class="bordered-text">{{$numberView->chiffre}}</div>
-        <div class="uppercase font-bold text-xl">{{$numberView->titre}}</div>
+          <div class="flex flex-col text-center space-y-4 items-center justify-center">
+            <div class="bordered-text">{{$numberView->chiffre}}</div>
+            <div class="uppercase font-bold text-xl">{{$numberView->titre}}</div>
+          </div>
+        @endforeach
+        
       </div>
-@endforeach
-      
-
-
-      </div>
-
     </div>
+    
 
     @endsection
 

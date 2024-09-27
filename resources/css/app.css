@@ -3,6 +3,25 @@
 @tailwind utilities;
 
 
+.caroussel {
+  display: flex; /* Utiliser Flexbox pour aligner les logos */
+  flex-shrink: 0; /* Empêcher le rétrécissement */
+  width: max-content; /* Permet de calculer la largeur totale des logos */
+  animation: caroussel 20s linear infinite; /* Animation continue, durée ajustable */
+}
+
+@keyframes caroussel {
+  0% {
+    transform: translateX(0); /* Départ */
+  }
+  100% {
+    transform: translateX(-50%); /* Défile sur la moitié de la largeur totale, car les logos sont dupliqués */
+  }
+}
+
+
+
+
 .custom-border {
     position: relative;
     padding-bottom: 0.5em; 
@@ -38,9 +57,10 @@
 }
   
   .bordered-text {
-    font-size: 8rem; 
+    font-size:85px; 
     font-weight: bold;
     color: #ffd42a; 
+    line-height: 0.9; 
     text-shadow:
         3px 3px 0 #000,  
         -3px -3px 0 #000,
