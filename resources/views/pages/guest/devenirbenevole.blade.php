@@ -3,13 +3,12 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Soutenez le Réseau L.I.L.A.S</title>
+    <meta name="description" content="Découvrez les avantages de devenir bénévole au Réseau L.I.L.A.S. et engagez-vous pour l’autonomisation des femmes entrepreneures en Martinique. Apportez votre soutien et enrichissez votre expérience tout en contribuant à une cause significative.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
 </head>
 <body>
-
-    @section('title', 'Devenir bénévole')
 
     @section('content')
 
@@ -23,98 +22,39 @@
         <a href="{{route ('devenir-benevole')}}"> Devenir bénévole </a>
     </div>
 
-    <div class="w-full h-72 flex justify-center items-center">
-        <div class="max-w-5xl">
-            <div class="text-justify">
-                {{$volunteerView->description}}
-            </div>
-        </div> 
-    </div>
+   
+    <div class="w-full p-12">
 
-    <div class="bg-jaune w-full h-52 flex flex-row justify-center items-center space-x-24">
-        <div class="flex flex-row justify-center items-center space-x-24 mt-11"> 
-        <div class="relative flex w-64 flex-col rounded-xl bg-white shadow-xl">
-            <div class="relative mx-auto -mt-12 h-24 w-24 overflow-hidden rounded-full bg-white flex items-center justify-center">
-                <i class="fa-solid fa-hand-holding-heart text-4xl"></i>
-            </div>
-            
-            <div class="p-4">
-              <h5 class="text-center text-lg font-semibold">
-               LOREM IPSUM
-              </h5>
-            </div>
-        </div>
-        <div class="relative flex w-64 flex-col rounded-xl bg-white shadow-xl">
-            <div class="relative mx-auto -mt-12 h-24 w-24 overflow-hidden rounded-full bg-white flex items-center justify-center">
-                <i class="fa-solid fa-hand-holding-heart text-4xl"></i>
-            </div>
-            <div class="p-4">
-              <h5 class="text-center text-lg font-semibold">
-                LOREM IPSUM
-              </h5>
-            </div>
-        </div>
-        <div class="relative flex w-64 flex-col rounded-xl bg-white shadow-xl">
-            <div class="relative mx-auto -mt-12 h-24 w-24 overflow-hidden rounded-full bg-white flex items-center justify-center">
-                <i class="fa-solid fa-hand-holding-heart text-4xl"></i>
-            </div>
-            <div class="p-4">
-              <h5 class="text-center text-lg font-semibold">
-                LOREM IPSUM
-              </h5>
-            </div>
-        </div>
-        </div>
-    </div>
-
-    <div class="w-full p-12 flex flex-col justify-center items-center">
-
-        <div class="max-w-4xl ">
-            <div class="text-justify flex flex-row justify-center">
-                Pour devenir bénévole et nous rejoindre dans nos actions, veuillez remplir ce formulaire afin que nous puissions vous intégrer au mieux dans nos équipes.            </div>
-        </div>
+        <h2 class="text-jaune font-black text-center uppercase text-3xl mt-10 mb-6">
+            6 Avantages de devenir bénévole
+        </h2>
     
+        <div class="text-justify">
+            Devenir bénévole au sein du Réseau L.I.L.A.S. est un engagement précieux qui a un impact significatif tant sur l'économie locale que sur le bien-être social.  Nos actions, qu'elles soient menées sur le terrain ou à travers des campagnes de communication sur divers médias et réseaux sociaux, permettent de créer un écosystème de soutien et d'entraide. En rejoignant notre équipe de bénévoles, vous aurez l'opportunité de participer activement à des initiatives qui transforment des vies. Votre engagement ne valorise pas seulement votre propre expérience, mais renforce également notre mission collective en faveur d'une société plus inclusive.        </div>
     
-    <div class="mt-10 w-full">
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2"> Contribuer à l'égalité des chances</h3>
+        <div class="text-justify">
+            En devenant bénévole, vous participez à réduire les inégalités en soutenant des femmes dans leurs projets entrepreneuriaux. </div>
     
-        <form class="flex flex-col items-center" method="post" action="{{ route('volunteer-request') }}">
-            @csrf
-            <div class="flex flex-col space-y-4 w-full max-w-4xl">
-                <div class="flex flex-row space-x-4">
-                    <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="nom" placeholder="Nom">
-                    <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black"  name="prenom" placeholder="Prénom">
-                </div>
-            
-                
-                <div class="flex flex-row space-x-4">
-                    <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="email" placeholder="Adresse e-mail" required>
-                    <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="telephone" placeholder="Numéro de téléphone" required>
-                </div>
-        
-                <input class="p-2 rounded-xl border-2 border-jaune w-full focus:ring-0 focus:border-black" name="adresse_postale" placeholder="Adresse postale" required>
-        
-                <div class="flex flex-row space-x-4">
-                    <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="ville" placeholder="Ville" required>
-                    <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="code_postal" placeholder="Code postal" required>
-                </div>
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2"> Soutenir l'économie locale</h3>
+        <div class="text-justify">
+            En aidant des femmes à créer et développer leurs entreprises, vous encouragez la croissance de l'économie locale. Les entrepreneuses génèrent des emplois et des opportunités qui bénéficient à toute la communauté.  </div>
     
-                <textarea class="p-2 rounded-xl border-2 border-jaune resize-none w-full text-gray-500 focus:ring-0 focus:border-black" rows="5" name="message" placeholder="Message" required></textarea>
-            </div>
-            <div class="flex justify-end w-full max-w-4xl mt-4">
-                <button class="font-bold bg-jaune rounded-xl py-1.5 px-4">ENVOYER</button>
-            </div>
-            @if (session('success'))
-            <div class="alert alert-success w-full text-center font-bold">
-                {{ session('success') }}
-            </div>
-        @endif  
-        </form>
-        
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2">Développer vos compétences</h3>
+        <div class="text-justify">
+            Le bénévolat est une excellente opportunité pour acquérir de nouvelles compétences professionnelles ou personnelles, telles que la gestion de projet, le mentorat ou la communication, tout en contribuant à une cause.   </div>
     
-    </div>
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2">Renforcer votre réseau</h3>
+        <div class="text-justify">
+            En travaillant avec des femmes entrepreneuses, vous élargissez votre réseau professionnel. Vous pourrez rencontrer des entrepreneuses, des expertes, et des partenaires potentiels de divers secteurs.  </div>
     
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2">Impacter positivement la société</h3>
+        <div class="text-justify">
+            Votre engagement contribue à renforcer l'autonomie des femmes, à promouvoir la diversité et à soutenir des initiatives qui ont un réel impact sur la société. </div>
     
-    
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2">S'épanouir personnellement</h3>
+        <div class="text-justify">
+            Le bénévolat offre un sentiment d'accomplissement et de satisfaction. Aider les autres à réussir est gratifiant et peut vous apporter un épanouissement personnel profond.   </div>
     </div>
 
    

@@ -43,7 +43,7 @@
 
         <div class="mb-4">
             <label for="Numéro de téléphone" class="block text-sm font-semibold  mb-2">Numéro de téléphone :</label>
-            <input name="telephone" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune" required>
+            <input name="telephone" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune">
         </div>
 
         @if ($errors->has('max_elements'))

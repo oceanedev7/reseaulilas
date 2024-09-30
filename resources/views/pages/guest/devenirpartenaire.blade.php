@@ -3,17 +3,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Soutenez le Réseau L.I.L.A.S</title>
+    <meta name="description" content="Découvrez les avantages de devenir partenaire du Réseau L.I.L.A.S. et engagez-vous pour l’inclusion des femmes entrepreneures en Martinique. Profitez d'une visibilité accrue et de réductions fiscales.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
 
-    @section('title', 'Devenir partenaire')
-
     @section('content')
 
     <div class="bg-jaune h-56 w-full flex justify-center items-center">
-        <div class="font-black text-4xl"> DEVENIR PARTENAIRE </div>
+        <h1 class="font-black text-4xl"> DEVENIR PARTENAIRE </h1>
     </div>
 
     <div class="flex space-x-2 font-bold text-lg relative top-10 ml-6">
@@ -22,100 +22,51 @@
         <a href="{{route ('devenir-benevole')}}"> Devenir partenaire </a>
     </div>
 
-    <div class="w-full h-72 flex justify-center items-center">
-        <div class="max-w-5xl">
-            <div class="text-justify">
-                {{$partnerView->description}}           
-             </div>
+    <div class="w-full p-12">
+
+        <h2 class="text-jaune font-black text-center uppercase text-3xl mt-10 mb-6">
+            6 Avantages à soutenir le Réseau L.I.L.A.S.
+        </h2>
+    
+        <div class="text-justify">
+            Soutenir le Réseau L.I.L.A.S. est un acte engagé qui bénéficie à la fois à l'économie locale et au bien-être social. Grâce à nos actions directes auprès de centaines de femmes et à nos campagnes de communication sur divers médias, réseaux sociaux et relais d'influence, nous vous offrons plusieurs avantages pour valoriser votre soutien.
         </div>
+    
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2">Engagement social</h3>
+        <div class="text-justify">
+            Contribuez à une cause noble en soutenant des femmes entrepreneures et en favorisant l'inclusion sociale et l'autonomie financière.
+        </div>
+    
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2">Soutien direct à l'économie locale</h3>
+        <div class="text-justify">
+            En aidant les entrepreneuses martiniquaises, vous soutenez le développement économique local et la création d'emplois.
+        </div>
+    
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2">Visibilité auprès de plus de 1000 femmes entrepreneures</h3>
+        <div class="text-justify">
+            Bénéficiez d’une visibilité auprès de notre communauté, vous permettant de promouvoir votre marque et vos valeurs auprès d’un réseau engagé.
+        </div>
+    
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2">Dons ouverts aux réductions d'impôts</h3>
+        <div class="text-justify">
+            Profitez des avantages fiscaux liés aux dons à une association reconnue, tout en contribuant positivement à la communauté.
+        </div>
+    
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2">Impact social et RSE</h3>
+        <div class="text-justify">
+            Renforcez votre politique de Responsabilité Sociétale des Entreprises (RSE) en vous associant à un projet ayant un impact social réel et mesurable.
+        </div>
+    
+        <h3 class="text-jaune text-xl font-bold mt-8 mb-2">Connexion à tout notre écosystème</h3>
+        <div class="text-justify">
+            Élargissez votre réseau grâce à des interactions avec des acteurs clés de divers secteurs, et accédez à de nouvelles opportunités de collaboration.
+        </div>
+
+        <div class="flex flex-col justify-center items-center mt-10">
+
+            <a href="https://www.helloasso.com/associations/lilas-les-independantes-libres-alignees-et-solidai/formulaires/1" target="_blank" class="bg-jaune py-4 px-6 rounded-xl font-black text-lg uppercase"> JE FAIS UN DON</a>
+            </div>
     </div>
-
-    <div class="bg-jaune w-full h-52 flex flex-row justify-center items-center space-x-24">
-
-        <div class="flex flex-col justify-center items-center">
-            <i class="fa-solid fa-user-plus text-4xl"></i>
-            <div class="font-black "> LOREM IPSUM </div>
-            <div class="text-center"> Lorem ipsum dolor sit amet, <br> non sem condimentum.</div>
-        </div>
-        <div class="flex flex-col justify-center items-center">
-            <i class="fa-solid fa-user-plus text-4xl"></i>
-            <div class="font-black "> LOREM IPSUM </div>
-            <div class="text-center"> Lorem ipsum dolor sit amet, <br> non sem condimentum.</div>
-        </div>
-        <div class="flex flex-col justify-center items-center">
-            <i class="fa-solid fa-user-plus text-4xl"></i>
-            <div class="font-black"> LOREM IPSUM </div>
-            <div class="text-center"> Lorem ipsum dolor sit amet, <br> non sem condimentum.</div>
-        </div>
-        <div class="flex flex-col justify-center items-center">
-            <i class="fa-solid fa-user-plus text-4xl"></i>
-            <div class="font-black "> LOREM IPSUM </div>
-            <div class="text-center"> Lorem ipsum dolor sit amet, <br> non sem condimentum.</div>
-        </div>
-        
-    </div>
-
-<div class="w-full p-12 flex flex-col justify-center items-center">
-
-    <div class="max-w-4xl ">
-        <div class="text-justify flex flex-row justify-center">
-            Pour devenir partenaire et collaborer avec nous, merci de bien vouloir remplir ce formulaire afin que nous puissions explorer ensemble les opportunités de partenariat.        </div>
-    </div>
-
-
-<div class="mt-10 w-full">
-
-    <form class="flex flex-col items-center" method="POST" action="{{route ('partner-request')}}">
-        @csrf
-        <div class="flex flex-col space-y-4 w-full max-w-4xl">
-            <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="nom" placeholder="Nom" required>
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " name="prenom" placeholder="Prénom" required>
-            </div>
-            
-            <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " name="raison_sociale" placeholder="Raison sociale" required>
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="fonction" placeholder="Fonction" required>
-            </div>
-            
-            <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " name="email" placeholder="Adresse e-mail" required>
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black " name="telephone" placeholder="Numéro de téléphone" required>
-            </div>
-    
-            <input class="p-2 rounded-xl border-2 border-jaune w-full focus:ring-0 focus:border-black " name="adresse_postale" placeholder="Adresse postale" required>
-    
-            <div class="flex flex-row space-x-4">
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="ville" placeholder="Ville" required>
-                <input class="p-2 rounded-xl border-2 border-jaune flex-1 focus:ring-0 focus:border-black" name="code_postal" placeholder="Code postal" required>
-            </div>
-    
-            <select class="p-2 rounded-xl border-2 border-jaune w-full focus:ring-0 focus:border-black" name="type" required>
-                <option disabled selected>Veuillez sélectionner un type de partenariat</option>
-                <option value="Sponsoring">Sponsoring</option>
-                <option value="Mécénat">Mécénat</option>
-                <option value="Collaboration">Collaboration</option>
-                <option value="Parrainage">Parrainage</option>
-            </select>
-    
-            <textarea class="p-2 rounded-xl border-2 border-jaune resize-none w-full focus:ring-0 focus:border-black " rows="5" name="message" placeholder="Message" required></textarea>
-        </div>
-        <div class="flex justify-end w-full max-w-4xl mt-4">
-            <button class="font-bold bg-jaune rounded-xl py-1.5 px-4">ENVOYER</button>
-        </div>
-        @if (session('success'))
-            <div class="alert alert-success w-full text-center font-bold">
-                {{ session('success') }}
-            </div>
-        @endif  
-    </form>
-    
-
-</div>
-
-
-
-</div>
     
 
     @endsection

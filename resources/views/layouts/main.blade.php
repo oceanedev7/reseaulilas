@@ -9,7 +9,6 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
-    <title>@yield('title')</title>
 </head>
 <body>
         
@@ -170,6 +169,9 @@
                                     <a href="https://www.linkedin.com/in/r%C3%A9seau-l-i-l-a-s-49037421b/?originalSubdomain=mq" target="_blank" class="text-2xl">
                                         <i class="fa-brands fa-linkedin"></i>
                                     </a>    
+                                    <a href="https://www.youtube.com/channel/UClM4hehfPA9F0PmbBL5znqQ" target="_blank" class="text-2xl">
+                                        <i class="fa-brands fa-youtube"></i>
+                                    </a> 
                                 </div>
 
                                 <a href="https://chat.whatsapp.com/LT88YWEQe8UG1UsxWz9je9" target="_blank" class="flex">

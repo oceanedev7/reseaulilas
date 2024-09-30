@@ -36,31 +36,28 @@
         </div>
         
        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-16"> 
-            
-
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mt-16 mx-auto"> 
             @foreach ($eventsAgendaView as $eventAgendaView)
-                
-            <a href="{{route('evenement-details', $eventAgendaView->id )}}" class="bg-white max-w-xs w-full rounded-xl custom-shadow overflow-hidden relative"> 
-                <div class="relative rounded-lg overflow-hidden">
-                    <img class="w-full h-40 object-cover" src="{{ Storage::url($eventAgendaView->photo) }}" alt="">
-                    <div class="absolute top-0 left-0 right-0 h-14 z-10 flex items-center justify-center">
-                        <div class="absolute inset-0 bg-jaune opacity-70 z-0"></div>
-                        <div class="font-bold text-xl z-10 relative">{{$eventAgendaView->date}}</div>
+                <a href="{{route('evenement-details', $eventAgendaView->id )}}" class="mx-auto bg-white max-w-xs w-full rounded-xl custom-shadow overflow-hidden relative"> 
+                    <div class="relative rounded-lg overflow-hidden">
+                        <img class="w-full h-40 object-cover" src="{{ Storage::url($eventAgendaView->photo) }}" alt="">
+                        <div class="absolute top-0 left-0 right-0 h-14 z-10 flex items-center justify-center">
+                            <div class="absolute inset-0 bg-jaune opacity-70 z-0"></div>
+                            <div class="font-bold text-xl z-10 relative">{{ \Carbon\Carbon::parse($eventAgendaView->date)->format('d/m/Y') }}</div>
+                        </div>
                     </div>
+                  
+                    <div class="absolute left-6 transform -translate-y-1/2 bg-jaune max-w-full rounded-lg p-1 px-3 z-20 whitespace-nowrap overflow-x-auto" style="top: 160px;">
+                        <span class="font-bold">{{$eventAgendaView->categorie}}</span>
+                    </div>  
                     
-                </div>
-              
-                <div class="absolute left-6 transform -translate-y-1/2 bg-jaune max-w-full rounded-lg p-1 px-3 z-20 whitespace-nowrap overflow-x-auto" style="top: 160px;">
-                    <span class="font-bold">{{$eventAgendaView->categorie}}</span>
-                </div>  
-                
-                <div class="uppercase p-10 font-black text-center overflow-hidden whitespace-normal">
-                    {{$eventAgendaView->titre}}
-                </div>
-            </a>
-        @endforeach
-    </div>
+                    <div class="uppercase p-10 font-black text-center overflow-hidden whitespace-normal">
+                        {{$eventAgendaView->titre}}
+                    </div>
+                </a>
+            @endforeach
+        </div>
+        
    
     </div>
 

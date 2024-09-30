@@ -28,7 +28,7 @@
 
         <div class="container mx-auto space-y-12">
 
-        <div class="font-black uppercase text-3xl text-center"> - {{$eventAgendaView->titre}} -  </div>
+        <div class="font-black uppercase text-3xl text-center mt-10"> - {{$eventAgendaView->titre}} -  </div>
 
         <div class="flex font-bold flex-row justify-center text-xl space-x-24"> 
             <div>Lieu : {{$eventAgendaView->lieu}} </div>

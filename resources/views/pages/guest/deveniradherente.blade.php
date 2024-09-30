@@ -37,23 +37,23 @@
 
     </div> 
         <div class="text-2xl font-bold text-center mt-8"> DÉCOUVREZ NOS FORMULES </div>
-
-        <div class="flex justify-center space-x-12 mt-20">
-            @foreach ($formulesView as $formule)
         
-            <a  href="{{ route('accueil-formule-details', $formule->id) }}" class=" flex flex-col space-y-4">
-                <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
-                <div  class=" flex flex-col">
-                <div class="text-center max-w-60 font-black uppercase"> {{$formule->titre}} </div>
-                <div class="text-center max-w-60 font-semibold"> Pour celles qui souhaitent... </div>
+        <div class="flex flex-wrap justify-center md:space-x-12 space-y-6 md:space-y-0 mt-20">
+            @foreach ($formulesView as $formule)
+            <a href="{{ route('accueil-formule-details', $formule->id) }}" class="flex flex-col items-center space-y-4 w-full sm:w-60 md:w-48 lg:w-60">
+              
+                <div class="flex justify-center">
+                    <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                </div>
+        
+                <div class="flex flex-col">
+                    <div class="text-center font-black uppercase"> {{$formule->titre}} </div>
                 </div>
             </a>
             @endforeach
         </div>
         
         
-
-
     @endsection
 </body>
 </html>

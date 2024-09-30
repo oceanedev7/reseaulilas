@@ -38,17 +38,7 @@ class ContactRequestController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
-            'nom' => 'required|string|max:255',
-            'prenom' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'sujet' => 'required|string|max:255',
-            'message' => 'required|string',
-        ]);
-    
-        Mail::to('ninaricci046@gmail.com')->send(new ContactRequestMail($data));
-    
-        return back()->with('success', 'Votre message a été envoyé avec succès !');
+       //
     }
 
 

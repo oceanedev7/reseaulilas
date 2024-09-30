@@ -54,18 +54,20 @@ Route::get('/nospartenaires', [NospartenairesController::class, 'index'])->name(
 Route::get('/recrutement', [Job_offerController::class, 'indexView'])->name('recrutement');
 Route::get('/recrutement/detail/{id}', [Job_offerController::class, 'showView'])->name('recrutement-details');
 
-Route::post('/demandecontact', [ContactRequestController::class, 'store'])->name('contact-request');
+// Route::post('/demandecontact', [ContactRequestController::class, 'store'])->name('contact-request');
 Route::get('/contact', [ContactRequestController::class, 'index'])->name('contact');
-
-Route::get('/devenir/benevole', [Volunteer_SignupController::class, 'index'])->name('devenir-benevole');
-Route::post('/inscription/benevole', [Volunteer_SignupController::class, 'store'])->name('volunteer-request');
-
-Route::get('/devenir/partenaire', [Partner_SignupController::class, 'index'])->name('devenir-partenaire');
-Route::post('/inscription/partenaire', [Partner_SignupController::class, 'store'])->name('partner-request');
 
 Route::get('/plandusite', function () {
     return view('pages.guest.plandusite');
 })->name('plan');
+
+Route::get('/devenir/partenaire', function () {
+    return view('pages.guest.devenirpartenaire');
+})->name('devenir-partenaire');
+
+Route::get('/devenir/benevole', function () {
+    return view('pages.guest.devenirbenevole');
+})->name('devenir-benevole');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
@@ -194,16 +196,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/espaceadmin/new-number-content', [NumberContentController::class, 'create'])->name('new-number');
         Route::get('/espaceadmin/number/edit/{id}', [NumberContentController::class, 'edit'])->name('number-edit');
         Route::post('/espaceadmin/number/update/{id}', [NumberContentController::class, 'update'])->name('number-update');
-
-        Route::get('/espaceadmin/partner-content', [PartnerContentController::class, 'index'])->name('partner-content');
-        Route::post('/espaceadmin/new-partner-content', [PartnerContentController::class, 'create'])->name('new-partner-content');
-        Route::get('/espaceadmin/partner-content/edit/{id}', [PartnerContentController::class, 'edit'])->name('partner-content-edit');
-        Route::post('/espaceadmin/partner-content/update/{id}', [PartnerContentController::class, 'update'])->name('partner-content-update');
-
-        Route::get('/espaceadmin/volunteer-content', [VolunteerContentController::class, 'index'])->name('volunteer-content');
-        Route::post('/espaceadmin/new-volunteer-content', [VolunteerContentController::class, 'create'])->name('new-volunteer-content');
-        Route::get('/espaceadmin/volunteer-content/edit/{id}', [VolunteerContentController::class, 'edit'])->name('volunteer-content-edit');
-        Route::post('/espaceadmin/volunteer-content/update/{id}', [VolunteerContentController::class, 'update'])->name('volunteer-content-update');
 
     });
 

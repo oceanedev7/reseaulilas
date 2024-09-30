@@ -52,12 +52,18 @@
    
         
         <div class="custom-shadow w-full rounded-xl p-12 text-justify">
-            {{$description->description}}
+            @if($description)
+                    {{$description->description}}
+
+                @endif  
             </div>
     
             <div class="flex justify-start mt-4">
-                <a href="{{route ('partner-edit', $description->id)}}" class="font-bold bg-green-600 text-white w-full text-center rounded-xl py-1.5 px-4 mt-4">Modifier</a>
+                @if($description)
+                    <a href="{{ route('partner-edit', $description->id) }}" class="font-bold bg-green-600 text-white w-full text-center rounded-xl py-1.5 px-4 mt-4">Modifier</a>
+                @endif
             </div>
+            
         </div>
     
  

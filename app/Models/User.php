@@ -83,10 +83,6 @@ class User extends Authenticatable
          return $this->hasMany(Team_content::class);
      }
 
-     public function partnerContents()
-     {
-         return $this->hasMany(Partner_content::class);
-     }
 
      public function volunteerContents()
      {

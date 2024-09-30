@@ -36,12 +36,12 @@ class MissionsController extends Controller
         
         $request->validate(
             [
-            'titre' => 'required|string|max:12',
-            'description' => 'required|string|max:75',
+            'titre' => 'required|string|max:45',
+            'description' => 'required|string|max:265',
             ],
             [
-                'titre.max' => 'La description ne doit pas dépasser 12 caractères.', 
-                'description.max' => 'La description ne doit pas dépasser 75 caractères.', 
+                'titre.max' => 'La description ne doit pas dépasser 45 caractères.', 
+                'description.max' => 'La description ne doit pas dépasser 265 caractères.', 
             ]);
 
          Mission_content::create($request->all());
@@ -80,12 +80,12 @@ class MissionsController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'titre' => 'required|string|max:12',
-            'description' => 'required|string|max:75',
+            'titre' => 'required|string|max:45',
+            'description' => 'required|string|max:265',
         ],
         [
-            'titre.max' => 'La description ne doit pas dépasser 12 caractères.', 
-            'description.max' => 'La description ne doit pas dépasser 75 caractères.', 
+            'titre.max' => 'La description ne doit pas dépasser 45 caractères.', 
+            'description.max' => 'La description ne doit pas dépasser 265 caractères.', 
         ]
     );
     

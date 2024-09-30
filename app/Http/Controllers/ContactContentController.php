@@ -39,7 +39,7 @@ class ContactContentController extends Controller
             'horaire' => 'required|string',
             'adresse' => 'required|string',
             'email' => 'required|string',
-            'telephone' => 'required|string',
+            'telephone' => 'nullable|string',
             ]);
 
          Contact_content::create($request->all());
@@ -81,7 +81,7 @@ class ContactContentController extends Controller
         $request->validate([
             'horaire' => 'string',  
             'adresse' => 'string',  
-            'telephone' => 'string',  
+            'telephone' => 'nullable|string',  
             'email' => 'string', 
         ]);
     

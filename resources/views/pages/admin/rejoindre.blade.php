@@ -7,15 +7,12 @@
 
 <div class="flex items-center justify-center space-x-12 mt-40">  
 
-      <a href="{{route ('partner-content')}}" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
-          <i class="fa-solid fa-pencil text-3xl"></i>
-          <div class="text-lg font-bold text-center"> Gérer le texte <br> 'Devenir partenaire' </div>
-      </a>
+  <a href="{{route ('emploi')}}" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
+    <i class="fa-solid fa-pencil text-3xl"></i>
+    <div class="text-lg font-bold text-center"> Gérer les <br>offres d'emploi </div>
+</a>
 
-      <a href="{{route ('volunteer-content')}}" class="w-[200px] h-[150px] bg-jaune rounded-xl flex flex-col justify-center items-center space-y-2">
-        <i class="fa-solid fa-pencil text-3xl"></i>
-        <div class="text-lg font-bold text-center"> Gérer le texte <br> 'Devenir bénévole' </div>
-    </a>
+  
 
   </div>
 
