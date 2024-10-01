@@ -13,7 +13,7 @@
     @section('content')
 
     <div class="bg-jaune h-56 w-full flex justify-center items-center">
-        <div class="font-black text-4xl"> DEVENIR BÉNÉVOLE </div>
+        <h1 class="font-black text-4xl"> DEVENIR BÉNÉVOLE </h1>
     </div>
 
     <div class="flex space-x-2 font-bold text-lg relative top-10 ml-6">

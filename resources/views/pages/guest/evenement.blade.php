@@ -6,10 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Évènement</title>
+
 </head>
 <body>
-
-    @section('title', 'Évènement')
 
     @section('content')
 
@@ -28,7 +28,7 @@
 
         <div class="container mx-auto space-y-12">
 
-        <div class="font-black uppercase text-3xl text-center mt-10"> - {{$eventAgendaView->titre}} -  </div>
+        <h1 class="font-black uppercase text-3xl text-center mt-10"> - {{$eventAgendaView->titre}} -  </h1>
 
         <div class="flex font-bold flex-row justify-center text-xl space-x-24"> 
             <div>Lieu : {{$eventAgendaView->lieu}} </div>

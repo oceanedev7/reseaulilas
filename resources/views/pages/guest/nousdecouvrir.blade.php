@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nous découvrir</title>
 
 </head>
 <body>
-    @section('title', 'Nous découvrir')
-
+   
     @section('content')
     <div class="bg-jaune h-56 w-full flex justify-center items-center">
       <div class="font-black text-4xl uppercase"> Nous découvrir </div>

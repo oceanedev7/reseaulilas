@@ -6,14 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Devenir adhérente</title>
+    <meta name="description" content="Devenez adhérente au Réseau L.I.L.A.S. et bénéficiez d'un accompagnement. Rejoignez une communauté bienveillante et professionnelle, pour développer votre activité tout en préservant votre équilibre de vie personnelle.">
+
 </head>
 <body>
-    @section('title', 'Devenir adhérente')
 
     @section('content')
 
     <div class="bg-jaune h-56 w-full flex justify-center items-center">
-        <div class="font-black text-4xl"> DEVENIR ADHÉRENTE </div>
+        <h1 class="font-black text-4xl"> DEVENIR ADHÉRENTE </h1>
     </div>
 
 

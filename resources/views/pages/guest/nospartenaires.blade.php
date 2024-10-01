@@ -21,11 +21,11 @@
 
         <div class="relative flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-4">
 
-            <div class="h-[550px] w-[480px] flex justify-center items-center"> <!-- Ajout de items-center pour centrer l'image verticalement -->
+            <div class="h-[550px] w-[480px] flex justify-center items-center"> 
                 <img class="h-full w-full rounded-xl object-cover" src="{{ asset('storage/images/nospartenaires.jpg') }}" alt="">
             </div>
         
-            <div class="bg-white rounded-xl custom-shadow overflow-hidden p-8 max-w-3xl z-10 mb-4 md:mb-0 flex-1"> <!-- Ajout de flex-1 pour équilibrer avec l'image -->
+            <div class="bg-white rounded-xl custom-shadow overflow-hidden p-8 max-w-3xl z-10 mb-4 md:mb-0 flex-1"> 
                 <div class="uppercase font-black text-center mb-4 text-xl">Remerciement aux Partenaires</div>
                 <div class="text-justify mb-4">
                     @if($descriptionView)

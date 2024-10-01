@@ -9,13 +9,11 @@
 </head>
 <body>
 
-    @section('title', 'Formule 1')
-
     @section('content')
 
 
     <div class="bg-jaune h-56 w-full flex justify-center items-center">
-        <div class="font-black text-4xl uppercase"> {{$formuleView->titre}} </div>
+        <h1 class="font-black text-4xl uppercase"> {{$formuleView->titre}} </h1>
     </div>
 <div class="flex space-x-2 font-bold text-lg relative top-8 ml-6">
             <div> Nous rejoindre </div> 
