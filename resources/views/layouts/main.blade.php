@@ -100,7 +100,7 @@
     </main>
 
     
- <footer class="bg-jaune p-6">
+<footer class="bg-jaune p-6">
 
                 <div class="flex flex-row justify-center items-start px-8">
                     <div class="flex flex-row mb-8 space-x-12 max-w-7xl">
@@ -194,9 +194,11 @@
                 <a href="{{route('plan')}}" class="text-sm">Plan du site</a>
             </div>
         </div>
-    </footer>
+    </footer> 
     
-
+   
+    
+    
 
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
 

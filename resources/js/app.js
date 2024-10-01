@@ -39,49 +39,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Caroussel des membres de l'équipe (vue nous découvrir)
 
-// document.addEventListener('DOMContentLoaded', function() {
-//     let defaultTransform = 0;
-
-//     function goNext() {
-//         defaultTransform = defaultTransform - 398;
-//         let slider = document.getElementById("slider");
-//         if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) defaultTransform = 0;
-//         slider.style.transform = "translateX(" + defaultTransform + "px)";
-//     }
-
-//     function goPrev() {
-//         let slider = document.getElementById("slider");
-//         if (Math.abs(defaultTransform) === 0) defaultTransform = 0;
-//         else defaultTransform = defaultTransform + 398;
-//         slider.style.transform = "translateX(" + defaultTransform + "px)";
-//     }
-
-//     let next = document.getElementById("next");
-//     let prev = document.getElementById("prev");
-
-//     if (next) {
-//         next.addEventListener("click", goNext);
-//     }
-
-//     if (prev) {
-//         prev.addEventListener("click", goPrev);
-//     }
-// });
-
 document.addEventListener('DOMContentLoaded', function() {
     let defaultTransform = 0;
 
     function goNext() {
         let slider = document.getElementById("slider");
-        let cardWidth = slider.querySelector('div').offsetWidth; // Prendre la largeur d'une carte
-        let visibleWidth = slider.parentElement.offsetWidth; // Largeur visible du conteneur
-        let totalWidth = slider.scrollWidth; // Largeur totale du contenu
+        let cardWidth = slider.querySelector('div').offsetWidth; 
+        let visibleWidth = slider.parentElement.offsetWidth; 
+        let totalWidth = slider.scrollWidth; 
 
-        // Si nous n'avons pas atteint la fin du slider, continuer de défiler
         if (Math.abs(defaultTransform) + visibleWidth < totalWidth) {
-            defaultTransform -= cardWidth + 20; // Ajuster pour l'espace entre les cartes (gap-14)
+            defaultTransform -= cardWidth + 20; 
         } else {
-            // Revenir au début seulement après avoir affiché toutes les cartes
+           
             defaultTransform = 0;
         }
 
@@ -90,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function goPrev() {
         let slider = document.getElementById("slider");
-        let cardWidth = slider.querySelector('div').offsetWidth; // Prendre la largeur d'une carte
+        let cardWidth = slider.querySelector('div').offsetWidth; 
 
-        // Si on n'est pas au début, défiler vers la gauche
+       
         if (Math.abs(defaultTransform) > 0) {
-            defaultTransform += cardWidth + 20; // Ajuster pour l'espace entre les cartes (gap-14)
+            defaultTransform += cardWidth + 20; 
         }
 
         slider.style.transform = `translateX(${defaultTransform}px)`;
