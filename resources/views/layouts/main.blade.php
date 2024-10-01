@@ -170,103 +170,7 @@
         @yield('content')
     </main>
 
-    
-{{-- <footer class="bg-jaune p-6">
 
-                <div class="flex flex-row justify-center items-start px-8">
-                    <div class="flex flex-row mb-8 space-x-12 max-w-7xl">
-                       
-                        <div class="flex items-center flex-shrink-0">
-                            <img src="{{ asset('storage/images/logofooter.png') }}" alt="Logo Réseau LILAS" class="h-16"> <!-- Taille du logo augmentée -->
-                        </div>  
-                
-                        <div class="space-x-16 flex">
-                       
-                        <div class="space-y-4">
-                            <div class="text-base font-bold">S'engager</div>
-                            <div class="flex flex-col space-y-4 text-base">
-                                <a href="{{route ('devenir-adherente')}}" class="text-sm hover:font-bold transition-all duration-500">- Devenir adhérente</a>
-                                <a href="{{route ('devenir-partenaire')}}" class="text-sm hover:font-bold transition-all duration-500">- Devenir partenaire</a>
-                                <a href="{{route ('devenir-benevole')}}" class="text-sm hover:font-bold transition-all duration-500">- Devenir bénévole</a>
-                                <a href="{{route ('recrutement')}}" class="text-sm hover:font-bold transition-all duration-500">- Postuler</a>
-
-                            </div>
-                        </div>
-                
-                        
-                        <div class="space-y-4">
-                            <div class="text-base font-bold">Horaires</div>
-                            <div class="flex flex-col space-y-1 text-base">
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-calendar-days text-xl"></i>
-                                    <div class="text-sm">
-                                        Du Lundi au Vendredi <br> de 8h30 à 17h
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="flex-1 space-y-4">
-                            <div class="text-base font-bold">Contactez-nous</div>
-                            <div class="flex flex-col space-y-4 text-base">
-                                <a href="https://www.google.fr/maps/place/BeBOOSTER/@14.6048436,-61.0458183,17z/data=!3m1!4b1!4m6!3m5!1s0x8c6aa15d37fd051d:0x5fead3840118fcbe!8m2!3d14.6048384!4d-61.0432434!16s%2Fg%2F11smk9_zqk?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-location-dot text-xl"></i>
-                                    <div class="text-sm">
-                                        Centre d'Affaires BE BOOSTER, <br> 12 Rue des Arts et Métiers, <br> Fort-de-France 97200, Martinique
-                                    </div>
-                                </a>
-                                <div class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-phone text-xl"></i>
-                                    <div class="text-sm"></div>
-                                </div>
-                                <a href="mailto:adressemail@gmail.com" class="flex items-center space-x-2">
-                                    <i class="fa-solid fa-envelope text-xl"></i>
-                                    <div class="text-sm mb-1">adressemail@gmail.com</div>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="flex-1 space-y-4">
-                            <div class="text-base font-bold">Suivez-nous</div>
-                            <div class="flex flex-col space-y-4 text-base">
-                                
-                                <div class="flex items-center space-x-2">
-                                    <a href="https://www.facebook.com/p/R%C3%A9seau-LILAS-100081957576254/" target="_blank" class="text-2xl">
-                                        <i class="fa-brands fa-square-facebook"></i>
-                                    </a>
-                                    <a href="https://www.instagram.com/reseaulilas/" target="_blank" class="text-2xl">
-                                        <i class="fa-brands fa-square-instagram"></i>
-                                    </a>
-                                    <a href="https://www.linkedin.com/in/r%C3%A9seau-l-i-l-a-s-49037421b/?originalSubdomain=mq" target="_blank" class="text-2xl">
-                                        <i class="fa-brands fa-linkedin"></i>
-                                    </a>    
-                                    <a href="https://www.youtube.com/channel/UClM4hehfPA9F0PmbBL5znqQ" target="_blank" class="text-2xl">
-                                        <i class="fa-brands fa-youtube"></i>
-                                    </a> 
-                                </div>
-
-                                <a href="https://chat.whatsapp.com/LT88YWEQe8UG1UsxWz9je9" target="_blank" class="flex">
-                                        <i class="fa-brands fa-square-whatsapp mt-2 text-2xl"></i>
-                                    <div class="text-center text-sm">
-                                        Rejoignez notre groupe “Entrepreneuses 972”
-                                    </div>
-                                </a>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-        
-        <div class="text-center border-t border-black">
-            <div class="inline-flex items-center space-x-2 relative top-2.5">
-                <a href="#" class="text-sm">Mentions légales</a>
-                <span class="border-l border-black h-4"></span>
-                <a href="{{route('plan')}}" class="text-sm">Plan du site</a>
-            </div>
-        </div>
-    </footer> 
-     --}}
      <footer class="bg-jaune p-6">
         <div class="flex flex-col justify-center px-8">
             <div class="flex flex-col md:flex-row mb-8 space-y-8 md:space-y-0 md:space-x-12 max-w-7xl">
@@ -275,7 +179,7 @@
                     <img src="{{ asset('storage/images/logofooter.png') }}" alt="Logo Réseau LILAS" class="h-16"> <!-- Taille du logo augmentée -->
                 </div>  
                 
-                <div class="space-y-8 md:space-x-16 md:space-y-0 flex flex-col md:flex-row">
+                <div class="space-y-8 md:space-x-14 md:space-y-0 flex flex-col md:flex-row">
                 
                     <div class="space-y-4">
                         <div class="text-base font-bold">S'engager</div>
@@ -288,38 +192,43 @@
                         </div>
                     </div>
                 
-                <div class="space-y-4">
-                    <div class="text-base font-bold">Horaires</div>
-                    <div class="flex flex-col space-y-1 text-base">
-                        <div class="flex items-center space-x-2">
-                            <i class="fa-solid fa-calendar-days text-xl"></i>
-                            <div class="text-sm">
-                                Du Lundi au Vendredi <br> de 8h30 à 17h
+                    @if (isset($contactsView))
+                    @foreach ($contactsView as $contact)
+                    <div class="space-y-4">
+                        <div class="text-base font-bold">Horaires</div>
+                        <div class="flex flex-col space-y-1 text-base">
+                            <div class="flex items-start space-x-2">
+                                <i class="fa-solid fa-calendar-days text-xl"></i>
+                                <div class="text-sm md:mt-0 mt-0.5">
+                                    {{ $contact->horaire }}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    
+                    
                 
                 <div class="flex-1 space-y-4">
                     <div class="text-base font-bold">Contactez-nous</div>
                     <div class="flex flex-col space-y-4 text-base">
                         <a href="https://www.google.fr/maps/place/BeBOOSTER/@14.6048436,-61.0458183,17z/data=!3m1!4b1!4m6!3m5!1s0x8c6aa15d37fd051d:0x5fead3840118fcbe!8m2!3d14.6048384!4d-61.0432434!16s%2Fg%2F11smk9_zqk?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="flex items-center space-x-2">
                             <i class="fa-solid fa-location-dot text-xl"></i>
-                            <div class="text-sm">
-                                Centre d'Affaires BE BOOSTER, <br> 12 Rue des Arts et Métiers, <br> Fort-de-France 97200, Martinique
+                            <div class="text-sm ">
+                                {{ $contact->adresse }}                            
                             </div>
                         </a>
                         <div class="flex items-center space-x-2">
                             <i class="fa-solid fa-phone text-xl"></i>
-                            <div class="text-sm"></div>
+                            <div class="text-sm"> {{ $contact->telephone }}</div>
                         </div>
                         <a href="mailto:adressemail@gmail.com" class="flex items-center space-x-2">
                             <i class="fa-solid fa-envelope text-xl"></i>
-                            <div class="text-sm mb-1">adressemail@gmail.com</div>
+                            <div class="text-sm mb-1">  {{ $contact->email }}</div>
                         </a>
                     </div>
                 </div>
-    
+                @endforeach
+    @endif
                 <div class="flex-1 space-y-4">
                     <div class="text-base font-bold">Suivez-nous</div>
                     <div class="flex flex-col space-y-4 text-base">
@@ -341,7 +250,7 @@
     
                         <a href="https://chat.whatsapp.com/LT88YWEQe8UG1UsxWz9je9" target="_blank" class="flex space-x-2">
                                 <i class="fa-brands fa-square-whatsapp mt-2 text-2xl"></i>
-                            <div class="text-center text-sm mt-3">
+                            <div class="text-center text-sm md:mt-0 mt-3">
                                 Rejoignez notre groupe “Entrepreneuses 972”
                             </div>
                         </a>
