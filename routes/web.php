@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\Agenda;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AccueilController;
 use App\Http\Controllers\ActualiteController;
@@ -10,7 +9,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\EvenementController;
-use App\Http\Controllers\FooterController;
 use App\Http\Controllers\FormulesController;
 use App\Http\Controllers\GlobalNumberController;
 use App\Http\Controllers\Job_offerController;
@@ -21,16 +19,11 @@ use App\Http\Controllers\NospartenairesController;
 use App\Http\Controllers\NousdecouvrirController;
 use App\Http\Controllers\NumberContentController;
 use App\Http\Controllers\OfficeAddressController;
-use App\Http\Controllers\Partner_SignupController;
-use App\Http\Controllers\PartnerContentController;
 use App\Http\Controllers\PartnerLogosController;
 use App\Http\Controllers\PartnerThanksController;
 use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\TeamController;
-use App\Http\Controllers\Volunteer_SignupController;
-use App\Http\Controllers\VolunteerContentController;
 use App\Models\Formules;
-use App\Models\Office_adress_content;
 
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');
 Route::get('/accueil/formule/details/{id}', [AccueilController::class, 'show'])->name('accueil-formule-details');
@@ -39,22 +32,18 @@ Route::get('/devenir/adherente', [MembersController::class, 'index'])->name('dev
 
 Route::get('/nous/decouvrir', [NousdecouvrirController::class, 'index'])->name('nous-decouvrir');
 
-
 Route::get('/actualites', [ActualiteController::class, 'indexView'])->name('actualites');
 Route::get('/actualite/details/{id}', [ActualiteController::class, 'showView'])->name('actualite-details');
-
 
 Route::get('/agenda', [EvenementController::class, 'indexView'])->name('agenda');
 Route::get('/agenda/details/{id}', [EvenementController::class, 'showView'])->name('evenement-details');
 Route::get('/agenda/evenement/filtrer', [EvenementController::class, 'filtrer'])->name('filtrer');
-
 
 Route::get('/nospartenaires', [NospartenairesController::class, 'index'])->name('nospartenaires');
 
 Route::get('/recrutement', [Job_offerController::class, 'indexView'])->name('recrutement');
 Route::get('/recrutement/detail/{id}', [Job_offerController::class, 'showView'])->name('recrutement-details');
 
-// Route::post('/demandecontact', [ContactRequestController::class, 'store'])->name('contact-request');
 Route::get('/contact', [ContactRequestController::class, 'index'])->name('contact');
 
 Route::get('/plandusite', function () {
@@ -79,7 +68,7 @@ Route::get('/devenir/benevole', function () {
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-Route::get('/dashboard/admin/reseaulilas', function () {
+Route::get('/dashboard/admin/reseau/asso-lilas', function () {
     return redirect()->route('login'); 
 })->middleware(['auth', 'admin'])->name('admin.reseaulilas');
 
@@ -173,7 +162,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('/espaceadmin/new-formule', [FormulesController::class, 'create'])->name('new-formule');
         Route::get('/espaceadmin/formule/details/{id}', [FormulesController::class, 'show'])->name('formule-details');
         Route::get('/espaceadmin/formule/edit/{id}', [FormulesController::class, 'edit'])->name('formule-edit');
-        Route::post('/espaceadmin/formule/update/{id}', [FormulesController::class, 'update'])->name('formule-update');        
+        Route::post('/espaceadmin/formule/update/{id}', [FormulesController::class, 'update'])->name('formule-update'); 
+        Route::get('/delete/formule/{id}', [FormulesController::class, 'destroy'])->name('delete-formule'); 
 
         Route::get('/espaceadmin/about', [AboutController::class, 'index'])->name('about-content');
         Route::post('/espaceadmin/new-about-content', [AboutController::class, 'create'])->name('new-about-content');

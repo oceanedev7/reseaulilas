@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Formules;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class FormulesController extends Controller
 {
@@ -23,7 +25,7 @@ class FormulesController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-        public function create(Request $request)
+    public function create(Request $request)
     {
         $existingMissionsCount = Formules::count();
 
@@ -37,6 +39,7 @@ class FormulesController extends Controller
             [
             'titre' => 'required|string|max:20',
             'photo.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg', 
+            'photo_pres' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'presentation' => 'required|string|max:195',
             'description1' => 'required|string|max:560',
             'description2' => 'required|string|max:560',
@@ -58,11 +61,14 @@ class FormulesController extends Controller
                 $paths[] = $path; 
             }
         }
-    
-        Formules::create($request->except('photo') + ['photo' => json_encode($paths)]);
-        return redirect()->route('formules');
 
-    // return redirect("/espaceadmin/formules");
+        $photoPresPath = null;
+    if ($request->hasFile('photo_pres')) {
+        $photoPresPath = $request->file('photo_pres')->store('public/images');
+    }
+    
+        Formules::create($request->except('photo') + ['photo' => json_encode($paths),  'photo_pres' => $photoPresPath]);
+        return redirect()->route('formules');
 
     }
 
@@ -96,12 +102,14 @@ class FormulesController extends Controller
     /**
      * Update the specified resource in storage.
      */
+   
     public function update(Request $request, string $id)
     {
         $request->validate(
             [
                 'titre' => 'string|max:20',
                 'photo.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
+                'photo_pres' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
                 'presentation' => 'string|max:195',
                 'description1' => 'string|max:560',
                 'description2' => 'string|max:560',
@@ -116,10 +124,9 @@ class FormulesController extends Controller
             ]
         );
     
-        // Trouver la formule à mettre à jour
         $formule = Formules::findOrFail($id);
     
-        // Traitement des images
+      
         $paths = json_decode($formule->photo, true) ?? [];
     
         if ($request->hasFile('photo')) {
@@ -129,18 +136,28 @@ class FormulesController extends Controller
             }
         }
     
-        // Mettre à jour la formule avec les nouvelles données
-        $formule->update($request->except('photo') + ['photo' => json_encode($paths)]);
+        if ($request->hasFile('photo_pres')) {
+          
+            $photoPresPath = $request->file('photo_pres')->store('public/images');
+            $formule->photo_pres = $photoPresPath; 
+        }
+
+
+        $formule->update($request->except('photo', 'photo_pres') + ['photo' => json_encode($paths)]);
     
-        // Redirection après la mise à jour
         return redirect('/espaceadmin/formule/details/' . $formule->id);
     }
+
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        $delete  = Formules::findOrFail($id);
+        $delete->delete();
+
+        return redirect("/espaceadmin/formules");
     }
+
 }

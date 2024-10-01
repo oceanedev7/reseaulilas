@@ -176,7 +176,7 @@
             <div class="flex flex-col md:flex-row mb-8 space-y-8 md:space-y-0 md:space-x-12 max-w-7xl">
                 
                 <div class="flex items-center flex-shrink-0 justify-center md:justify-start">
-                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="Logo Réseau LILAS" class="h-16"> <!-- Taille du logo augmentée -->
+                    <img src="{{ asset('storage/images/logofooter.png') }}" alt="Logo Réseau LILAS" class="h-16"> 
                 </div>  
                 
                 <div class="space-y-8 md:space-x-14 md:space-y-0 flex flex-col md:flex-row">

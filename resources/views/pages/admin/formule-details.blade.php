@@ -21,6 +21,9 @@
 </a>
     <div class="p-6 bg-white shadow-lg rounded-lg max-w-xl mx-auto custom-shadow mt-16">
         
+        
+        <p class="mb-8"> <img class="w-full rounded-lg object-cover" src="{{ Storage::url($formule->photo_pres)}}" alt=""> </p>
+
         <label class="block font-bold">Titre : </label>
         <p class=" font-bold text-gray-800 mb-4">{{ $formule->titre }}</p>
 

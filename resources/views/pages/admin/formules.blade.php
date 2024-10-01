@@ -26,7 +26,9 @@
     <form method="POST" action="{{route ('new-formule')}}" enctype="multipart/form-data">
         @csrf
 
-        <div class="mb-4">
+
+
+        <div class="mb-8">
             <label  class="block text-sm font-semibold  mb-2">Titre :</label>
             <input name="titre" class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune" required>
         </div>
@@ -35,8 +37,13 @@
         <div class="text-red-600 text-sm mt-1 mb-4">{{ $message }}</div>  
      @enderror
 
-        <div class="mb-4">
-            <label for="photo" class="block text-sm font-semibold  mb-2">Photos du caroussel :</label>
+     <div class="mb-8">
+        <label  class="block text-sm font-semibold  mb-2">Photo de présentation de la formule :</label>
+        <input type="file" name="photo_pres" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border file:border-gray-300 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" accept="image/*" required>
+    </div>
+
+        <div class="mb-8">
+            <label for="photo" class="block text-sm font-semibold  mb-2">Photos du caroussel (possibilité de choisir plusieurs photos) :</label>
             <input type="file" name="photo[]" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border file:border-gray-300 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100" accept="image/*" multiple  required>
         </div>
 
@@ -109,9 +116,16 @@
             
         </div>
 
-       <a href="{{route ('formule-edit', $formule->id)}}" class="font-bold bg-green-600 text-white rounded-xl py-1.5 px-4 mt-4">Modifier</a> 
+        <div class="flex space-x-2 mt-6">
+       <a href="{{route ('formule-edit', $formule->id)}}" class="font-bold bg-green-600 text-white rounded-xl py-1.5 px-4 ">Modifier</a> 
            
+       <a href="{{ route('delete-formule', $formule->id) }}" class="font-bold bg-red-600 text-white rounded-xl px-2 py-1">
+        Supprimer
+       </a>
         </div>
+
+        </div>
+
     @endforeach
 </div>
 

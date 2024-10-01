@@ -40,12 +40,12 @@
     </div> 
         <div class="text-2xl font-bold text-center mt-8"> DÉCOUVREZ NOS FORMULES </div>
         
-        <div class="flex flex-wrap justify-center md:space-x-12 space-y-6 md:space-y-0 mt-20">
+        <div class="flex flex-wrap justify-center md:space-x-12 space-y-6 md:space-y-0 mt-12">
             @foreach ($formulesView as $formule)
             <a href="{{ route('accueil-formule-details', $formule->id) }}" class="flex flex-col items-center space-y-4 w-full sm:w-60 md:w-48 lg:w-60">
               
                 <div class="flex justify-center">
-                    <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                    <img class="h-60 w-60 rounded-xl object-cover transition-transform duration-300 ease-in-out transform hover:scale-105" src="{{ Storage::url($formule->photo_pres) }}" alt="">
                 </div>
         
                 <div class="flex flex-col">

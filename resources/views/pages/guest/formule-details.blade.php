@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{$formuleView->titre}}</title>
+
 </head>
 <body>
 
@@ -29,7 +31,7 @@
         <div class="space-y-12 mt-6">
 
             <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-16">
-                <img class="rounded-xl h-48 w-48 object-cover" src="{{ asset('storage/images/photoaccueil.jpg') }}" alt="">
+                <img class="rounded-xl h-48 w-48 object-cover" src="{{ Storage::url($formuleView->photo_pres) }}" alt="">
                 <div class="text-justify max-w-3xl text-center md:text-left"> 
                     {{$formuleView->description1}}
                 </div>

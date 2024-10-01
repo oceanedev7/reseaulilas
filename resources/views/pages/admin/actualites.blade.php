@@ -52,7 +52,7 @@
     <div class="bg-white max-w-xs w-full rounded-xl custom-shadow overflow-hidden p-3">
         <div class="relative rounded-lg overflow-hidden">
             <div class="p-4">
-                <img class="w-full h-40 rounded-lg object-cover" src="{{ Storage::url($actualite->photo) }}" alt="">
+                <img class="w-full h-40 rounded-lg object-cover" src="{{ Storage::url($actualite->photo)}}" alt="">
             </div>
         </div>
         <div class="flex flex-col px-4 py-2 space-y-2">

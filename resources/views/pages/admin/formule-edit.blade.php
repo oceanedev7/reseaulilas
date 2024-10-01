@@ -27,6 +27,13 @@
     <div class="bg-white custom-shadow p-8 rounded-lg shadow-lg w-full max-w-4xl">
         <form method="POST" action="{{ route('formule-update', $formule->id) }}" enctype="multipart/form-data">
             @csrf
+
+            <div class="mb-4">
+                <label for="photo" class="block text-sm font-semibold  mb-2">Photo :</label>
+                <img src="{{ Storage::url($formule->photo_pres) }}" class="w-full h-64 object-cover rounded-lg shadow-md">
+                <input class="" aria-describedby="user_avatar_help" name="photo_pres" type="file" accept="image/*"/>
+    
+            </div>
         
             <div class="mb-4">
                 <label class="block text-sm font-semibold mb-2">Titre :</label>
@@ -74,7 +81,7 @@
     @enderror
         
             <div class="mb-4">
-                <label class="block text-sm font-semibold mb-2">Photos :</label>
+                <label class="block text-sm font-semibold mb-2">Photos du caroussel :</label>
                 <input type="file" name="photo[]" multiple class="w-full px-3 py-2 border border-black rounded-md shadow-sm focus:outline-none focus:ring-jaune focus:border-jaune">
                 
                 @if($formule->photo)
@@ -87,13 +94,14 @@
                             @foreach($photos as $photo)
                                 <div class="relative inline-block">
                                     <img src="{{ Storage::url($photo) }}" alt="Photo de la formule" class="w-32 h-32 object-cover rounded-md">
-                                    <button type="button" data-photo="{{ $photo }}" class="absolute top-0 right-0 p-1 bg-red-500 text-white rounded-full text-xs">X</button>
                                 </div>
                             @endforeach
                         </div>
                     </div>
                 @endif
             </div>
+
+        
         
             <div class="mb-4">
                 <button type="submit" class="w-full mt-4 py-2 bg-jaune font-bold rounded-xl shadow-sm hover:bg-yellow-300">Modifier cette formule</button>

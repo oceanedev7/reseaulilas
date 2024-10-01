@@ -66,7 +66,7 @@
 
               <div class="flex flex-col">  
 
-                <div class="space-y-1.5 flex flex-col justify-center rounded-xl w-[120px] h-[120px] bg-jaune bg-cover p-2 box-border overflow-hidden">
+                <div class="space-y-1.5 flex flex-col justify-center rounded-xl w-[200px] min-h-[200px]  bg-jaune bg-cover p-2 box-border overflow-hidden">
                     <div class="font-bold text-sm text-center break-words whitespace-normal">{{$mission->titre}}</div>
                     <div class="text-xs text-center break-words whitespace-normal">{{$mission->description}}</div>
                 </div>
