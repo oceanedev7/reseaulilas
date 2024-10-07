@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Formules;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\File;
 
 
 class FormulesController extends Controller
@@ -160,4 +162,54 @@ class FormulesController extends Controller
         return redirect("/espaceadmin/formules");
     }
 
+public function deleteAllPhotos($id)
+{
+    try {
+        // Vérifiez si la formule existe
+        $formule = Formules::findOrFail($id);
+        
+        Log::info('Suppression des photos pour la formule : ' . $id);
+        Log::info('Formule récupérée : ' . json_encode($formule));
+
+        // Vérifiez si des photos existent dans la colonne 'photo'
+        if ($formule->photo) {
+            // Décoder la chaîne JSON pour obtenir un tableau de photos
+            $photos = json_decode($formule->photo);
+
+            if (is_array($photos)) {
+                foreach ($photos as $photo) {
+                    // Supprimez l'image du stockage
+                    $photoPath = trim($photo);
+                    Log::info('Suppression de l\'image : ' . $photoPath);
+                    
+                    // Vérifiez si le fichier existe avant de tenter de le supprimer
+                    if (Storage::exists($photoPath)) {
+                        Storage::delete($photoPath); // Supprime le fichier du stockage
+                    } else {
+                        Log::warning('Le fichier n\'existe pas : ' . $photoPath);
+                    }
+                }
+
+                // Réinitialisation de la colonne photo dans la base de données
+                $formule->photo = ''; // Réinitialise la colonne 'photo' à une chaîne vide
+                $formule->save(); // Sauvegarde les modifications
+            } else {
+                Log::warning('Erreur lors du décodage des photos pour la formule : ' . $id);
+            }
+        } else {
+            Log::warning('Aucune photo à supprimer pour la formule : ' . $id);
+        }
+
+        return response()->json(['success' => true]);
+    } catch (\Exception $e) {
+        Log::error('Erreur lors de la suppression des photos : ' . $e->getMessage());
+        return response()->json(['error' => 'Erreur lors de la suppression des photos.'], 500);
+    }
 }
+
+
+
+    }
+    
+
+    

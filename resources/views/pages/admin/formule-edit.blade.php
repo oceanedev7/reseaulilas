@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -88,21 +89,25 @@
                     @php
                         $photos = json_decode($formule->photo, true);
                     @endphp
-                    <div class="mt-2">
-                        <p class="font-semibold">Photos existantes :</p>
-                        <div class="flex flex-wrap gap-2 mt-2">
-                            @foreach($photos as $photo)
-                                <div class="relative inline-block">
-                                    <img src="{{ Storage::url($photo) }}" alt="Photo de la formule" class="w-32 h-32 object-cover rounded-md">
-                                </div>
-                            @endforeach
-                        </div>
+            
+                    <div class="mb-4">
+                        <button class="bg-red-500 text-white p-2 rounded" onclick="deleteAllPhotos('{{ $formule->id }}')">
+                            Supprimer toutes les images
+                        </button>
                     </div>
+                    
+                    @foreach($photos as $photo)
+                    <div class="relative inline-block">
+                        <img src="{{ Storage::url($photo) }}" alt="Photo de la formule" class="w-32 h-32 object-cover rounded-md">
+                    </div>
+                    @endforeach
+                    
+    
+                        </div>
+           
                 @endif
-            </div>
+           
 
-        
-        
             <div class="mb-4">
                 <button type="submit" class="w-full mt-4 py-2 bg-jaune font-bold rounded-xl shadow-sm hover:bg-yellow-300">Modifier cette formule</button>
             </div>
@@ -112,3 +117,33 @@
 </body>
 </html>
 
+<script>
+    function deleteAllPhotos(formuleId) {
+        if(confirm('Êtes-vous sûr de vouloir supprimer toutes les images ?')) {
+            fetch(`/formules/${formuleId}/photos`, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'Content-Type': 'application/json',
+                },
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erreur lors de la suppression des photos: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    alert('Toutes les images ont été supprimées.');
+                    location.reload(); 
+                }
+            })
+            .catch(error => {
+                console.error('Erreur:', error);
+                alert('Une erreur est survenue : ' + error.message);
+            });
+        }
+    }
+    </script>
+    

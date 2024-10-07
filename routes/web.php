@@ -25,6 +25,9 @@ use App\Http\Controllers\ReviewsController;
 use App\Http\Controllers\TeamController;
 use App\Models\Formules;
 
+Route::delete('/formules/{id}/photos', [FormulesController::class, 'deleteAllPhotos'])->name('formules.deletePhotos');
+
+
 Route::get('/', [AccueilController::class, 'index'])->name('accueil');
 Route::get('/accueil/formule/details/{id}', [AccueilController::class, 'show'])->name('accueil-formule-details');
 
